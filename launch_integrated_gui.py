@@ -26,7 +26,8 @@ try:
         app.setOrganizationName("Lumina Memory Team")
         
         # Create and show main window
-        window = EnhancedMainWindowWithLLM()
+        project_root = Path(__file__).parent
+        window = EnhancedMainWindowWithLLM(project_root)
         window.show()
         
         print("✅ GUI launched successfully!")
