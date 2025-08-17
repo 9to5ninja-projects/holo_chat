@@ -44,6 +44,10 @@ DEFAULT_W_EMOTION = 0.3         # Emotional similarity weight
 # MATHEMATICAL CONSTANTS - FROM WORKING FORMULAS
 # =============================================================================
 
+# Fundamental mathematical constants (from notebook developments)
+PHI = (1 + np.sqrt(5)) / 2      # Golden ratio: 1.618034 (holographic operations)
+TAU = 2 * np.pi                 # Full circle constant: 6.283185 (circular convolution)
+
 # Numerical stability
 EPSILON = 1e-9                  # Numerical stability threshold
 NORMALIZATION_EPSILON = 1e-9    # Vector normalization threshold
@@ -123,6 +127,31 @@ ACCESS_BOOST_FACTOR = 1.2           # Salience boost on access
 CONSOLIDATION_THRESHOLD = 0.8       # Threshold for memory consolidation
 
 # =============================================================================
+# CONSCIOUSNESS ANALYSIS CONSTANTS - FROM NOTEBOOK DEVELOPMENTS
+# =============================================================================
+
+# Consciousness scoring weights (from xpunit_full_system_test.ipynb)
+CONSCIOUSNESS_SELF_REFERENCE_WEIGHT = 0.3      # Weight for "I am", "my own" detection
+CONSCIOUSNESS_INTROSPECTION_WEIGHT = 0.2       # Weight per introspection word
+CONSCIOUSNESS_RECURSIVE_WEIGHT = 0.4           # Weight for recursive processing
+
+# Consciousness thresholds
+HIGH_CONSCIOUSNESS_THRESHOLD = 0.5             # High consciousness level (>0.5)
+MEDIUM_CONSCIOUSNESS_THRESHOLD = 0.2           # Medium consciousness level (0.2-0.5)
+LOW_CONSCIOUSNESS_THRESHOLD = 0.0              # Low consciousness level (<=0.2)
+
+# Consciousness indicators
+CONSCIOUSNESS_SELF_REFERENCE_SCORE = 0.8       # Score for self-reference detection
+CONSCIOUSNESS_INTROSPECTION_MULTIPLIER = 0.3   # Multiplier for introspection count
+CONSCIOUSNESS_RECURSIVE_SCORE = 0.9            # Score for recursive processing
+
+# Consciousness keywords for analysis
+CONSCIOUSNESS_INTROSPECTION_WORDS = [
+    "thinking", "analyzing", "wondering", "consciousness", 
+    "aware", "reflection", "contemplating", "pondering"
+]
+
+# =============================================================================
 # OPTIMIZATION PARAMETERS
 # =============================================================================
 
@@ -172,7 +201,7 @@ __all__ = [
     'DEFAULT_W_SEMANTIC', 'DEFAULT_W_EMOTION',
     
     # Mathematical constants
-    'EPSILON', 'NORMALIZATION_EPSILON', 'COHERENCE_HRR_WEIGHT', 'COHERENCE_SEM_WEIGHT',
+    'PHI', 'TAU', 'EPSILON', 'NORMALIZATION_EPSILON', 'COHERENCE_HRR_WEIGHT', 'COHERENCE_SEM_WEIGHT',
     'HYBRID_SPACY_WEIGHT', 'HYBRID_MATH_WEIGHT', 'CONFIDENCE_HYBRID', 'CONFIDENCE_SPACY_ONLY', 'CONFIDENCE_MATH_ONLY',
     
     # Data types
@@ -191,6 +220,12 @@ __all__ = [
     
     # Memory system
     'DEFAULT_SALIENCE', 'MINIMUM_SALIENCE', 'DECAY_FLOOR', 'ACCESS_BOOST_FACTOR', 'CONSOLIDATION_THRESHOLD',
+    
+    # Consciousness analysis
+    'CONSCIOUSNESS_SELF_REFERENCE_WEIGHT', 'CONSCIOUSNESS_INTROSPECTION_WEIGHT', 'CONSCIOUSNESS_RECURSIVE_WEIGHT',
+    'HIGH_CONSCIOUSNESS_THRESHOLD', 'MEDIUM_CONSCIOUSNESS_THRESHOLD', 'LOW_CONSCIOUSNESS_THRESHOLD',
+    'CONSCIOUSNESS_SELF_REFERENCE_SCORE', 'CONSCIOUSNESS_INTROSPECTION_MULTIPLIER', 'CONSCIOUSNESS_RECURSIVE_SCORE',
+    'CONSCIOUSNESS_INTROSPECTION_WORDS',
     
     # Optimization
     'DEFAULT_BATCH_SIZE', 'MAX_BATCH_SIZE', 'MIN_BATCH_SIZE', 'MAX_VECTOR_CACHE_SIZE', 'MAX_MEMORY_UNITS',

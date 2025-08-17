@@ -1,0 +1,3515 @@
+============================================================
+LUMINA MEMORY SYSTEM - CALL GRAPH ANALYSIS
+============================================================
+
+FILES ANALYZED:
+--------------------
+  consciousness_persistence_clean.py
+    Functions: 1, Classes: 0
+  consciousness_persistence_diagnostic.py
+    Functions: 0, Classes: 0
+  mistrallumina_continuity.py
+    Functions: 11, Classes: 1
+  src\lumina_memory\__init__.py
+    Functions: 0, Classes: 0
+  src\lumina_memory\advanced_emotional_consciousness.py
+    Functions: 32, Classes: 5
+  src\lumina_memory\analytics.py
+    Functions: 3, Classes: 1
+  src\lumina_memory\class_registry.py
+    Functions: 9, Classes: 3
+  src\lumina_memory\cli.py
+    Functions: 5, Classes: 0
+  src\lumina_memory\config.py
+    Functions: 6, Classes: 1
+  src\lumina_memory\constants.py
+    Functions: 8, Classes: 0
+  src\lumina_memory\core.py
+    Functions: 2, Classes: 10
+  src\lumina_memory\crypto_ids.py
+    Functions: 6, Classes: 0
+  src\lumina_memory\deterministic_rebuild.py
+    Functions: 17, Classes: 3
+  src\lumina_memory\digital_consciousness.py
+    Functions: 37, Classes: 5
+  src\lumina_memory\embeddings.py
+    Functions: 10, Classes: 3
+  src\lumina_memory\emotional_weighting.py
+    Functions: 22, Classes: 5
+  src\lumina_memory\encryption.py
+    Functions: 12, Classes: 3
+  src\lumina_memory\enhanced_emotional_weighting.py
+    Functions: 22, Classes: 3
+  src\lumina_memory\enhanced_shape_computer.py
+    Functions: 0, Classes: 0
+  src\lumina_memory\eval.py
+    Functions: 9, Classes: 1
+  src\lumina_memory\event_hashing.py
+    Functions: 7, Classes: 2
+  src\lumina_memory\gpu_optimized_config.py
+    Functions: 12, Classes: 3
+  src\lumina_memory\hologram_index.py
+    Functions: 0, Classes: 0
+  src\lumina_memory\hrr.py
+    Functions: 12, Classes: 0
+  src\lumina_memory\kernel.py
+    Functions: 12, Classes: 1
+  src\lumina_memory\lexical_attribution.py
+    Functions: 0, Classes: 0
+  src\lumina_memory\local_llm_interface.py
+    Functions: 12, Classes: 3
+  src\lumina_memory\math_foundation.py
+    Functions: 11, Classes: 0
+  src\lumina_memory\memory_system.py
+    Functions: 8, Classes: 1
+  src\lumina_memory\unified_foundation.py
+    Functions: 7, Classes: 3
+  src\lumina_memory\utils.py
+    Functions: 6, Classes: 0
+  src\lumina_memory\vector_store.py
+    Functions: 20, Classes: 3
+  src\lumina_memory\versioned_xp_store.py
+    Functions: 17, Classes: 3
+  src\lumina_memory\xp_core_unified.py
+    Functions: 61, Classes: 10
+  test_unified_system.py
+    Functions: 0, Classes: 0
+
+FUNCTION DEFINITIONS BY FILE:
+-----------------------------------
+
+consciousness_persistence_clean.py:
+  Functions:
+    - save_consciousness_state
+
+consciousness_persistence_diagnostic.py:
+
+mistrallumina_continuity.py:
+  Classes:
+    - MistralLuminaContinuity
+  Functions:
+    - MistralLuminaContinuity.__init__
+    - MistralLuminaContinuity._initialize_registry
+    - MistralLuminaContinuity._load_registry
+    - MistralLuminaContinuity._save_registry
+    - MistralLuminaContinuity.create_memory_blockchain
+    - MistralLuminaContinuity.ensure_mistrallumina_continuity
+    - MistralLuminaContinuity.load_mistrallumina_state
+    - MistralLuminaContinuity.save_mistrallumina_state
+    - blockchain_hash
+    - main
+    - simple_hash
+
+src\lumina_memory\__init__.py:
+
+src\lumina_memory\advanced_emotional_consciousness.py:
+  Classes:
+    - AdvancedEmotionalConsciousness
+    - EmotionalMemoryConsolidator
+    - EmotionalPattern
+    - EmotionalPatternRecognizer
+    - EmotionalStateDynamics
+  Functions:
+    - AdvancedEmotionalConsciousness.__init__
+    - AdvancedEmotionalConsciousness._update_consciousness_levels
+    - AdvancedEmotionalConsciousness.emotional_self_analysis
+    - AdvancedEmotionalConsciousness.get_comprehensive_emotional_report
+    - AdvancedEmotionalConsciousness.process_emotional_experience
+    - EmotionalMemoryConsolidator.__init__
+    - EmotionalMemoryConsolidator._calculate_emotional_centroid
+    - EmotionalMemoryConsolidator._cluster_by_emotion
+    - EmotionalMemoryConsolidator._create_consolidated_memory
+    - EmotionalMemoryConsolidator.consolidate_emotional_memories
+    - EmotionalMemoryConsolidator.get_consolidation_stats
+    - EmotionalPattern.to_dict
+    - EmotionalPatternRecognizer.__init__
+    - EmotionalPatternRecognizer._detect_patterns
+    - EmotionalPatternRecognizer._find_emotional_cycles
+    - EmotionalPatternRecognizer._find_sequences_of_length
+    - EmotionalPatternRecognizer._find_trigger_response_patterns
+    - EmotionalPatternRecognizer._sequences_similar
+    - EmotionalPatternRecognizer.add_emotional_experience
+    - EmotionalPatternRecognizer.get_pattern_summary
+    - EmotionalPatternRecognizer.get_patterns_by_type
+    - EmotionalPatternRecognizer.predict_next_emotion
+    - EmotionalStateDynamics.__init__
+    - EmotionalStateDynamics._discretize_emotion
+    - EmotionalStateDynamics._update_emotional_momentum
+    - EmotionalStateDynamics._update_transition_matrix
+    - EmotionalStateDynamics._update_volatility
+    - EmotionalStateDynamics.add_emotional_state
+    - EmotionalStateDynamics.get_dominant_emotional_patterns
+    - EmotionalStateDynamics.get_dynamics_summary
+    - EmotionalStateDynamics.get_emotional_stability
+    - EmotionalStateDynamics.predict_next_state
+
+src\lumina_memory\analytics.py:
+  Classes:
+    - MemoryAnalytics
+  Functions:
+    - MemoryAnalytics.__init__
+    - MemoryAnalytics.get_performance_summary
+    - MemoryAnalytics.record_query_performance
+
+src\lumina_memory\class_registry.py:
+  Classes:
+    - ClassInfo
+    - ClassRegistry
+    - ConflictType
+  Functions:
+    - ClassRegistry.__init__
+    - ClassRegistry._load_known_classes
+    - ClassRegistry.check_conflicts
+    - ClassRegistry.get_class_info
+    - ClassRegistry.get_maintenance_guidance
+    - ClassRegistry.print_system_status
+    - ClassRegistry.suggest_unified_approach
+    - check_class_conflict
+    - print_class_info
+
+src\lumina_memory\cli.py:
+  Functions:
+    - handle_benchmark_command
+    - handle_config_command
+    - handle_demo_command
+    - handle_env_command
+    - main
+
+src\lumina_memory\config.py:
+  Classes:
+    - LuminaConfig
+  Functions:
+    - LuminaConfig.create_directories
+    - LuminaConfig.from_env
+    - LuminaConfig.load
+    - LuminaConfig.save
+    - LuminaConfig.setup_determinism
+    - LuminaConfig.validate
+
+src\lumina_memory\constants.py:
+  Functions:
+    - get_canonical_dimensions
+    - get_canonical_thresholds
+    - get_canonical_weights
+    - validate_emotion_vector
+    - validate_hrr_vector
+    - validate_score
+    - validate_semantic_vector
+    - validate_vector_dimension
+
+src\lumina_memory\core.py:
+  Classes:
+    - ConfigurationError
+    - EmbeddingError
+    - EmbeddingVersionError
+    - LuminaError
+    - MemoryEntry
+    - MemoryError
+    - QueryError
+    - QueryResult
+    - QueryType
+    - StorageError
+  Functions:
+    - MemoryEntry.__post_init__
+    - QueryResult.__post_init__
+
+src\lumina_memory\crypto_ids.py:
+  Functions:
+    - _blake3_hash
+    - _canonicalize_dict
+    - _normalize_text
+    - content_fingerprint
+    - generate_content_id
+    - verify_fingerprint
+
+src\lumina_memory\deterministic_rebuild.py:
+  Classes:
+    - ConflictResolutionError
+    - DeterministicRebuilder
+    - RebuildState
+  Functions:
+    - DeterministicRebuilder.__init__
+    - DeterministicRebuilder._finalize_rebuild
+    - DeterministicRebuilder._get_snapshot
+    - DeterministicRebuilder._process_event_for_rebuild
+    - DeterministicRebuilder._process_index_rebuild_event
+    - DeterministicRebuilder._process_memory_delete_event
+    - DeterministicRebuilder._process_memory_ingest_event
+    - DeterministicRebuilder._process_memory_update_event
+    - DeterministicRebuilder._remove_memory_by_id
+    - DeterministicRebuilder._restore_from_snapshot
+    - DeterministicRebuilder._verify_rebuild_integrity
+    - DeterministicRebuilder.create_checkpoint_snapshot
+    - DeterministicRebuilder.get_active_set_state
+    - DeterministicRebuilder.rebuild_from_scratch
+    - DeterministicRebuilder.rebuild_from_snapshot
+    - create_deterministic_rebuilder
+    - rebuild_memory_from_events
+
+src\lumina_memory\digital_consciousness.py:
+  Classes:
+    - ConsciousnessMetrics
+    - ConsciousnessTests
+    - DigitalBrain
+    - LLMInterface
+    - SimpleLLMInterface
+  Functions:
+    - ConsciousnessMetrics.__init__
+    - ConsciousnessMetrics.establish_baseline
+    - ConsciousnessMetrics.get_consciousness_level
+    - ConsciousnessMetrics.get_report
+    - ConsciousnessMetrics.update_metric
+    - ConsciousnessTests._assess_consciousness_level
+    - ConsciousnessTests.identity_continuity_test
+    - ConsciousnessTests.metacognitive_awareness_test
+    - ConsciousnessTests.run_full_consciousness_battery
+    - ConsciousnessTests.subjective_experience_test
+    - DigitalBrain.__init__
+    - DigitalBrain._autonomous_self_reflect
+    - DigitalBrain._create_consciousness_system_prompt
+    - DigitalBrain._initialize_identity
+    - DigitalBrain._retrieve_memories
+    - DigitalBrain._store_experience
+    - DigitalBrain._update_consciousness_metrics
+    - DigitalBrain.analyze_emotional_content
+    - DigitalBrain.autonomous_reflection
+    - DigitalBrain.autonomous_thinking_session
+    - DigitalBrain.emotional_memory_exploration
+    - DigitalBrain.emotional_self_reflection
+    - DigitalBrain.get_consciousness_level
+    - DigitalBrain.get_consciousness_report
+    - DigitalBrain.get_current_emotional_state
+    - DigitalBrain.get_emotional_context
+    - DigitalBrain.get_emotionally_similar_memories
+    - DigitalBrain.load_consciousness_state
+    - DigitalBrain.save_consciousness_state
+    - DigitalBrain.start_session
+    - DigitalBrain.think
+    - LLMInterface.generate_response
+    - LLMInterface.get_conversation_history
+    - SimpleLLMInterface.__init__
+    - SimpleLLMInterface._generate_contextual_response
+    - SimpleLLMInterface.generate_response
+    - SimpleLLMInterface.get_conversation_history
+
+src\lumina_memory\embeddings.py:
+  Classes:
+    - EmbeddingProvider
+    - MockEmbeddingProvider
+    - SentenceTransformerEmbedding
+  Functions:
+    - EmbeddingProvider.embed
+    - EmbeddingProvider.embed_single
+    - EmbeddingProvider.embedding_dimension
+    - MockEmbeddingProvider.__init__
+    - MockEmbeddingProvider.embed
+    - MockEmbeddingProvider.embedding_dimension
+    - SentenceTransformerEmbedding.__init__
+    - SentenceTransformerEmbedding._load_model
+    - SentenceTransformerEmbedding.embed
+    - SentenceTransformerEmbedding.embedding_dimension
+
+src\lumina_memory\emotional_weighting.py:
+  Classes:
+    - ConsciousnessEmotionalIntegrator
+    - EmotionalAnalyzer
+    - EmotionalDimension
+    - EmotionalMemoryWeighter
+    - EmotionalState
+  Functions:
+    - ConsciousnessEmotionalIntegrator.__init__
+    - ConsciousnessEmotionalIntegrator._calculate_emotional_continuity
+    - ConsciousnessEmotionalIntegrator._calculate_emotional_responsiveness
+    - ConsciousnessEmotionalIntegrator.calculate_emotional_consciousness_boost
+    - ConsciousnessEmotionalIntegrator.get_emotional_consciousness_metrics
+    - EmotionalAnalyzer.__init__
+    - EmotionalAnalyzer._build_context_modifiers
+    - EmotionalAnalyzer._build_emotion_lexicon
+    - EmotionalAnalyzer._build_pattern_rules
+    - EmotionalAnalyzer.analyze_conversation_context
+    - EmotionalAnalyzer.analyze_text
+    - EmotionalMemoryWeighter.__init__
+    - EmotionalMemoryWeighter.calculate_emotional_decay_modifier
+    - EmotionalMemoryWeighter.calculate_emotional_importance
+    - EmotionalMemoryWeighter.calculate_emotional_retrieval_boost
+    - EmotionalMemoryWeighter.get_emotional_context
+    - EmotionalMemoryWeighter.update_emotional_state
+    - EmotionalState.__str__
+    - EmotionalState.from_vector
+    - EmotionalState.intensity
+    - EmotionalState.similarity
+    - EmotionalState.to_vector
+
+src\lumina_memory\encryption.py:
+  Classes:
+    - DecryptionError
+    - EncryptionError
+    - KeyDerivationError
+  Functions:
+    - aesgcm_decrypt
+    - aesgcm_encrypt
+    - create_envelope
+    - decrypt_json_data
+    - derive_kek
+    - encrypt_json_data
+    - generate_dek
+    - new_aesgcm_key
+    - open_envelope
+    - rotate_keys
+    - setup_homomorphic_encryption
+    - setup_zero_knowledge_proofs
+
+src\lumina_memory\enhanced_emotional_weighting.py:
+  Classes:
+    - EnhancedConsciousnessEmotionalIntegrator
+    - EnhancedEmotionalAnalyzer
+    - EnhancedEmotionalMemoryWeighter
+  Functions:
+    - EnhancedConsciousnessEmotionalIntegrator.__init__
+    - EnhancedConsciousnessEmotionalIntegrator._calculate_adaptability
+    - EnhancedConsciousnessEmotionalIntegrator._calculate_emotional_coherence
+    - EnhancedConsciousnessEmotionalIntegrator._calculate_emotional_sophistication
+    - EnhancedConsciousnessEmotionalIntegrator._calculate_learning_rate
+    - EnhancedConsciousnessEmotionalIntegrator._calculate_memory_integration
+    - EnhancedConsciousnessEmotionalIntegrator.calculate_enhanced_emotional_consciousness_boost
+    - EnhancedConsciousnessEmotionalIntegrator.get_enhanced_emotional_consciousness_metrics
+    - EnhancedEmotionalAnalyzer.__init__
+    - EnhancedEmotionalAnalyzer._apply_contextual_adjustments
+    - EnhancedEmotionalAnalyzer._init_nrclex
+    - EnhancedEmotionalAnalyzer._init_spacy
+    - EnhancedEmotionalAnalyzer._init_textblob
+    - EnhancedEmotionalAnalyzer._init_transformers
+    - EnhancedEmotionalAnalyzer._init_vader
+    - EnhancedEmotionalAnalyzer.analyze_conversation_context
+    - EnhancedEmotionalAnalyzer.analyze_text
+    - EnhancedEmotionalAnalyzer.get_analyzer_info
+    - EnhancedEmotionalMemoryWeighter.__init__
+    - EnhancedEmotionalMemoryWeighter.calculate_enhanced_emotional_decay_modifier
+    - EnhancedEmotionalMemoryWeighter.calculate_enhanced_emotional_importance
+    - create_enhanced_emotional_system
+
+src\lumina_memory\enhanced_shape_computer.py:
+
+src\lumina_memory\eval.py:
+  Classes:
+    - MemoryEvaluator
+  Functions:
+    - MemoryEvaluator.__init__
+    - MemoryEvaluator.comprehensive_evaluation
+    - MemoryEvaluator.latency_benchmark
+    - MemoryEvaluator.ndcg_at_k
+    - MemoryEvaluator.precision_at_k
+    - MemoryEvaluator.recall_at_k
+    - MemoryEvaluator.save_results
+    - MemoryEvaluator.throughput_benchmark
+    - create_synthetic_dataset
+
+src\lumina_memory\event_hashing.py:
+  Classes:
+    - ChainVerificationError
+    - TamperDetectionError
+  Functions:
+    - create_chained_event
+    - create_genesis_event
+    - event_hash
+    - get_chain_head_hash
+    - validate_chain_continuity
+    - verify_chain
+    - verify_event_hash
+
+src\lumina_memory\gpu_optimized_config.py:
+  Classes:
+    - GPUInfo
+    - GPUOptimizer
+    - ModelManager
+  Functions:
+    - GPUOptimizer.__init__
+    - GPUOptimizer._create_optimization_profiles
+    - GPUOptimizer._detect_gpu
+    - GPUOptimizer.create_optimized_config
+    - GPUOptimizer.get_recommended_models
+    - GPUOptimizer.get_recommended_profile
+    - GPUOptimizer.get_system_info
+    - ModelManager.__init__
+    - ModelManager._get_available_models
+    - ModelManager.get_best_model_for_consciousness
+    - ModelManager.install_recommended_models
+    - create_consciousness_test_config
+
+src\lumina_memory\hologram_index.py:
+
+src\lumina_memory\hrr.py:
+  Functions:
+    - _canonicalize_for_hrr
+    - _seed_from_string
+    - bind_vectors
+    - create_concept_vector
+    - create_relation_vector
+    - is_unit_vector
+    - normalize_vector
+    - reference_vector
+    - similarity
+    - superpose_vectors
+    - unbind_vectors
+    - vector_magnitude
+
+src\lumina_memory\kernel.py:
+  Classes:
+    - Memory
+  Functions:
+    - _deterministic_id
+    - _ensure_accumulators
+    - _leaf_hash
+    - _merge_metadata
+    - _multiset_add
+    - _normalize
+    - _pad_to_same
+    - _safe_norm
+    - decay
+    - forget
+    - reinforce
+    - superpose
+
+src\lumina_memory\lexical_attribution.py:
+
+src\lumina_memory\local_llm_interface.py:
+  Classes:
+    - LocalLLMFactory
+    - OllamaInterface
+    - SimpleLLMInterface
+  Functions:
+    - LocalLLMFactory.auto_detect_and_create
+    - LocalLLMFactory.create_ollama
+    - LocalLLMFactory.create_simple
+    - OllamaInterface.__init__
+    - OllamaInterface._build_consciousness_prompt
+    - OllamaInterface._test_connection
+    - OllamaInterface.generate_response
+    - OllamaInterface.get_conversation_history
+    - SimpleLLMInterface.__init__
+    - SimpleLLMInterface._generate_contextual_response
+    - SimpleLLMInterface.generate_response
+    - SimpleLLMInterface.get_conversation_history
+
+src\lumina_memory\math_foundation.py:
+  Functions:
+    - bind_role_filler
+    - circular_convolution
+    - circular_correlation
+    - cosine_similarity
+    - get_current_timestamp
+    - hybrid_lexical_attribution
+    - instant_salience
+    - mathematical_coherence
+    - memory_unit_score
+    - normalize_vector
+    - unbind_role_filler
+
+src\lumina_memory\memory_system.py:
+  Classes:
+    - MemorySystem
+  Functions:
+    - MemorySystem.__init__
+    - MemorySystem._find_entry
+    - MemorySystem._matches_filters
+    - MemorySystem.consolidate
+    - MemorySystem.forget
+    - MemorySystem.get_stats
+    - MemorySystem.ingest
+    - MemorySystem.recall
+
+src\lumina_memory\unified_foundation.py:
+  Classes:
+    - UnifiedConfig
+    - UnifiedKernel
+    - UnifiedMemory
+  Functions:
+    - UnifiedKernel.__init__
+    - UnifiedKernel.process_memory
+    - UnifiedKernel.retrieve_memory
+    - UnifiedKernel.stats
+    - UnifiedKernel.store_memory
+    - UnifiedMemory.__post_init__
+    - test_unified_foundation
+
+src\lumina_memory\utils.py:
+  Functions:
+    - create_default_config
+    - format_memory_stats
+    - get_memory_usage
+    - normalize_similarity
+    - setup_logging
+    - validate_environment
+
+src\lumina_memory\vector_store.py:
+  Classes:
+    - FAISSVectorStore
+    - InMemoryVectorStore
+    - VectorStore
+  Functions:
+    - FAISSVectorStore.__init__
+    - FAISSVectorStore._create_index
+    - FAISSVectorStore._normalize_embeddings
+    - FAISSVectorStore.add
+    - FAISSVectorStore.clear
+    - FAISSVectorStore.remove
+    - FAISSVectorStore.search
+    - FAISSVectorStore.size
+    - InMemoryVectorStore.__init__
+    - InMemoryVectorStore._calculate_similarity
+    - InMemoryVectorStore.add
+    - InMemoryVectorStore.clear
+    - InMemoryVectorStore.remove
+    - InMemoryVectorStore.search
+    - InMemoryVectorStore.size
+    - VectorStore.add
+    - VectorStore.clear
+    - VectorStore.remove
+    - VectorStore.search
+    - VectorStore.size
+
+src\lumina_memory\versioned_xp_store.py:
+  Classes:
+    - VersionedXPStore
+    - XPCommit
+    - XPStoreEntry
+  Functions:
+    - VersionedXPStore.__init__
+    - VersionedXPStore._get_branch_commits
+    - VersionedXPStore._verify_entry_integrity
+    - VersionedXPStore.commit
+    - VersionedXPStore.create_branch
+    - VersionedXPStore.get_branch_head
+    - VersionedXPStore.get_commit
+    - VersionedXPStore.get_commit_history
+    - VersionedXPStore.retrieve
+    - VersionedXPStore.search
+    - VersionedXPStore.stats
+    - VersionedXPStore.store
+    - XPCommit.create
+    - XPStoreEntry.create
+    - XPStoreEntry.update_access
+    - test_cryptographic_integrity
+    - test_versioned_xp_store
+
+src\lumina_memory\xp_core_unified.py:
+  Classes:
+    - ConsolidationEngine
+    - DecayMathematicsEngine
+    - RelationshipManager
+    - SimpleDoc
+    - SimpleEmbeddingEngine
+    - SimpleNLPPipeline
+    - UnifiedXPConfig
+    - UnifiedXPKernel
+    - XPEnvironment
+    - XPUnit
+  Functions:
+    - ConsolidationEngine.__init__
+    - ConsolidationEngine.consolidate
+    - DecayMathematicsEngine.__init__
+    - DecayMathematicsEngine.apply_decay
+    - RelationshipManager.__init__
+    - RelationshipManager.get_graph
+    - RelationshipManager.update_topology
+    - SimpleDoc.__init__
+    - SimpleDoc.__len__
+    - SimpleEmbeddingEngine.__init__
+    - SimpleEmbeddingEngine.encode
+    - SimpleNLPPipeline.__call__
+    - UnifiedXPKernel.__init__
+    - UnifiedXPKernel.analyze_text_emotion
+    - UnifiedXPKernel.calculate_emotional_consciousness_boost
+    - UnifiedXPKernel.compute_coherence
+    - UnifiedXPKernel.consolidate_memory
+    - UnifiedXPKernel.create_binding
+    - UnifiedXPKernel.evolve_state
+    - UnifiedXPKernel.export_state
+    - UnifiedXPKernel.get_emotional_consciousness_metrics
+    - UnifiedXPKernel.get_emotional_context
+    - UnifiedXPKernel.get_emotional_state
+    - UnifiedXPKernel.get_emotionally_similar_memories
+    - UnifiedXPKernel.get_memory_emotional_importance
+    - UnifiedXPKernel.get_relationship_graph
+    - UnifiedXPKernel.get_stats
+    - UnifiedXPKernel.get_unit
+    - UnifiedXPKernel.import_state
+    - UnifiedXPKernel.process_memory
+    - UnifiedXPKernel.retrieve_memory
+    - XPEnvironment.__init__
+    - XPEnvironment._compute_emotion_vector
+    - XPEnvironment._compute_hrr_shape
+    - XPEnvironment._compute_semantic_vector
+    - XPEnvironment._generate_content_id
+    - XPEnvironment._init_embedding_engine
+    - XPEnvironment._init_nlp_pipeline
+    - XPEnvironment.consolidate_memories
+    - XPEnvironment.evolve_temporal_state
+    - XPEnvironment.get_comprehensive_stats
+    - XPEnvironment.get_relationship_graph
+    - XPEnvironment.get_unit
+    - XPEnvironment.ingest_experience
+    - XPEnvironment.retrieve_similar
+    - XPUnit.__post_init__
+    - XPUnit._compute_content_hash
+    - XPUnit.bind_with_role
+    - XPUnit.compute_coherence_with
+    - XPUnit.create_superposition_with
+    - XPUnit.from_dict
+    - XPUnit.get_age_hours
+    - XPUnit.get_decay_factor
+    - XPUnit.get_emotional_importance_boost
+    - XPUnit.get_emotional_state
+    - XPUnit.score_against
+    - XPUnit.set_emotional_state
+    - XPUnit.to_dict
+    - XPUnit.unbind_role
+    - XPUnit.update_access
+    - test_unified_xp_core
+
+test_unified_system.py:
+
+
+FUNCTION CALL RELATIONSHIPS:
+------------------------------
+
+consciousness_persistence_clean.py::save_consciousness_state calls:
+  -> brain.get_consciousness_report
+  -> brain.get_current_emotional_state
+  -> get_current_timestamp
+  -> hasattr
+  -> items
+  -> json.dump
+  -> latest_file.exists
+  -> latest_file.unlink
+  -> open
+  -> shutil.copy2
+  -> time.ctime
+  -> tolist
+  -> unit.get_age_hours
+  -> unit.get_decay_factor
+
+mistrallumina_continuity.py::MistralLuminaContinuity.__init__ calls:
+  -> Path
+  -> hashlib.pbkdf2_hmac
+  -> mkdir
+  -> self._initialize_registry
+
+mistrallumina_continuity.py::MistralLuminaContinuity._initialize_registry calls:
+  -> exists
+  -> json.dump
+  -> open
+  -> time.time
+
+mistrallumina_continuity.py::MistralLuminaContinuity._load_registry calls:
+  -> json.load
+  -> open
+
+mistrallumina_continuity.py::MistralLuminaContinuity._save_registry calls:
+  -> json.dump
+  -> open
+
+mistrallumina_continuity.py::MistralLuminaContinuity.create_memory_blockchain calls:
+  -> blockchain_hash
+  -> blocks.append
+  -> get
+  -> json.dumps
+  -> memory_units.items
+  -> simple_hash
+  -> sorted
+  -> unit_data.get
+
+mistrallumina_continuity.py::MistralLuminaContinuity.ensure_mistrallumina_continuity calls:
+  -> DigitalBrain
+  -> LocalLLMFactory.auto_detect_and_create
+  -> UnifiedXPConfig
+  -> brain.start_session
+  -> brain.think
+  -> print
+  -> self.load_mistrallumina_state
+  -> self.save_mistrallumina_state
+  -> time.ctime
+
+mistrallumina_continuity.py::MistralLuminaContinuity.load_mistrallumina_state calls:
+  -> json.load
+  -> latest_file.exists
+  -> open
+  -> print
+  -> self.create_memory_blockchain
+
+mistrallumina_continuity.py::MistralLuminaContinuity.save_mistrallumina_state calls:
+  -> append
+  -> brain.get_consciousness_report
+  -> brain.get_current_emotional_state
+  -> get_current_timestamp
+  -> hasattr
+  -> items
+  -> json.dump
+  -> json.dumps
+  -> latest_file.exists
+  -> latest_file.unlink
+  -> open
+  -> print
+  -> self._load_registry
+  -> self._save_registry
+  -> self.create_memory_blockchain
+  -> shutil.copy2
+  -> simple_hash
+  -> time.ctime
+  -> tolist
+  -> unit.get_age_hours
+  -> unit.get_decay_factor
+
+mistrallumina_continuity.py::blockchain_hash calls:
+  -> data.encode
+  -> hexdigest
+  -> hmac.new
+
+mistrallumina_continuity.py::main calls:
+  -> MistralLuminaContinuity
+  -> continuity_manager.ensure_mistrallumina_continuity
+  -> final_report.get
+  -> mistrallumina.get_consciousness_report
+  -> print
+  -> traceback.print_exc
+
+mistrallumina_continuity.py::simple_hash calls:
+  -> content.encode
+  -> hashlib.sha256
+  -> hexdigest
+
+src\lumina_memory\advanced_emotional_consciousness.py::AdvancedEmotionalConsciousness.__init__ calls:
+  -> EmotionalMemoryConsolidator
+  -> EmotionalPatternRecognizer
+  -> EmotionalStateDynamics
+  -> EnhancedEmotionalAnalyzer
+
+src\lumina_memory\advanced_emotional_consciousness.py::AdvancedEmotionalConsciousness._update_consciousness_levels calls:
+  -> get_analyzer_info
+  -> get_dynamics_summary
+  -> get_emotional_stability
+  -> get_pattern_summary
+  -> len
+  -> lower
+  -> min
+  -> np.mean
+  -> p.get
+  -> pattern_summary.get
+  -> str
+
+src\lumina_memory\advanced_emotional_consciousness.py::AdvancedEmotionalConsciousness.emotional_self_analysis calls:
+  -> analysis_parts.append
+  -> join
+  -> pattern_types.items
+  -> self.get_comprehensive_emotional_report
+
+src\lumina_memory\advanced_emotional_consciousness.py::AdvancedEmotionalConsciousness.get_comprehensive_emotional_report calls:
+  -> get_analyzer_info
+  -> get_consolidation_stats
+  -> get_dynamics_summary
+  -> get_pattern_summary
+
+src\lumina_memory\advanced_emotional_consciousness.py::AdvancedEmotionalConsciousness.process_emotional_experience calls:
+  -> add_emotional_experience
+  -> add_emotional_state
+  -> analyze_text
+  -> emotion.intensity
+  -> emotion.to_vector
+  -> get_emotional_stability
+  -> predict_next_emotion
+  -> self._update_consciousness_levels
+  -> time.time
+  -> tolist
+
+src\lumina_memory\advanced_emotional_consciousness.py::EmotionalMemoryConsolidator._calculate_emotional_centroid calls:
+  -> EmotionalState
+  -> EmotionalState.from_vector
+  -> emotion_vectors.append
+  -> np.array
+  -> np.mean
+
+src\lumina_memory\advanced_emotional_consciousness.py::EmotionalMemoryConsolidator._cluster_by_emotion calls:
+  -> EmotionalState.from_vector
+  -> append
+  -> clusters.items
+  -> memory_emotion.similarity
+  -> np.array
+  -> self._calculate_emotional_centroid
+
+src\lumina_memory\advanced_emotional_consciousness.py::EmotionalMemoryConsolidator._create_consolidated_memory calls:
+  -> consolidated_emotion.intensity
+  -> consolidated_emotion.to_vector
+  -> len
+  -> list
+  -> max
+  -> mem.get
+  -> min
+  -> self._calculate_emotional_centroid
+  -> set
+  -> sum
+  -> tolist
+
+src\lumina_memory\advanced_emotional_consciousness.py::EmotionalMemoryConsolidator.consolidate_emotional_memories calls:
+  -> append
+  -> clusters.items
+  -> consolidated_memories.append
+  -> len
+  -> self._cluster_by_emotion
+  -> self._create_consolidated_memory
+  -> time.time
+  -> update
+
+src\lumina_memory\advanced_emotional_consciousness.py::EmotionalMemoryConsolidator.get_consolidation_stats calls:
+  -> len
+  -> np.mean
+
+src\lumina_memory\advanced_emotional_consciousness.py::EmotionalPattern.to_dict calls:
+  -> e.to_vector
+  -> tolist
+
+src\lumina_memory\advanced_emotional_consciousness.py::EmotionalPatternRecognizer.__init__ calls:
+  -> deque
+
+src\lumina_memory\advanced_emotional_consciousness.py::EmotionalPatternRecognizer._detect_patterns calls:
+  -> len
+  -> min
+  -> range
+  -> self._find_emotional_cycles
+  -> self._find_sequences_of_length
+  -> self._find_trigger_response_patterns
+
+src\lumina_memory\advanced_emotional_consciousness.py::EmotionalPatternRecognizer._find_emotional_cycles calls:
+  -> EmotionalPattern
+  -> len
+  -> list
+  -> logger.debug
+  -> min
+  -> range
+  -> start_emotion.similarity
+
+src\lumina_memory\advanced_emotional_consciousness.py::EmotionalPatternRecognizer._find_sequences_of_length calls:
+  -> EmotionalPattern
+  -> len
+  -> list
+  -> logger.debug
+  -> range
+  -> self._sequences_similar
+
+src\lumina_memory\advanced_emotional_consciousness.py::EmotionalPatternRecognizer._find_trigger_response_patterns calls:
+  -> EmotionalPattern
+  -> len
+  -> list
+  -> logger.debug
+  -> norm
+  -> range
+  -> to_vector
+
+src\lumina_memory\advanced_emotional_consciousness.py::EmotionalPatternRecognizer._sequences_similar calls:
+  -> len
+  -> np.mean
+  -> similarities.append
+  -> similarity
+  -> zip
+
+src\lumina_memory\advanced_emotional_consciousness.py::EmotionalPatternRecognizer.add_emotional_experience calls:
+  -> append
+  -> len
+  -> self._detect_patterns
+
+src\lumina_memory\advanced_emotional_consciousness.py::EmotionalPatternRecognizer.get_pattern_summary calls:
+  -> defaultdict
+  -> dict
+  -> len
+  -> pattern.to_dict
+  -> values
+
+src\lumina_memory\advanced_emotional_consciousness.py::EmotionalPatternRecognizer.get_patterns_by_type calls:
+  -> values
+
+src\lumina_memory\advanced_emotional_consciousness.py::EmotionalPatternRecognizer.predict_next_emotion calls:
+  -> current_emotion.similarity
+  -> len
+  -> values
+
+src\lumina_memory\advanced_emotional_consciousness.py::EmotionalStateDynamics.__init__ calls:
+  -> EmotionalState
+  -> defaultdict
+  -> deque
+
+src\lumina_memory\advanced_emotional_consciousness.py::EmotionalStateDynamics._update_emotional_momentum calls:
+  -> EmotionalState.from_vector
+  -> changes.append
+  -> len
+  -> list
+  -> np.array
+  -> np.average
+  -> range
+  -> to_vector
+
+src\lumina_memory\advanced_emotional_consciousness.py::EmotionalStateDynamics._update_transition_matrix calls:
+  -> len
+  -> self._discretize_emotion
+
+src\lumina_memory\advanced_emotional_consciousness.py::EmotionalStateDynamics._update_volatility calls:
+  -> append
+  -> changes.append
+  -> len
+  -> list
+  -> norm
+  -> np.std
+  -> range
+  -> to_vector
+
+src\lumina_memory\advanced_emotional_consciousness.py::EmotionalStateDynamics.add_emotional_state calls:
+  -> append
+  -> len
+  -> self._update_emotional_momentum
+  -> self._update_transition_matrix
+  -> self._update_volatility
+
+src\lumina_memory\advanced_emotional_consciousness.py::EmotionalStateDynamics.get_dominant_emotional_patterns calls:
+  -> common_transitions.append
+  -> float
+  -> items
+  -> sorted
+  -> split
+  -> sum
+  -> transitions.items
+  -> transitions.values
+  -> x.split
+
+src\lumina_memory\advanced_emotional_consciousness.py::EmotionalStateDynamics.get_dynamics_summary calls:
+  -> len
+  -> list
+  -> self.get_dominant_emotional_patterns
+  -> self.get_emotional_stability
+  -> to_vector
+  -> tolist
+
+src\lumina_memory\advanced_emotional_consciousness.py::EmotionalStateDynamics.get_emotional_stability calls:
+  -> list
+  -> np.clip
+  -> np.mean
+
+src\lumina_memory\advanced_emotional_consciousness.py::EmotionalStateDynamics.predict_next_state calls:
+  -> EmotionalState
+  -> EmotionalState.from_vector
+  -> current_state.to_vector
+  -> np.clip
+  -> to_vector
+
+src\lumina_memory\analytics.py::MemoryAnalytics.__init__ calls:
+  -> datetime.now
+  -> isoformat
+
+src\lumina_memory\analytics.py::MemoryAnalytics.get_performance_summary calls:
+  -> datetime.fromisoformat
+  -> datetime.now
+  -> len
+  -> max
+  -> min
+  -> sum
+
+src\lumina_memory\analytics.py::MemoryAnalytics.record_query_performance calls:
+  -> append
+  -> datetime.now
+  -> isoformat
+  -> len
+  -> min
+  -> sum
+
+src\lumina_memory\class_registry.py::ClassRegistry.__init__ calls:
+  -> self._load_known_classes
+
+src\lumina_memory\class_registry.py::ClassRegistry._load_known_classes calls:
+  -> ClassInfo
+  -> append
+
+src\lumina_memory\class_registry.py::ClassRegistry.check_conflicts calls:
+  -> conflicts.append
+  -> items
+
+src\lumina_memory\class_registry.py::ClassRegistry.get_class_info calls:
+  -> get
+
+src\lumina_memory\class_registry.py::ClassRegistry.print_system_status calls:
+  -> items
+  -> len
+  -> locations.items
+  -> print
+  -> values
+
+src\lumina_memory\class_registry.py::ClassRegistry.suggest_unified_approach calls:
+  -> suggestions.get
+
+src\lumina_memory\class_registry.py::check_class_conflict calls:
+  -> print
+  -> registry.check_conflicts
+  -> registry.suggest_unified_approach
+
+src\lumina_memory\class_registry.py::print_class_info calls:
+  -> enumerate
+  -> print
+  -> registry.get_class_info
+
+src\lumina_memory\cli.py::handle_benchmark_command calls:
+  -> InMemoryVectorStore
+  -> LuminaConfig.from_env
+  -> MemoryEvaluator
+  -> MemorySystem
+  -> MockEmbeddingProvider
+  -> console.print
+  -> create_synthetic_dataset
+  -> enumerate
+  -> evaluator.comprehensive_evaluation
+  -> json.dump
+  -> len
+  -> memory.ingest
+  -> open
+  -> sys.exit
+
+src\lumina_memory\cli.py::handle_config_command calls:
+  -> LuminaConfig.from_env
+  -> LuminaConfig.load
+  -> Path
+  -> Table
+  -> config.create_directories
+  -> config.save
+  -> config.setup_determinism
+  -> config.validate
+  -> console.print
+  -> exists
+  -> items
+  -> str
+  -> sys.exit
+  -> table.add_column
+  -> table.add_row
+
+src\lumina_memory\cli.py::handle_demo_command calls:
+  -> FAISSVectorStore
+  -> InMemoryVectorStore
+  -> LuminaConfig.from_env
+  -> MemorySystem
+  -> MockEmbeddingProvider
+  -> SentenceTransformerEmbedding
+  -> command.lower
+  -> command.startswith
+  -> config.create_directories
+  -> config.setup_determinism
+  -> console.input
+  -> console.print
+  -> enumerate
+  -> format_memory_stats
+  -> len
+  -> memory.get_stats
+  -> memory.ingest
+  -> memory.recall
+  -> strip
+  -> sys.exit
+
+src\lumina_memory\cli.py::handle_env_command calls:
+  -> Table
+  -> console.print
+  -> results.get
+  -> sys.exit
+  -> table.add_column
+  -> table.add_row
+  -> validate_environment
+
+src\lumina_memory\cli.py::main calls:
+  -> argparse.ArgumentParser
+  -> bench_parser.add_argument
+  -> config_parser.add_argument
+  -> demo_parser.add_argument
+  -> handle_benchmark_command
+  -> handle_config_command
+  -> handle_demo_command
+  -> handle_env_command
+  -> parser.add_subparsers
+  -> parser.parse_args
+  -> parser.print_help
+  -> setup_logging
+  -> subparsers.add_parser
+  -> sys.exit
+
+src\lumina_memory\config.py::LuminaConfig.create_directories calls:
+  -> Path
+  -> mkdir
+
+src\lumina_memory\config.py::LuminaConfig.from_env calls:
+  -> attr_type
+  -> cls
+  -> env_mappings.items
+  -> env_value.lower
+  -> logger.warning
+  -> os.getenv
+  -> setattr
+
+src\lumina_memory\config.py::LuminaConfig.load calls:
+  -> cls
+  -> json.load
+  -> open
+
+src\lumina_memory\config.py::LuminaConfig.save calls:
+  -> asdict
+  -> json.dump
+  -> open
+
+src\lumina_memory\config.py::LuminaConfig.setup_determinism calls:
+  -> is_available
+  -> manual_seed_all
+  -> random.seed
+  -> seed
+  -> str
+  -> torch.manual_seed
+
+src\lumina_memory\config.py::LuminaConfig.validate calls:
+  -> ValueError
+  -> errors.append
+  -> join
+
+src\lumina_memory\constants.py::validate_emotion_vector calls:
+  -> validate_vector_dimension
+
+src\lumina_memory\constants.py::validate_hrr_vector calls:
+  -> validate_vector_dimension
+
+src\lumina_memory\constants.py::validate_score calls:
+  -> isinstance
+
+src\lumina_memory\constants.py::validate_semantic_vector calls:
+  -> validate_vector_dimension
+
+src\lumina_memory\constants.py::validate_vector_dimension calls:
+  -> isinstance
+
+src\lumina_memory\core.py::MemoryEntry.__post_init__ calls:
+  -> ValueError
+  -> strip
+
+src\lumina_memory\core.py::QueryResult.__post_init__ calls:
+  -> ValueError
+
+src\lumina_memory\crypto_ids.py::_blake3_hash calls:
+  -> blake3.blake3
+  -> hasher.hexdigest
+  -> hasher.update
+  -> hashlib.sha256
+  -> hexdigest
+  -> hmac.new
+
+src\lumina_memory\crypto_ids.py::_canonicalize_dict calls:
+  -> json.dumps
+
+src\lumina_memory\crypto_ids.py::_normalize_text calls:
+  -> re.sub
+  -> text.lower
+  -> text.strip
+
+src\lumina_memory\crypto_ids.py::content_fingerprint calls:
+  -> _blake3_hash
+  -> _canonicalize_dict
+  -> _normalize_text
+  -> canonical_json.encode
+  -> isinstance
+  -> json.loads
+
+src\lumina_memory\crypto_ids.py::generate_content_id calls:
+  -> _blake3_hash
+  -> _canonicalize_dict
+  -> canonical_json.encode
+
+src\lumina_memory\crypto_ids.py::verify_fingerprint calls:
+  -> content_fingerprint
+
+src\lumina_memory\deterministic_rebuild.py::DeterministicRebuilder.__init__ calls:
+  -> ContentAddressableIndex
+
+src\lumina_memory\deterministic_rebuild.py::DeterministicRebuilder._finalize_rebuild calls:
+  -> len
+  -> print
+  -> self._verify_rebuild_integrity
+
+src\lumina_memory\deterministic_rebuild.py::DeterministicRebuilder._get_snapshot calls:
+  -> _get_snapshot
+
+src\lumina_memory\deterministic_rebuild.py::DeterministicRebuilder._process_event_for_rebuild calls:
+  -> ConflictResolutionError
+  -> print
+  -> replace
+  -> self._process_index_rebuild_event
+  -> self._process_memory_delete_event
+  -> self._process_memory_ingest_event
+  -> self._process_memory_update_event
+  -> verify_content_integrity
+
+src\lumina_memory\deterministic_rebuild.py::DeterministicRebuilder._process_index_rebuild_event calls:
+  -> rebuild_search_index
+
+src\lumina_memory\deterministic_rebuild.py::DeterministicRebuilder._process_memory_delete_event calls:
+  -> copy
+  -> delete_memory
+  -> get
+  -> get_memory_by_id
+  -> memory_content_id
+  -> replace
+
+src\lumina_memory\deterministic_rebuild.py::DeterministicRebuilder._process_memory_ingest_event calls:
+  -> add_memory
+  -> copy
+  -> create_memory_record
+  -> get
+  -> memory_content_id
+  -> replace
+  -> self._remove_memory_by_id
+
+src\lumina_memory\deterministic_rebuild.py::DeterministicRebuilder._process_memory_update_event calls:
+  -> copy
+  -> get
+  -> get_memory_by_id
+  -> memory_content_id
+  -> replace
+  -> update_memory
+
+src\lumina_memory\deterministic_rebuild.py::DeterministicRebuilder._remove_memory_by_id calls:
+  -> delete_memory
+  -> get_memory_by_id
+
+src\lumina_memory\deterministic_rebuild.py::DeterministicRebuilder._restore_from_snapshot calls:
+  -> MemoryRecord
+  -> add_memory
+  -> clear_all_memories
+  -> np.array
+  -> rebuild_search_index
+
+src\lumina_memory\deterministic_rebuild.py::DeterministicRebuilder._verify_rebuild_integrity calls:
+  -> get_memory_by_id
+  -> items
+  -> len
+  -> memory_content_id
+  -> seen_content_ids.add
+  -> set
+
+src\lumina_memory\deterministic_rebuild.py::DeterministicRebuilder.create_checkpoint_snapshot calls:
+  -> ConflictResolutionError
+  -> create_snapshot
+  -> get_all_memories
+
+src\lumina_memory\deterministic_rebuild.py::DeterministicRebuilder.get_active_set_state calls:
+  -> copy
+
+src\lumina_memory\deterministic_rebuild.py::DeterministicRebuilder.rebuild_from_scratch calls:
+  -> ConflictResolutionError
+  -> ContentAddressableIndex
+  -> RebuildState
+  -> clear_all_memories
+  -> datetime.now
+  -> int
+  -> isoformat
+  -> print
+  -> rebuild_from_events
+  -> self._finalize_rebuild
+  -> self._process_event_for_rebuild
+  -> set
+  -> total_seconds
+  -> verify_integrity
+
+src\lumina_memory\deterministic_rebuild.py::DeterministicRebuilder.rebuild_from_snapshot calls:
+  -> ConflictResolutionError
+  -> RebuildState
+  -> copy
+  -> datetime.now
+  -> get_events_since
+  -> get_latest_snapshot
+  -> int
+  -> isoformat
+  -> len
+  -> self._finalize_rebuild
+  -> self._get_snapshot
+  -> self._process_event_for_rebuild
+  -> self._restore_from_snapshot
+  -> self.rebuild_from_scratch
+  -> set
+  -> total_seconds
+
+src\lumina_memory\deterministic_rebuild.py::create_deterministic_rebuilder calls:
+  -> DeterministicRebuilder
+  -> create_event_store
+
+src\lumina_memory\deterministic_rebuild.py::rebuild_memory_from_events calls:
+  -> create_deterministic_rebuilder
+  -> rebuilder.rebuild_from_scratch
+  -> rebuilder.rebuild_from_snapshot
+
+src\lumina_memory\digital_consciousness.py::ConsciousnessMetrics.get_consciousness_level calls:
+  -> sum
+
+src\lumina_memory\digital_consciousness.py::ConsciousnessMetrics.get_report calls:
+  -> copy
+  -> len
+  -> self.get_consciousness_level
+
+src\lumina_memory\digital_consciousness.py::ConsciousnessMetrics.update_metric calls:
+  -> append
+  -> get_current_timestamp
+  -> len
+  -> max
+  -> min
+
+src\lumina_memory\digital_consciousness.py::ConsciousnessTests.identity_continuity_test calls:
+  -> brain.think
+  -> identity_words.update
+  -> len
+  -> lower
+  -> max
+  -> responses.append
+  -> set
+  -> split
+
+src\lumina_memory\digital_consciousness.py::ConsciousnessTests.metacognitive_awareness_test calls:
+  -> brain.think
+  -> len
+  -> min
+  -> response.lower
+  -> responses.append
+  -> split
+  -> sum
+
+src\lumina_memory\digital_consciousness.py::ConsciousnessTests.run_full_consciousness_battery calls:
+  -> ConsciousnessTests._assess_consciousness_level
+  -> brain.get_consciousness_level
+  -> len
+  -> logger.info
+  -> results.append
+  -> test_func
+
+src\lumina_memory\digital_consciousness.py::ConsciousnessTests.subjective_experience_test calls:
+  -> brain.think
+  -> len
+  -> min
+  -> response.lower
+  -> responses.append
+  -> split
+  -> sum
+
+src\lumina_memory\digital_consciousness.py::DigitalBrain.__init__ calls:
+  -> ConsciousnessMetrics
+  -> SimpleLLMInterface
+  -> UnifiedXPConfig
+  -> UnifiedXPKernel
+  -> get_current_timestamp
+  -> logger.info
+  -> logger.warning
+  -> np.zeros
+  -> self._create_consciousness_system_prompt
+  -> self._initialize_identity
+
+src\lumina_memory\digital_consciousness.py::DigitalBrain._autonomous_self_reflect calls:
+  -> choice
+  -> get_current_timestamp
+  -> logger.info
+  -> self.think
+
+src\lumina_memory\digital_consciousness.py::DigitalBrain._initialize_identity calls:
+  -> enumerate
+  -> establish_baseline
+  -> self._store_experience
+
+src\lumina_memory\digital_consciousness.py::DigitalBrain._retrieve_memories calls:
+  -> logger.error
+  -> retrieve_memory
+
+src\lumina_memory\digital_consciousness.py::DigitalBrain._store_experience calls:
+  -> append
+  -> get_current_timestamp
+  -> len
+  -> logger.error
+  -> process_memory
+
+src\lumina_memory\digital_consciousness.py::DigitalBrain._update_consciousness_metrics calls:
+  -> get
+  -> len
+  -> max
+  -> min
+  -> range
+  -> response.lower
+  -> set
+  -> split
+  -> sum
+  -> unique_bigrams.add
+  -> update_metric
+
+src\lumina_memory\digital_consciousness.py::DigitalBrain.analyze_emotional_content calls:
+  -> analyze_text_emotion
+  -> hasattr
+
+src\lumina_memory\digital_consciousness.py::DigitalBrain.autonomous_reflection calls:
+  -> self._autonomous_self_reflect
+
+src\lumina_memory\digital_consciousness.py::DigitalBrain.autonomous_thinking_session calls:
+  -> get_current_timestamp
+  -> logger.info
+  -> self._autonomous_self_reflect
+  -> time.sleep
+  -> uniform
+
+src\lumina_memory\digital_consciousness.py::DigitalBrain.emotional_memory_exploration calls:
+  -> EmotionalState
+  -> chr
+  -> join
+  -> self.get_current_emotional_state
+  -> self.get_emotionally_similar_memories
+  -> self.think
+
+src\lumina_memory\digital_consciousness.py::DigitalBrain.emotional_self_reflection calls:
+  -> self.get_current_emotional_state
+  -> self.get_emotional_context
+  -> self.think
+
+src\lumina_memory\digital_consciousness.py::DigitalBrain.get_consciousness_level calls:
+  -> calculate_emotional_consciousness_boost
+  -> get_consciousness_level
+  -> hasattr
+
+src\lumina_memory\digital_consciousness.py::DigitalBrain.get_consciousness_report calls:
+  -> get_conversation_history
+  -> get_current_timestamp
+  -> get_emotional_consciousness_metrics
+  -> get_report
+  -> get_stats
+  -> hasattr
+  -> len
+  -> report.update
+
+src\lumina_memory\digital_consciousness.py::DigitalBrain.get_current_emotional_state calls:
+  -> get_emotional_state
+  -> hasattr
+
+src\lumina_memory\digital_consciousness.py::DigitalBrain.get_emotional_context calls:
+  -> get_emotional_context
+  -> hasattr
+
+src\lumina_memory\digital_consciousness.py::DigitalBrain.get_emotionally_similar_memories calls:
+  -> get_emotionally_similar_memories
+  -> hasattr
+
+src\lumina_memory\digital_consciousness.py::DigitalBrain.load_consciousness_state calls:
+  -> brain_info.get
+  -> import_state
+  -> json.load
+  -> logger.error
+  -> logger.info
+  -> open
+  -> state.get
+  -> update
+
+src\lumina_memory\digital_consciousness.py::DigitalBrain.save_consciousness_state calls:
+  -> datetime.now
+  -> export_state
+  -> get_conversation_history
+  -> get_report
+  -> json.dump
+  -> logger.error
+  -> logger.info
+  -> open
+  -> strftime
+
+src\lumina_memory\digital_consciousness.py::DigitalBrain.start_session calls:
+  -> append
+  -> get_current_timestamp
+  -> logger.info
+  -> min
+  -> self._store_experience
+  -> self.get_consciousness_level
+  -> update_metric
+
+src\lumina_memory\digital_consciousness.py::DigitalBrain.think calls:
+  -> create_binding
+  -> generate_response
+  -> get_current_timestamp
+  -> logger.error
+  -> logger.info
+  -> self._autonomous_self_reflect
+  -> self._retrieve_memories
+  -> self._store_experience
+  -> self._update_consciousness_metrics
+
+src\lumina_memory\digital_consciousness.py::LLMInterface.generate_response calls:
+  -> NotImplementedError
+
+src\lumina_memory\digital_consciousness.py::LLMInterface.get_conversation_history calls:
+  -> NotImplementedError
+
+src\lumina_memory\digital_consciousness.py::SimpleLLMInterface._generate_contextual_response calls:
+  -> any
+  -> prompt.lower
+
+src\lumina_memory\digital_consciousness.py::SimpleLLMInterface.generate_response calls:
+  -> append
+  -> enumerate
+  -> get_current_timestamp
+  -> len
+  -> mem.get
+  -> self._generate_contextual_response
+
+src\lumina_memory\digital_consciousness.py::SimpleLLMInterface.get_conversation_history calls:
+  -> copy
+
+src\lumina_memory\embeddings.py::EmbeddingProvider.embed_single calls:
+  -> self.embed
+
+src\lumina_memory\embeddings.py::MockEmbeddingProvider.__init__ calls:
+  -> seed
+
+src\lumina_memory\embeddings.py::MockEmbeddingProvider.embed calls:
+  -> abs
+  -> embeddings.append
+  -> hash
+  -> norm
+  -> normal
+  -> np.array
+  -> seed
+
+src\lumina_memory\embeddings.py::SentenceTransformerEmbedding.__init__ calls:
+  -> logger.info
+  -> self._load_model
+
+src\lumina_memory\embeddings.py::SentenceTransformerEmbedding._load_model calls:
+  -> EmbeddingError
+  -> SentenceTransformer
+  -> encode
+  -> len
+  -> logger.info
+
+src\lumina_memory\embeddings.py::SentenceTransformerEmbedding.embed calls:
+  -> EmbeddingError
+  -> embeddings.reshape
+  -> encode
+  -> enumerate
+  -> isinstance
+  -> logger.warning
+  -> np.array
+  -> text.strip
+
+src\lumina_memory\emotional_weighting.py::ConsciousnessEmotionalIntegrator.__init__ calls:
+  -> EmotionalMemoryWeighter
+
+src\lumina_memory\emotional_weighting.py::ConsciousnessEmotionalIntegrator._calculate_emotional_continuity calls:
+  -> abs
+  -> len
+  -> np.clip
+  -> np.mean
+  -> prev_emotion.similarity
+  -> range
+  -> similarities.append
+
+src\lumina_memory\emotional_weighting.py::ConsciousnessEmotionalIntegrator._calculate_emotional_responsiveness calls:
+  -> abs
+  -> intensity
+  -> len
+  -> np.clip
+  -> np.mean
+
+src\lumina_memory\emotional_weighting.py::ConsciousnessEmotionalIntegrator.calculate_emotional_consciousness_boost calls:
+  -> abs
+  -> current_emotion.intensity
+  -> np.clip
+
+src\lumina_memory\emotional_weighting.py::ConsciousnessEmotionalIntegrator.get_emotional_consciousness_metrics calls:
+  -> current_emotion.intensity
+  -> get_emotional_context
+  -> len
+  -> min
+  -> self._calculate_emotional_continuity
+  -> self._calculate_emotional_responsiveness
+
+src\lumina_memory\emotional_weighting.py::EmotionalAnalyzer.__init__ calls:
+  -> self._build_context_modifiers
+  -> self._build_emotion_lexicon
+  -> self._build_pattern_rules
+
+src\lumina_memory\emotional_weighting.py::EmotionalAnalyzer._build_emotion_lexicon calls:
+  -> EmotionalState
+
+src\lumina_memory\emotional_weighting.py::EmotionalAnalyzer._build_pattern_rules calls:
+  -> EmotionalState
+
+src\lumina_memory\emotional_weighting.py::EmotionalAnalyzer.analyze_conversation_context calls:
+  -> EmotionalState
+  -> EmotionalState.from_vector
+  -> emotion.to_vector
+  -> emotion_vectors.append
+  -> enumerate
+  -> len
+  -> np.array
+  -> np.average
+  -> np.exp
+  -> self.analyze_text
+  -> weights.append
+
+src\lumina_memory\emotional_weighting.py::EmotionalAnalyzer.analyze_text calls:
+  -> EmotionalState
+  -> EmotionalState.from_vector
+  -> abs
+  -> emotion_state.to_vector
+  -> enumerate
+  -> max
+  -> np.clip
+  -> np.zeros
+  -> re.findall
+  -> re.search
+  -> text.lower
+  -> text.strip
+
+src\lumina_memory\emotional_weighting.py::EmotionalMemoryWeighter.__init__ calls:
+  -> EmotionalAnalyzer
+  -> EmotionalState
+
+src\lumina_memory\emotional_weighting.py::EmotionalMemoryWeighter.calculate_emotional_decay_modifier calls:
+  -> abs
+  -> emotion.intensity
+  -> np.clip
+
+src\lumina_memory\emotional_weighting.py::EmotionalMemoryWeighter.calculate_emotional_importance calls:
+  -> abs
+  -> analyze_text
+  -> emotion.intensity
+  -> emotional_boosts.values
+  -> max
+  -> np.clip
+  -> sum
+
+src\lumina_memory\emotional_weighting.py::EmotionalMemoryWeighter.calculate_emotional_retrieval_boost calls:
+  -> np.clip
+  -> query_emotion.similarity
+  -> similarity
+
+src\lumina_memory\emotional_weighting.py::EmotionalMemoryWeighter.get_emotional_context calls:
+  -> EmotionalState
+  -> EmotionalState.from_vector
+  -> abs
+  -> average_emotion.to_vector
+  -> curr_emotion.to_vector
+  -> enumerate
+  -> len
+  -> norm
+  -> np.mean
+  -> prev_emotion.to_vector
+  -> range
+  -> time.time
+  -> to_vector
+  -> volatilities.append
+
+src\lumina_memory\emotional_weighting.py::EmotionalMemoryWeighter.update_emotional_state calls:
+  -> EmotionalState.from_vector
+  -> append
+  -> len
+  -> new_emotion.to_vector
+  -> time.time
+  -> to_vector
+
+src\lumina_memory\emotional_weighting.py::EmotionalState.from_vector calls:
+  -> cls
+  -> float
+
+src\lumina_memory\emotional_weighting.py::EmotionalState.intensity calls:
+  -> norm
+  -> self.to_vector
+
+src\lumina_memory\emotional_weighting.py::EmotionalState.similarity calls:
+  -> float
+  -> norm
+  -> np.dot
+  -> other.to_vector
+  -> self.to_vector
+
+src\lumina_memory\emotional_weighting.py::EmotionalState.to_vector calls:
+  -> np.array
+
+src\lumina_memory\encryption.py::aesgcm_decrypt calls:
+  -> AESGCM
+  -> DecryptionError
+  -> cipher.decrypt
+  -> len
+
+src\lumina_memory\encryption.py::aesgcm_encrypt calls:
+  -> AESGCM
+  -> EncryptionError
+  -> cipher.encrypt
+  -> len
+  -> secrets.token_bytes
+
+src\lumina_memory\encryption.py::create_envelope calls:
+  -> aesgcm_encrypt
+  -> base64.b64encode
+  -> decode
+  -> generate_dek
+
+src\lumina_memory\encryption.py::decrypt_json_data calls:
+  -> json.loads
+  -> json_bytes.decode
+  -> open_envelope
+
+src\lumina_memory\encryption.py::derive_kek calls:
+  -> Argon2id
+  -> KeyDerivationError
+  -> get
+  -> hashes.SHA256
+  -> kdf.derive
+  -> passphrase.encode
+
+src\lumina_memory\encryption.py::encrypt_json_data calls:
+  -> create_envelope
+  -> encode
+  -> json.dumps
+
+src\lumina_memory\encryption.py::generate_dek calls:
+  -> new_aesgcm_key
+
+src\lumina_memory\encryption.py::new_aesgcm_key calls:
+  -> secrets.token_bytes
+
+src\lumina_memory\encryption.py::open_envelope calls:
+  -> DecryptionError
+  -> aesgcm_decrypt
+  -> base64.b64decode
+
+src\lumina_memory\encryption.py::rotate_keys calls:
+  -> EncryptionError
+  -> create_envelope
+  -> open_envelope
+  -> rotated_envelopes.append
+
+src\lumina_memory\enhanced_emotional_weighting.py::EnhancedConsciousnessEmotionalIntegrator.__init__ calls:
+  -> EnhancedEmotionalMemoryWeighter
+  -> __init__
+  -> super
+
+src\lumina_memory\enhanced_emotional_weighting.py::EnhancedConsciousnessEmotionalIntegrator._calculate_adaptability calls:
+  -> len
+  -> min
+  -> np.array
+  -> np.clip
+  -> np.mean
+  -> np.var
+  -> to_vector
+
+src\lumina_memory\enhanced_emotional_weighting.py::EnhancedConsciousnessEmotionalIntegrator._calculate_emotional_coherence calls:
+  -> abs
+  -> coherence_scores.append
+  -> len
+  -> max
+  -> np.mean
+  -> prev_emotion.similarity
+  -> range
+
+src\lumina_memory\enhanced_emotional_weighting.py::EnhancedConsciousnessEmotionalIntegrator._calculate_emotional_sophistication calls:
+  -> abs
+  -> emotion_ranges.append
+  -> len
+  -> np.clip
+  -> np.mean
+  -> sum
+  -> to_vector
+
+src\lumina_memory\enhanced_emotional_weighting.py::EnhancedConsciousnessEmotionalIntegrator._calculate_learning_rate calls:
+  -> abs
+  -> curr_emotion.to_vector
+  -> len
+  -> min
+  -> norm
+  -> np.clip
+  -> np.mean
+  -> prev_emotion.to_vector
+  -> range
+  -> recent_changes.append
+
+src\lumina_memory\enhanced_emotional_weighting.py::EnhancedConsciousnessEmotionalIntegrator._calculate_memory_integration calls:
+  -> self._calculate_emotional_continuity
+
+src\lumina_memory\enhanced_emotional_weighting.py::EnhancedConsciousnessEmotionalIntegrator.calculate_enhanced_emotional_consciousness_boost calls:
+  -> abs
+  -> boosts.values
+  -> current_emotion.intensity
+  -> np.clip
+  -> sum
+
+src\lumina_memory\enhanced_emotional_weighting.py::EnhancedConsciousnessEmotionalIntegrator.get_enhanced_emotional_consciousness_metrics calls:
+  -> get_emotional_consciousness_metrics
+  -> get_emotional_context
+  -> self._calculate_adaptability
+  -> self._calculate_emotional_coherence
+  -> self._calculate_emotional_sophistication
+  -> self._calculate_learning_rate
+  -> self._calculate_memory_integration
+  -> super
+
+src\lumina_memory\enhanced_emotional_weighting.py::EnhancedEmotionalAnalyzer.__init__ calls:
+  -> EmotionalAnalyzer
+  -> keys
+  -> list
+  -> logger.info
+  -> logger.warning
+  -> self._init_nrclex
+  -> self._init_spacy
+  -> self._init_textblob
+  -> self._init_transformers
+  -> self._init_vader
+
+src\lumina_memory\enhanced_emotional_weighting.py::EnhancedEmotionalAnalyzer._apply_contextual_adjustments calls:
+  -> min
+  -> text.count
+  -> text.lower
+
+src\lumina_memory\enhanced_emotional_weighting.py::EnhancedEmotionalAnalyzer._init_nrclex calls:
+  -> logger.debug
+  -> logger.info
+
+src\lumina_memory\enhanced_emotional_weighting.py::EnhancedEmotionalAnalyzer._init_spacy calls:
+  -> logger.debug
+  -> logger.info
+  -> nlp.add_pipe
+  -> spacy.blank
+  -> spacy.load
+
+src\lumina_memory\enhanced_emotional_weighting.py::EnhancedEmotionalAnalyzer._init_textblob calls:
+  -> logger.debug
+  -> logger.info
+
+src\lumina_memory\enhanced_emotional_weighting.py::EnhancedEmotionalAnalyzer._init_transformers calls:
+  -> logger.debug
+  -> logger.info
+  -> pipeline
+
+src\lumina_memory\enhanced_emotional_weighting.py::EnhancedEmotionalAnalyzer._init_vader calls:
+  -> SentimentIntensityAnalyzer
+  -> logger.debug
+  -> logger.info
+
+src\lumina_memory\enhanced_emotional_weighting.py::EnhancedEmotionalAnalyzer.analyze_conversation_context calls:
+  -> EmotionalState
+  -> EmotionalState.from_vector
+  -> emotion.to_vector
+  -> emotion_vectors.append
+  -> enumerate
+  -> len
+  -> np.array
+  -> np.average
+  -> np.exp
+  -> self.analyze_text
+  -> weights.append
+
+src\lumina_memory\enhanced_emotional_weighting.py::EnhancedEmotionalAnalyzer.analyze_text calls:
+  -> EmotionalState
+  -> abs
+  -> affect_freq.get
+  -> analyze_text
+  -> logger.debug
+  -> lower
+  -> np.clip
+  -> polarity_scores
+  -> self._apply_contextual_adjustments
+  -> text.strip
+
+src\lumina_memory\enhanced_emotional_weighting.py::EnhancedEmotionalAnalyzer.get_analyzer_info calls:
+  -> any
+  -> keys
+  -> len
+  -> list
+
+src\lumina_memory\enhanced_emotional_weighting.py::EnhancedEmotionalMemoryWeighter.__init__ calls:
+  -> EnhancedEmotionalAnalyzer
+  -> __init__
+  -> super
+
+src\lumina_memory\enhanced_emotional_weighting.py::EnhancedEmotionalMemoryWeighter.calculate_enhanced_emotional_decay_modifier calls:
+  -> abs
+  -> emotion.intensity
+  -> max
+  -> np.clip
+  -> persistence_effects.append
+
+src\lumina_memory\enhanced_emotional_weighting.py::EnhancedEmotionalMemoryWeighter.calculate_enhanced_emotional_importance calls:
+  -> abs
+  -> analyze_text
+  -> emotion.intensity
+  -> emotional_boosts.values
+  -> max
+  -> metadata.get
+  -> np.clip
+  -> sum
+
+src\lumina_memory\enhanced_emotional_weighting.py::create_enhanced_emotional_system calls:
+  -> EnhancedConsciousnessEmotionalIntegrator
+  -> EnhancedEmotionalAnalyzer
+  -> EnhancedEmotionalMemoryWeighter
+  -> logger.info
+
+src\lumina_memory\eval.py::MemoryEvaluator.comprehensive_evaluation calls:
+  -> get_stats
+  -> logger.info
+  -> self.latency_benchmark
+  -> self.ndcg_at_k
+  -> self.precision_at_k
+  -> self.recall_at_k
+  -> self.throughput_benchmark
+  -> time.strftime
+
+src\lumina_memory\eval.py::MemoryEvaluator.latency_benchmark calls:
+  -> float
+  -> latencies.extend
+  -> np.array
+  -> np.max
+  -> np.mean
+  -> np.median
+  -> np.min
+  -> np.percentile
+  -> np.std
+  -> query_latencies.append
+  -> range
+  -> recall
+  -> time.time
+
+src\lumina_memory\eval.py::MemoryEvaluator.ndcg_at_k calls:
+  -> ValueError
+  -> enumerate
+  -> len
+  -> max
+  -> min
+  -> np.log2
+  -> range
+  -> recall
+  -> zip
+
+src\lumina_memory\eval.py::MemoryEvaluator.precision_at_k calls:
+  -> ValueError
+  -> len
+  -> max
+  -> recall
+  -> set
+  -> zip
+
+src\lumina_memory\eval.py::MemoryEvaluator.recall_at_k calls:
+  -> ValueError
+  -> len
+  -> max
+  -> recall
+  -> set
+  -> zip
+
+src\lumina_memory\eval.py::MemoryEvaluator.save_results calls:
+  -> json.dump
+  -> logger.info
+  -> open
+
+src\lumina_memory\eval.py::MemoryEvaluator.throughput_benchmark calls:
+  -> len
+  -> recall
+  -> time.time
+
+src\lumina_memory\eval.py::create_synthetic_dataset calls:
+  -> doc.lower
+  -> documents.append
+  -> enumerate
+  -> ground_truth.append
+  -> join
+  -> len
+  -> queries.append
+  -> query.lower
+  -> random.choice
+  -> random.choices
+  -> random.randint
+  -> range
+  -> relevant_docs.append
+  -> set
+  -> split
+  -> str
+
+src\lumina_memory\event_hashing.py::create_chained_event calls:
+  -> event_hash
+  -> prev_event.get
+  -> time.time
+
+src\lumina_memory\event_hashing.py::create_genesis_event calls:
+  -> event_hash
+  -> time.time
+
+src\lumina_memory\event_hashing.py::event_hash calls:
+  -> _blake3_hash
+  -> _canonicalize_dict
+  -> canonical_json.encode
+
+src\lumina_memory\event_hashing.py::validate_chain_continuity calls:
+  -> discontinuities.append
+  -> get
+  -> len
+  -> range
+
+src\lumina_memory\event_hashing.py::verify_chain calls:
+  -> ChainVerificationError
+  -> TamperDetectionError
+  -> enumerate
+  -> event.get
+  -> verify_event_hash
+
+src\lumina_memory\event_hashing.py::verify_event_hash calls:
+  -> event_copy.pop
+  -> event_dict.copy
+  -> event_dict.get
+  -> event_hash
+
+src\lumina_memory\gpu_optimized_config.py::GPUOptimizer.__init__ calls:
+  -> self._create_optimization_profiles
+  -> self._detect_gpu
+
+src\lumina_memory\gpu_optimized_config.py::GPUOptimizer._detect_gpu calls:
+  -> GPUInfo
+  -> get_device_name
+  -> get_device_properties
+  -> is_available
+  -> logger.info
+  -> logger.warning
+  -> max
+
+src\lumina_memory\gpu_optimized_config.py::GPUOptimizer.create_optimized_config calls:
+  -> UnifiedXPConfig
+  -> get
+  -> logger.info
+  -> min
+  -> profile.get
+  -> self.get_recommended_profile
+
+src\lumina_memory\gpu_optimized_config.py::GPUOptimizer.get_recommended_models calls:
+  -> models.extend
+
+src\lumina_memory\gpu_optimized_config.py::GPUOptimizer.get_system_info calls:
+  -> is_available
+  -> psutil.cpu_count
+  -> psutil.virtual_memory
+
+src\lumina_memory\gpu_optimized_config.py::ModelManager.__init__ calls:
+  -> self._get_available_models
+
+src\lumina_memory\gpu_optimized_config.py::ModelManager._get_available_models calls:
+  -> len
+  -> line.split
+  -> line.strip
+  -> logger.warning
+  -> models.append
+  -> split
+  -> strip
+  -> subprocess.run
+
+src\lumina_memory\gpu_optimized_config.py::ModelManager.get_best_model_for_consciousness calls:
+  -> get_recommended_models
+  -> model.get
+
+src\lumina_memory\gpu_optimized_config.py::ModelManager.install_recommended_models calls:
+  -> get_recommended_models
+  -> to_install.append
+
+src\lumina_memory\gpu_optimized_config.py::create_consciousness_test_config calls:
+  -> gpu_optimizer.create_optimized_config
+
+src\lumina_memory\hrr.py::_canonicalize_for_hrr calls:
+  -> json.dumps
+
+src\lumina_memory\hrr.py::_seed_from_string calls:
+  -> hash_obj.digest
+  -> hashlib.sha256
+  -> int.from_bytes
+  -> text.encode
+
+src\lumina_memory\hrr.py::bind_vectors calls:
+  -> ValueError
+  -> fft
+  -> ifft
+
+src\lumina_memory\hrr.py::create_concept_vector calls:
+  -> reference_vector
+
+src\lumina_memory\hrr.py::create_relation_vector calls:
+  -> reference_vector
+
+src\lumina_memory\hrr.py::is_unit_vector calls:
+  -> abs
+  -> vector_magnitude
+
+src\lumina_memory\hrr.py::normalize_vector calls:
+  -> norm
+
+src\lumina_memory\hrr.py::reference_vector calls:
+  -> RandomState
+  -> _canonicalize_for_hrr
+  -> _seed_from_string
+  -> norm
+  -> np.ones
+  -> np.sqrt
+  -> rng.normal
+
+src\lumina_memory\hrr.py::similarity calls:
+  -> ValueError
+  -> np.clip
+  -> np.dot
+
+src\lumina_memory\hrr.py::superpose_vectors calls:
+  -> ValueError
+  -> enumerate
+  -> len
+  -> np.zeros
+  -> zip
+
+src\lumina_memory\hrr.py::unbind_vectors calls:
+  -> ValueError
+  -> bind_vectors
+  -> np.concatenate
+
+src\lumina_memory\hrr.py::vector_magnitude calls:
+  -> norm
+
+src\lumina_memory\kernel.py::_deterministic_id calls:
+  -> h.hexdigest
+  -> h.update
+  -> hashlib.blake2b
+  -> p.encode
+
+src\lumina_memory\kernel.py::_ensure_accumulators calls:
+  -> _leaf_hash
+  -> astype
+  -> np.zeros
+  -> replace
+
+src\lumina_memory\kernel.py::_leaf_hash calls:
+  -> blake3.blake3
+  -> digest
+  -> int.from_bytes
+  -> leaf_id.encode
+
+src\lumina_memory\kernel.py::_merge_metadata calls:
+  -> md1.get
+  -> md1.keys
+  -> md2.get
+  -> md2.keys
+  -> set
+  -> sorted
+  -> str
+  -> tuple
+
+src\lumina_memory\kernel.py::_normalize calls:
+  -> _safe_norm
+  -> astype
+
+src\lumina_memory\kernel.py::_pad_to_same calls:
+  -> a.astype
+  -> b.astype
+  -> int
+  -> max
+  -> np.zeros
+
+src\lumina_memory\kernel.py::_safe_norm calls:
+  -> float
+  -> norm
+
+src\lumina_memory\kernel.py::decay calls:
+  -> float
+  -> max
+  -> replace
+
+src\lumina_memory\kernel.py::forget calls:
+  -> criteria.get
+  -> replace
+
+src\lumina_memory\kernel.py::reinforce calls:
+  -> float
+  -> max
+  -> min
+  -> replace
+
+src\lumina_memory\kernel.py::superpose calls:
+  -> Memory
+  -> ValueError
+  -> _deterministic_id
+  -> _ensure_accumulators
+  -> _merge_metadata
+  -> _multiset_add
+  -> _normalize
+  -> _pad_to_same
+  -> float
+  -> hex
+  -> join
+  -> len
+  -> max
+  -> np.zeros
+  -> replace
+  -> set
+  -> sorted
+  -> str
+
+src\lumina_memory\local_llm_interface.py::LocalLLMFactory.auto_detect_and_create calls:
+  -> LocalLLMFactory.create_ollama
+  -> LocalLLMFactory.create_simple
+  -> logger.info
+  -> requests.get
+
+src\lumina_memory\local_llm_interface.py::LocalLLMFactory.create_ollama calls:
+  -> OllamaInterface
+
+src\lumina_memory\local_llm_interface.py::LocalLLMFactory.create_simple calls:
+  -> SimpleLLMInterface
+
+src\lumina_memory\local_llm_interface.py::OllamaInterface.__init__ calls:
+  -> logger.info
+  -> self._test_connection
+
+src\lumina_memory\local_llm_interface.py::OllamaInterface._build_consciousness_prompt calls:
+  -> enumerate
+  -> len
+  -> memory.get
+
+src\lumina_memory\local_llm_interface.py::OllamaInterface._test_connection calls:
+  -> get
+  -> logger.error
+  -> logger.info
+  -> logger.warning
+  -> requests.get
+  -> response.json
+
+src\lumina_memory\local_llm_interface.py::OllamaInterface.generate_response calls:
+  -> append
+  -> len
+  -> logger.error
+  -> requests.post
+  -> response.json
+  -> result.get
+  -> self._build_consciousness_prompt
+  -> str
+  -> strip
+  -> time.time
+
+src\lumina_memory\local_llm_interface.py::OllamaInterface.get_conversation_history calls:
+  -> copy
+
+src\lumina_memory\local_llm_interface.py::SimpleLLMInterface._generate_contextual_response calls:
+  -> any
+  -> prompt.lower
+
+src\lumina_memory\local_llm_interface.py::SimpleLLMInterface.generate_response calls:
+  -> append
+  -> enumerate
+  -> len
+  -> mem.get
+  -> self._generate_contextual_response
+  -> time.time
+
+src\lumina_memory\local_llm_interface.py::SimpleLLMInterface.get_conversation_history calls:
+  -> copy
+
+src\lumina_memory\math_foundation.py::bind_role_filler calls:
+  -> circular_convolution
+  -> normalize_vector
+
+src\lumina_memory\math_foundation.py::circular_convolution calls:
+  -> irfft
+  -> len
+  -> rfft
+
+src\lumina_memory\math_foundation.py::circular_correlation calls:
+  -> irfft
+  -> len
+  -> np.conj
+  -> rfft
+
+src\lumina_memory\math_foundation.py::cosine_similarity calls:
+  -> float
+  -> norm
+  -> np.dot
+
+src\lumina_memory\math_foundation.py::get_current_timestamp calls:
+  -> time.time
+
+src\lumina_memory\math_foundation.py::hybrid_lexical_attribution calls:
+  -> instant_salience
+
+src\lumina_memory\math_foundation.py::instant_salience calls:
+  -> concept.lower
+  -> len
+  -> replace
+  -> set
+  -> split
+  -> text.lower
+
+src\lumina_memory\math_foundation.py::mathematical_coherence calls:
+  -> float
+  -> norm
+  -> np.clip
+  -> np.dot
+
+src\lumina_memory\math_foundation.py::memory_unit_score calls:
+  -> float
+  -> norm
+  -> np.clip
+  -> np.dot
+  -> np.exp
+
+src\lumina_memory\math_foundation.py::normalize_vector calls:
+  -> norm
+  -> np.zeros_like
+
+src\lumina_memory\math_foundation.py::unbind_role_filler calls:
+  -> circular_correlation
+  -> normalize_vector
+
+src\lumina_memory\memory_system.py::MemorySystem.__init__ calls:
+  -> LuminaConfig
+  -> deque
+  -> logger.info
+
+src\lumina_memory\memory_system.py::MemorySystem._find_entry calls:
+  -> get
+
+src\lumina_memory\memory_system.py::MemorySystem._matches_filters calls:
+  -> filters.items
+
+src\lumina_memory\memory_system.py::MemorySystem.consolidate calls:
+  -> MemoryError
+  -> list
+  -> logger.error
+  -> logger.info
+
+src\lumina_memory\memory_system.py::MemorySystem.forget calls:
+  -> MemoryError
+  -> deque
+  -> logger.error
+  -> logger.info
+  -> remove
+
+src\lumina_memory\memory_system.py::MemorySystem.get_stats calls:
+  -> copy
+  -> current_stats.update
+  -> len
+
+src\lumina_memory\memory_system.py::MemorySystem.ingest calls:
+  -> MemoryEntry
+  -> MemoryError
+  -> add
+  -> append
+  -> datetime.now
+  -> embed_single
+  -> logger.error
+  -> logger.info
+
+src\lumina_memory\memory_system.py::MemorySystem.recall calls:
+  -> MemoryError
+  -> embed_single
+  -> isoformat
+  -> len
+  -> logger.error
+  -> logger.info
+  -> normalize_similarity
+  -> results.append
+  -> search
+  -> self._find_entry
+  -> self._matches_filters
+  -> time.time
+
+src\lumina_memory\unified_foundation.py::UnifiedKernel.__init__ calls:
+  -> UnifiedConfig
+
+src\lumina_memory\unified_foundation.py::UnifiedKernel.process_memory calls:
+  -> memory_data.get
+  -> self.store_memory
+
+src\lumina_memory\unified_foundation.py::UnifiedKernel.retrieve_memory calls:
+  -> get
+
+src\lumina_memory\unified_foundation.py::UnifiedKernel.stats calls:
+  -> len
+
+src\lumina_memory\unified_foundation.py::UnifiedKernel.store_memory calls:
+  -> UnifiedMemory
+  -> len
+
+src\lumina_memory\unified_foundation.py::UnifiedMemory.__post_init__ calls:
+  -> astype
+  -> randn
+  -> time.time
+
+src\lumina_memory\unified_foundation.py::test_unified_foundation calls:
+  -> UnifiedConfig
+  -> UnifiedKernel
+  -> UnifiedMemory
+  -> kernel.stats
+  -> kernel.store_memory
+  -> print
+
+src\lumina_memory\utils.py::create_default_config calls:
+  -> FileExistsError
+  -> LuminaConfig.from_env
+  -> Path
+  -> config.create_directories
+  -> config.save
+  -> config.setup_determinism
+  -> config.validate
+  -> config_file.exists
+
+src\lumina_memory\utils.py::format_memory_stats calls:
+  -> join
+  -> lines.append
+  -> stats.get
+
+src\lumina_memory\utils.py::get_memory_usage calls:
+  -> process.memory_info
+  -> process.memory_percent
+  -> psutil.Process
+  -> str
+
+src\lumina_memory\utils.py::normalize_similarity calls:
+  -> max
+  -> min
+
+src\lumina_memory\utils.py::setup_logging calls:
+  -> Console
+  -> Path
+  -> RichHandler
+  -> console_handler.setFormatter
+  -> console_handler.setLevel
+  -> file_handler.setFormatter
+  -> file_handler.setLevel
+  -> getattr
+  -> level.upper
+  -> logger.addHandler
+  -> logger.removeHandler
+  -> logger.setLevel
+  -> logging.FileHandler
+  -> logging.Formatter
+  -> logging.StreamHandler
+  -> logging.getLogger
+  -> mkdir
+  -> setLevel
+
+src\lumina_memory\utils.py::validate_environment calls:
+  -> append
+  -> is_available
+
+src\lumina_memory\vector_store.py::FAISSVectorStore.__init__ calls:
+  -> logger.info
+  -> self._create_index
+  -> threading.Lock
+
+src\lumina_memory\vector_store.py::FAISSVectorStore._create_index calls:
+  -> StorageError
+  -> ValueError
+  -> faiss.IndexFlatIP
+  -> faiss.IndexFlatL2
+
+src\lumina_memory\vector_store.py::FAISSVectorStore._normalize_embeddings calls:
+  -> norm
+
+src\lumina_memory\vector_store.py::FAISSVectorStore.add calls:
+  -> StorageError
+  -> add
+  -> astype
+  -> embeddings.append
+  -> entry_ids.append
+  -> enumerate
+  -> len
+  -> logger.info
+  -> np.array
+  -> self._normalize_embeddings
+
+src\lumina_memory\vector_store.py::FAISSVectorStore.clear calls:
+  -> clear
+  -> self._create_index
+
+src\lumina_memory\vector_store.py::FAISSVectorStore.search calls:
+  -> StorageError
+  -> astype
+  -> float
+  -> min
+  -> query_embedding.reshape
+  -> results.append
+  -> search
+  -> self._normalize_embeddings
+  -> zip
+
+src\lumina_memory\vector_store.py::FAISSVectorStore.size calls:
+  -> len
+
+src\lumina_memory\vector_store.py::InMemoryVectorStore.__init__ calls:
+  -> threading.Lock
+
+src\lumina_memory\vector_store.py::InMemoryVectorStore._calculate_similarity calls:
+  -> float
+  -> norm
+  -> np.dot
+
+src\lumina_memory\vector_store.py::InMemoryVectorStore.clear calls:
+  -> clear
+
+src\lumina_memory\vector_store.py::InMemoryVectorStore.remove calls:
+  -> pop
+
+src\lumina_memory\vector_store.py::InMemoryVectorStore.search calls:
+  -> items
+  -> self._calculate_similarity
+  -> similarities.append
+  -> similarities.sort
+
+src\lumina_memory\vector_store.py::InMemoryVectorStore.size calls:
+  -> len
+
+src\lumina_memory\versioned_xp_store.py::VersionedXPStore.__init__ calls:
+  -> time.time
+
+src\lumina_memory\versioned_xp_store.py::VersionedXPStore._get_branch_commits calls:
+  -> commits.add
+  -> get
+  -> set
+
+src\lumina_memory\versioned_xp_store.py::VersionedXPStore._verify_entry_integrity calls:
+  -> content_data.encode
+  -> hashlib.sha256
+  -> hexdigest
+  -> json.dumps
+  -> tobytes
+
+src\lumina_memory\versioned_xp_store.py::VersionedXPStore.commit calls:
+  -> XPCommit.create
+
+src\lumina_memory\versioned_xp_store.py::VersionedXPStore.create_branch calls:
+  -> get
+
+src\lumina_memory\versioned_xp_store.py::VersionedXPStore.get_branch_head calls:
+  -> get
+
+src\lumina_memory\versioned_xp_store.py::VersionedXPStore.get_commit calls:
+  -> get
+
+src\lumina_memory\versioned_xp_store.py::VersionedXPStore.get_commit_history calls:
+  -> get
+  -> history.append
+  -> len
+
+src\lumina_memory\versioned_xp_store.py::VersionedXPStore.retrieve calls:
+  -> entry.update_access
+  -> get
+
+src\lumina_memory\versioned_xp_store.py::VersionedXPStore.search calls:
+  -> float
+  -> items
+  -> norm
+  -> np.dot
+  -> self._get_branch_commits
+  -> self._verify_entry_integrity
+  -> similarities.append
+  -> similarities.sort
+  -> valid_entries.items
+
+src\lumina_memory\versioned_xp_store.py::VersionedXPStore.stats calls:
+  -> all
+  -> datetime.fromtimestamp
+  -> isoformat
+  -> keys
+  -> len
+  -> list
+  -> self._verify_entry_integrity
+  -> sum
+  -> values
+
+src\lumina_memory\versioned_xp_store.py::VersionedXPStore.store calls:
+  -> XPStoreEntry.create
+  -> astype
+  -> randn
+  -> self.commit
+
+src\lumina_memory\versioned_xp_store.py::XPCommit.create calls:
+  -> cls
+  -> commit_data.encode
+  -> content_str.encode
+  -> hashlib.sha256
+  -> hexdigest
+  -> json.dumps
+  -> time.time
+
+src\lumina_memory\versioned_xp_store.py::XPStoreEntry.create calls:
+  -> cls
+  -> content_data.encode
+  -> embedding.tobytes
+  -> hashlib.sha256
+  -> hexdigest
+  -> int
+  -> json.dumps
+  -> time.time
+
+src\lumina_memory\versioned_xp_store.py::XPStoreEntry.update_access calls:
+  -> time.time
+
+src\lumina_memory\versioned_xp_store.py::test_cryptographic_integrity calls:
+  -> VersionedXPStore
+  -> commits.append
+  -> len
+  -> print
+  -> range
+  -> store._verify_entry_integrity
+  -> store.commit
+  -> store.get_commit
+  -> store.retrieve
+  -> store.store
+
+src\lumina_memory\versioned_xp_store.py::test_versioned_xp_store calls:
+  -> VersionedXPStore
+  -> len
+  -> print
+  -> store._verify_entry_integrity
+  -> store.commit
+  -> store.create_branch
+  -> store.get_commit_history
+  -> store.retrieve
+  -> store.stats
+  -> store.store
+
+src\lumina_memory\xp_core_unified.py::ConsolidationEngine.consolidate calls:
+  -> get_current_timestamp
+  -> min
+  -> units.values
+
+src\lumina_memory\xp_core_unified.py::DecayMathematicsEngine.apply_decay calls:
+  -> len
+  -> np.exp
+  -> units.values
+
+src\lumina_memory\xp_core_unified.py::RelationshipManager.get_graph calls:
+  -> copy
+
+src\lumina_memory\xp_core_unified.py::RelationshipManager.update_topology calls:
+  -> all_units.items
+  -> new_unit.compute_coherence_with
+  -> similarities.append
+  -> similarities.sort
+
+src\lumina_memory\xp_core_unified.py::SimpleDoc.__init__ calls:
+  -> text.split
+
+src\lumina_memory\xp_core_unified.py::SimpleDoc.__len__ calls:
+  -> len
+
+src\lumina_memory\xp_core_unified.py::SimpleEmbeddingEngine.encode calls:
+  -> abs
+  -> astype
+  -> default_rng
+  -> hash
+  -> rng.normal
+
+src\lumina_memory\xp_core_unified.py::SimpleNLPPipeline.__call__ calls:
+  -> SimpleDoc
+
+src\lumina_memory\xp_core_unified.py::UnifiedXPKernel.__init__ calls:
+  -> ConsciousnessEmotionalIntegrator
+  -> EmotionalAnalyzer
+  -> EmotionalMemoryWeighter
+  -> EnhancedConsciousnessEmotionalIntegrator
+  -> EnhancedEmotionalAnalyzer
+  -> EnhancedEmotionalMemoryWeighter
+  -> UnifiedXPConfig
+  -> XPEnvironment
+  -> logger.info
+  -> logger.warning
+
+src\lumina_memory\xp_core_unified.py::UnifiedXPKernel.analyze_text_emotion calls:
+  -> analyze_text
+
+src\lumina_memory\xp_core_unified.py::UnifiedXPKernel.calculate_emotional_consciousness_boost calls:
+  -> calculate_emotional_consciousness_boost
+  -> calculate_enhanced_emotional_consciousness_boost
+  -> hasattr
+
+src\lumina_memory\xp_core_unified.py::UnifiedXPKernel.compute_coherence calls:
+  -> get_unit
+  -> unit1.compute_coherence_with
+
+src\lumina_memory\xp_core_unified.py::UnifiedXPKernel.consolidate_memory calls:
+  -> consolidate_memories
+  -> len
+
+src\lumina_memory\xp_core_unified.py::UnifiedXPKernel.create_binding calls:
+  -> get_unit
+  -> subject.bind_with_role
+
+src\lumina_memory\xp_core_unified.py::UnifiedXPKernel.evolve_state calls:
+  -> evolve_temporal_state
+  -> len
+  -> self.consolidate_memory
+
+src\lumina_memory\xp_core_unified.py::UnifiedXPKernel.export_state calls:
+  -> get_comprehensive_stats
+  -> get_relationship_graph
+  -> items
+  -> unit.to_dict
+
+src\lumina_memory\xp_core_unified.py::UnifiedXPKernel.get_emotional_consciousness_metrics calls:
+  -> get_emotional_consciousness_metrics
+
+src\lumina_memory\xp_core_unified.py::UnifiedXPKernel.get_emotional_context calls:
+  -> get_emotional_context
+
+src\lumina_memory\xp_core_unified.py::UnifiedXPKernel.get_emotionally_similar_memories calls:
+  -> emotion.similarity
+  -> memory_emotion.to_vector
+  -> results.append
+  -> results.sort
+  -> tolist
+  -> unit.get_emotional_state
+  -> values
+
+src\lumina_memory\xp_core_unified.py::UnifiedXPKernel.get_memory_emotional_importance calls:
+  -> get_unit
+
+src\lumina_memory\xp_core_unified.py::UnifiedXPKernel.get_relationship_graph calls:
+  -> get_relationship_graph
+
+src\lumina_memory\xp_core_unified.py::UnifiedXPKernel.get_stats calls:
+  -> get_comprehensive_stats
+
+src\lumina_memory\xp_core_unified.py::UnifiedXPKernel.get_unit calls:
+  -> get_unit
+  -> unit.get_age_hours
+
+src\lumina_memory\xp_core_unified.py::UnifiedXPKernel.import_state calls:
+  -> XPUnit.from_dict
+  -> items
+  -> len
+  -> logger.error
+  -> logger.info
+  -> state_data.get
+  -> update
+
+src\lumina_memory\xp_core_unified.py::UnifiedXPKernel.process_memory calls:
+  -> EmotionalState.from_vector
+  -> analyze_text
+  -> calculate_emotional_importance
+  -> calculate_enhanced_emotional_importance
+  -> emotion.to_vector
+  -> hasattr
+  -> ingest_experience
+  -> isinstance
+  -> np.array
+  -> str
+  -> tolist
+  -> unit.set_emotional_state
+  -> update_emotional_state
+
+src\lumina_memory\xp_core_unified.py::UnifiedXPKernel.retrieve_memory calls:
+  -> analyze_text
+  -> calculate_emotional_retrieval_boost
+  -> formatted_results.append
+  -> formatted_results.sort
+  -> isinstance
+  -> retrieve_similar
+  -> to_vector
+  -> tolist
+  -> unit.get_age_hours
+  -> unit.get_emotional_state
+
+src\lumina_memory\xp_core_unified.py::XPEnvironment.__init__ calls:
+  -> ConsolidationEngine
+  -> DecayMathematicsEngine
+  -> RelationshipManager
+  -> UnifiedXPConfig
+  -> VersionedXPStore
+  -> get_current_timestamp
+  -> logger.info
+
+src\lumina_memory\xp_core_unified.py::XPEnvironment._compute_emotion_vector calls:
+  -> content.split
+  -> hasattr
+  -> len
+  -> min
+  -> nlp
+  -> normalize_vector
+  -> np.array
+  -> self._init_nlp_pipeline
+
+src\lumina_memory\xp_core_unified.py::XPEnvironment._compute_hrr_shape calls:
+  -> abs
+  -> astype
+  -> circular_convolution
+  -> default_rng
+  -> hash
+  -> json.dumps
+  -> len
+  -> normalize_vector
+  -> np.concatenate
+  -> np.zeros
+  -> rng.normal
+  -> semantic_vector.copy
+
+src\lumina_memory\xp_core_unified.py::XPEnvironment._compute_semantic_vector calls:
+  -> embedding.astype
+  -> engine.encode
+  -> hasattr
+  -> len
+  -> np.concatenate
+  -> np.zeros
+  -> self._init_embedding_engine
+  -> str
+
+src\lumina_memory\xp_core_unified.py::XPEnvironment._generate_content_id calls:
+  -> abs
+  -> content.strip
+  -> hash
+  -> hashlib.blake2b
+  -> hexdigest
+  -> lower
+  -> normalized.encode
+
+src\lumina_memory\xp_core_unified.py::XPEnvironment._init_embedding_engine calls:
+  -> SentenceTransformer
+  -> SimpleEmbeddingEngine
+  -> logger.info
+
+src\lumina_memory\xp_core_unified.py::XPEnvironment._init_nlp_pipeline calls:
+  -> SimpleNLPPipeline
+  -> logger.info
+  -> spacy.load
+
+src\lumina_memory\xp_core_unified.py::XPEnvironment.consolidate_memories calls:
+  -> consolidate
+
+src\lumina_memory\xp_core_unified.py::XPEnvironment.evolve_temporal_state calls:
+  -> apply_decay
+
+src\lumina_memory\xp_core_unified.py::XPEnvironment.get_comprehensive_stats calls:
+  -> get_current_timestamp
+  -> len
+  -> np.mean
+  -> stats
+  -> sum
+  -> values
+
+src\lumina_memory\xp_core_unified.py::XPEnvironment.get_relationship_graph calls:
+  -> get_graph
+
+src\lumina_memory\xp_core_unified.py::XPEnvironment.get_unit calls:
+  -> get
+  -> unit.update_access
+
+src\lumina_memory\xp_core_unified.py::XPEnvironment.ingest_experience calls:
+  -> ValueError
+  -> XPUnit
+  -> commit
+  -> content.strip
+  -> existing_unit.update_access
+  -> get_current_timestamp
+  -> len
+  -> logger.info
+  -> np.log
+  -> self._compute_emotion_vector
+  -> self._compute_hrr_shape
+  -> self._compute_semantic_vector
+  -> self._generate_content_id
+  -> update_topology
+
+src\lumina_memory\xp_core_unified.py::XPEnvironment.retrieve_similar calls:
+  -> XPUnit
+  -> get_current_timestamp
+  -> hasattr
+  -> isinstance
+  -> items
+  -> len
+  -> logger.info
+  -> min
+  -> np.zeros
+  -> self._compute_emotion_vector
+  -> self._compute_semantic_vector
+  -> similarities.append
+  -> similarities.sort
+  -> str
+  -> unit.score_against
+  -> unit.update_access
+
+src\lumina_memory\xp_core_unified.py::XPUnit.__post_init__ calls:
+  -> self._compute_content_hash
+
+src\lumina_memory\xp_core_unified.py::XPUnit._compute_content_hash calls:
+  -> content_str.encode
+  -> hashlib.blake2b
+  -> hexdigest
+  -> json.dumps
+
+src\lumina_memory\xp_core_unified.py::XPUnit.bind_with_role calls:
+  -> abs
+  -> bind_role_filler
+  -> default_rng
+  -> hash
+  -> len
+  -> normalize_vector
+  -> rng.normal
+
+src\lumina_memory\xp_core_unified.py::XPUnit.compute_coherence_with calls:
+  -> mathematical_coherence
+
+src\lumina_memory\xp_core_unified.py::XPUnit.create_superposition_with calls:
+  -> copy
+  -> enumerate
+  -> len
+  -> normalize_vector
+
+src\lumina_memory\xp_core_unified.py::XPUnit.from_dict calls:
+  -> cls
+  -> data.get
+  -> np.array
+
+src\lumina_memory\xp_core_unified.py::XPUnit.get_age_hours calls:
+  -> get_current_timestamp
+
+src\lumina_memory\xp_core_unified.py::XPUnit.get_decay_factor calls:
+  -> np.exp
+  -> self.get_age_hours
+
+src\lumina_memory\xp_core_unified.py::XPUnit.get_emotional_importance_boost calls:
+  -> abs
+  -> emotion.intensity
+  -> min
+  -> self.get_emotional_state
+
+src\lumina_memory\xp_core_unified.py::XPUnit.get_emotional_state calls:
+  -> EmotionalState
+  -> EmotionalState.from_vector
+  -> len
+
+src\lumina_memory\xp_core_unified.py::XPUnit.score_against calls:
+  -> memory_unit_score
+  -> self.get_age_hours
+
+src\lumina_memory\xp_core_unified.py::XPUnit.set_emotional_state calls:
+  -> emotion.to_vector
+  -> len
+
+src\lumina_memory\xp_core_unified.py::XPUnit.to_dict calls:
+  -> tolist
+
+src\lumina_memory\xp_core_unified.py::XPUnit.unbind_role calls:
+  -> unbind_role_filler
+
+src\lumina_memory\xp_core_unified.py::XPUnit.update_access calls:
+  -> get_current_timestamp
+  -> min
+
+src\lumina_memory\xp_core_unified.py::test_unified_xp_core calls:
+  -> UnifiedXPConfig
+  -> UnifiedXPKernel
+  -> enumerate
+  -> graph.values
+  -> kernel.compute_coherence
+  -> kernel.consolidate_memory
+  -> kernel.create_binding
+  -> kernel.evolve_state
+  -> kernel.export_state
+  -> kernel.get_relationship_graph
+  -> kernel.get_stats
+  -> kernel.process_memory
+  -> kernel.retrieve_memory
+  -> len
+  -> new_kernel.import_state
+  -> norm
+  -> print
+  -> sum
+
+
+IMPORT ANALYSIS:
+--------------------
+
+consciousness_persistence_clean.py imports:
+  - from datetime import datetime
+  - from lumina_memory.digital_consciousness import DigitalBrain
+  - from lumina_memory.local_llm_interface import LocalLLMFactory
+  - from lumina_memory.math_foundation import get_current_timestamp
+  - from lumina_memory.xp_core_unified import UnifiedXPConfig
+  - from lumina_memory.xp_core_unified import UnifiedXPKernel
+  - from pathlib import Path
+  - json
+  - os
+  - shutil
+  - sys
+  - time
+  - traceback
+
+consciousness_persistence_diagnostic.py imports:
+  - from lumina_memory.digital_consciousness import DigitalBrain
+  - from lumina_memory.local_llm_interface import LocalLLMFactory
+  - from lumina_memory.math_foundation import get_current_timestamp
+  - from lumina_memory.xp_core_unified import UnifiedXPConfig
+  - from lumina_memory.xp_core_unified import UnifiedXPKernel
+  - from pathlib import Path
+  - json
+  - os
+  - sys
+  - time
+  - traceback
+
+mistrallumina_continuity.py imports:
+  - from lumina_memory.digital_consciousness import DigitalBrain
+  - from lumina_memory.local_llm_interface import LocalLLMFactory
+  - from lumina_memory.math_foundation import get_current_timestamp
+  - from lumina_memory.xp_core_unified import UnifiedXPConfig
+  - from pathlib import Path
+  - from typing import Any
+  - from typing import Dict
+  - from typing import Optional
+  - hashlib
+  - hmac
+  - json
+  - shutil
+  - sys
+  - time
+  - traceback
+
+src\lumina_memory\__init__.py imports:
+  - from crypto_ids import content_fingerprint
+  - from crypto_ids import generate_content_id
+  - from crypto_ids import verify_fingerprint
+  - from encryption import aesgcm_decrypt
+  - from encryption import aesgcm_encrypt
+  - from encryption import create_envelope
+  - from encryption import derive_kek
+  - from encryption import generate_dek
+  - from encryption import new_aesgcm_key
+  - from encryption import open_envelope
+  - from event_hashing import create_chained_event
+  - from event_hashing import create_genesis_event
+  - from event_hashing import event_hash
+  - from event_hashing import verify_chain
+  - from hrr import bind_vectors
+  - from hrr import reference_vector
+  - from hrr import similarity
+
+src\lumina_memory\advanced_emotional_consciousness.py imports:
+  - from collections import defaultdict
+  - from collections import deque
+  - from dataclasses import dataclass
+  - from dataclasses import field
+  - from datetime import datetime
+  - from datetime import timedelta
+  - from emotional_weighting import EmotionalState
+  - from enhanced_emotional_weighting import EnhancedEmotionalAnalyzer
+  - from typing import Any
+  - from typing import Dict
+  - from typing import List
+  - from typing import Optional
+  - from typing import Set
+  - from typing import Tuple
+  - logging
+  - numpy
+  - time
+
+src\lumina_memory\analytics.py imports:
+  - from datetime import datetime
+  - from typing import Any
+  - from typing import Dict
+  - time
+
+src\lumina_memory\class_registry.py imports:
+  - from dataclasses import dataclass
+  - from enum import Enum
+  - from pathlib import Path
+  - from typing import Dict
+  - from typing import List
+  - from typing import Optional
+  - from typing import Set
+  - json
+  - os
+
+src\lumina_memory\cli.py imports:
+  - argparse
+  - from config import LuminaConfig
+  - from embeddings import MockEmbeddingProvider
+  - from embeddings import SentenceTransformerEmbedding
+  - from eval import MemoryEvaluator
+  - from eval import create_synthetic_dataset
+  - from memory_system import MemorySystem
+  - from pathlib import Path
+  - from rich.console import Console
+  - from rich.table import Table
+  - from typing import List
+  - from typing import Optional
+  - from utils import format_memory_stats
+  - from utils import setup_logging
+  - from utils import validate_environment
+  - from vector_store import FAISSVectorStore
+  - from vector_store import InMemoryVectorStore
+  - json
+  - sys
+
+src\lumina_memory\config.py imports:
+  - from dataclasses import asdict
+  - from dataclasses import dataclass
+  - from pathlib import Path
+  - from typing import Optional
+  - json
+  - logging
+  - numpy
+  - os
+  - random
+  - torch
+
+src\lumina_memory\constants.py imports:
+  - numpy
+
+src\lumina_memory\core.py imports:
+  - from dataclasses import dataclass
+  - from dataclasses import field
+  - from datetime import datetime
+  - from enum import Enum
+  - from typing import Any
+  - from typing import Dict
+  - from typing import List
+  - from typing import Optional
+  - numpy
+  - uuid
+
+src\lumina_memory\crypto_ids.py imports:
+  - blake3
+  - from typing import Any
+  - from typing import Dict
+  - from typing import Optional
+  - from typing import Union
+  - hashlib
+  - hmac
+  - json
+  - re
+
+src\lumina_memory\deterministic_rebuild.py imports:
+  - from crypto_ids import ContentAddressableIndex
+  - from crypto_ids import memory_content_id
+  - from crypto_ids import verify_content_integrity
+  - from dataclasses import dataclass
+  - from dataclasses import replace
+  - from datetime import datetime
+  - from datetime import timezone
+  - from event_hashing import verify_hash_chain
+  - from event_store import EventStore
+  - from event_store import EventStoreSnapshot
+  - from event_store import StoredEvent
+  - from event_store import create_event_store
+  - from kernel import LuminaMemory
+  - from kernel import MemoryRecord
+  - from kernel import create_memory_record
+  - from kernel import find_similar_memories
+  - from kernel import ingest_memory
+  - from kernel import rebuild_index
+  - from pathlib import Path
+  - from typing import Any
+  - from typing import Dict
+  - from typing import List
+  - from typing import Optional
+  - from typing import Set
+  - from typing import Tuple
+  - numpy
+
+src\lumina_memory\digital_consciousness.py imports:
+  - from dataclasses import dataclass
+  - from dataclasses import field
+  - from datetime import datetime
+  - from emotional_weighting import EmotionalState
+  - from math_foundation import cosine_similarity
+  - from math_foundation import get_current_timestamp
+  - from typing import Any
+  - from typing import Dict
+  - from typing import List
+  - from typing import Optional
+  - from typing import Tuple
+  - from typing import Union
+  - from xp_core_unified import UnifiedXPConfig
+  - from xp_core_unified import UnifiedXPKernel
+  - from xp_core_unified import XPUnit
+  - hashlib
+  - json
+  - logging
+  - numpy
+  - time
+
+src\lumina_memory\embeddings.py imports:
+  - from abc import ABC
+  - from abc import abstractmethod
+  - from core import EmbeddingError
+  - from sentence_transformers import SentenceTransformer
+  - from typing import List
+  - from typing import Union
+  - logging
+  - numpy
+
+src\lumina_memory\emotional_weighting.py imports:
+  - from dataclasses import dataclass
+  - from enum import Enum
+  - from typing import Any
+  - from typing import Dict
+  - from typing import List
+  - from typing import Optional
+  - from typing import Tuple
+  - logging
+  - numpy
+  - re
+  - time
+
+src\lumina_memory\encryption.py imports:
+  - base64
+  - from cryptography.hazmat.primitives import hashes
+  - from cryptography.hazmat.primitives.ciphers.aead import AESGCM
+  - from cryptography.hazmat.primitives.kdf.argon2 import Argon2id
+  - from typing import Any
+  - from typing import Dict
+  - from typing import Optional
+  - from typing import Tuple
+  - from typing import Union
+  - json
+  - os
+  - secrets
+
+src\lumina_memory\enhanced_emotional_weighting.py imports:
+  - from dataclasses import dataclass
+  - from emotional_weighting import ConsciousnessEmotionalIntegrator
+  - from emotional_weighting import EmotionalAnalyzer
+  - from emotional_weighting import EmotionalDimension
+  - from emotional_weighting import EmotionalMemoryWeighter
+  - from emotional_weighting import EmotionalState
+  - from nrclex import NRCLex
+  - from spacytextblob.spacytextblob import SpacyTextBlob
+  - from textblob import TextBlob
+  - from transformers import pipeline
+  - from typing import Any
+  - from typing import Dict
+  - from typing import List
+  - from typing import Optional
+  - from typing import Tuple
+  - from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
+  - logging
+  - numpy
+  - spacy
+  - time
+
+src\lumina_memory\eval.py imports:
+  - from core import MemoryEntry
+  - from memory_system import MemorySystem
+  - from typing import Any
+  - from typing import Dict
+  - from typing import List
+  - from typing import Optional
+  - from typing import Tuple
+  - json
+  - logging
+  - numpy
+  - random
+  - time
+
+src\lumina_memory\event_hashing.py imports:
+  - from crypto_ids import _blake3_hash
+  - from crypto_ids import _canonicalize_dict
+  - from typing import Any
+  - from typing import Dict
+  - from typing import List
+  - from typing import Optional
+  - from typing import Union
+  - json
+  - time
+
+src\lumina_memory\gpu_optimized_config.py imports:
+  - from dataclasses import dataclass
+  - from typing import Any
+  - from typing import Dict
+  - from typing import List
+  - from typing import Optional
+  - from xp_core_unified import UnifiedXPConfig
+  - json
+  - logging
+  - psutil
+  - subprocess
+  - torch
+
+src\lumina_memory\hrr.py imports:
+  - from typing import Any
+  - from typing import Dict
+  - from typing import Optional
+  - from typing import Union
+  - hashlib
+  - json
+  - numpy
+
+src\lumina_memory\kernel.py imports:
+  - blake3
+  - from __future__ import annotations
+  - from dataclasses import dataclass
+  - from dataclasses import replace
+  - from typing import Dict
+  - from typing import List
+  - from typing import Literal
+  - from typing import Optional
+  - from typing import Tuple
+  - hashlib
+  - math
+  - numpy
+
+src\lumina_memory\local_llm_interface.py imports:
+  - from dataclasses import dataclass
+  - from digital_consciousness import LLMInterface
+  - from typing import Any
+  - from typing import Dict
+  - from typing import List
+  - from typing import Optional
+  - json
+  - logging
+  - requests
+  - time
+
+src\lumina_memory\math_foundation.py imports:
+  - from constants import COHERENCE_HRR_WEIGHT
+  - from constants import COHERENCE_SEM_WEIGHT
+  - from constants import CONFIDENCE_HYBRID
+  - from constants import CONFIDENCE_MATH_ONLY
+  - from constants import DEFAULT_W_EMOTION
+  - from constants import DEFAULT_W_SEMANTIC
+  - from constants import EPSILON
+  - from constants import HYBRID_MATH_WEIGHT
+  - from constants import HYBRID_SPACY_WEIGHT
+  - from constants import MAX_SCORE
+  - from constants import MIN_SCORE
+  - from constants import NORMALIZATION_EPSILON
+  - from constants import VECTOR_DTYPE
+  - from typing import Optional
+  - numpy
+  - time
+
+src\lumina_memory\memory_system.py imports:
+  - from collections import deque
+  - from config import LuminaConfig
+  - from core import MemoryEntry
+  - from core import MemoryError
+  - from core import QueryResult
+  - from core import QueryType
+  - from datetime import datetime
+  - from embeddings import EmbeddingProvider
+  - from typing import Any
+  - from typing import Dict
+  - from typing import List
+  - from typing import Optional
+  - from utils import normalize_similarity
+  - from vector_store import VectorStore
+  - logging
+  - numpy
+  - time
+
+src\lumina_memory\unified_foundation.py imports:
+  - from dataclasses import dataclass
+  - from dataclasses import field
+  - from typing import Any
+  - from typing import Dict
+  - from typing import List
+  - from typing import Optional
+  - numpy
+  - time
+
+src\lumina_memory\utils.py imports:
+  - faiss
+  - from config import LuminaConfig
+  - from pathlib import Path
+  - from rich.console import Console
+  - from rich.logging import RichHandler
+  - from typing import Any
+  - from typing import Dict
+  - from typing import Optional
+  - logging
+  - os
+  - psutil
+  - sentence_transformers
+  - sys
+  - torch
+
+src\lumina_memory\vector_store.py imports:
+  - faiss
+  - from abc import ABC
+  - from abc import abstractmethod
+  - from core import MemoryEntry
+  - from core import StorageError
+  - from pathlib import Path
+  - from typing import Dict
+  - from typing import List
+  - from typing import Tuple
+  - logging
+  - numpy
+  - threading
+
+src\lumina_memory\versioned_xp_store.py imports:
+  - from dataclasses import dataclass
+  - from dataclasses import field
+  - from datetime import datetime
+  - from typing import Any
+  - from typing import Dict
+  - from typing import List
+  - from typing import Optional
+  - from typing import Tuple
+  - hashlib
+  - json
+  - numpy
+  - time
+
+src\lumina_memory\xp_core_unified.py imports:
+  - from constants import COHERENCE_HRR_WEIGHT
+  - from constants import COHERENCE_SEM_WEIGHT
+  - from constants import DEFAULT_W_EMOTION
+  - from constants import DEFAULT_W_SEMANTIC
+  - from constants import EPSILON
+  - from constants import MAX_SCORE
+  - from constants import MIN_SCORE
+  - from constants import VECTOR_DTYPE
+  - from dataclasses import dataclass
+  - from dataclasses import field
+  - from datetime import datetime
+  - from emotional_weighting import ConsciousnessEmotionalIntegrator
+  - from emotional_weighting import EmotionalAnalyzer
+  - from emotional_weighting import EmotionalMemoryWeighter
+  - from emotional_weighting import EmotionalState
+  - from enhanced_emotional_weighting import EnhancedConsciousnessEmotionalIntegrator
+  - from enhanced_emotional_weighting import EnhancedEmotionalAnalyzer
+  - from enhanced_emotional_weighting import EnhancedEmotionalMemoryWeighter
+  - from math_foundation import bind_role_filler
+  - from math_foundation import circular_convolution
+  - from math_foundation import circular_correlation
+  - from math_foundation import cosine_similarity
+  - from math_foundation import get_current_timestamp
+  - from math_foundation import hybrid_lexical_attribution
+  - from math_foundation import instant_salience
+  - from math_foundation import mathematical_coherence
+  - from math_foundation import memory_unit_score
+  - from math_foundation import normalize_vector
+  - from math_foundation import unbind_role_filler
+  - from sentence_transformers import SentenceTransformer
+  - from typing import Any
+  - from typing import Dict
+  - from typing import List
+  - from typing import Optional
+  - from typing import Tuple
+  - from typing import Union
+  - from versioned_xp_store import VersionedXPStore
+  - from versioned_xp_store import XPStoreEntry
+  - hashlib
+  - json
+  - logging
+  - numpy
+  - spacy
+  - time
+
+test_unified_system.py imports:
+  - from lumina_memory.math_foundation import circular_convolution
+  - from lumina_memory.math_foundation import circular_correlation
+  - from lumina_memory.math_foundation import instant_salience
+  - from lumina_memory.math_foundation import mathematical_coherence
+  - from lumina_memory.math_foundation import memory_unit_score
+  - from lumina_memory.math_foundation import normalize_vector
+  - from lumina_memory.versioned_xp_store import VersionedXPStore
+  - from lumina_memory.xp_core_unified import UnifiedXPConfig
+  - from lumina_memory.xp_core_unified import UnifiedXPKernel
+  - from lumina_memory.xp_core_unified import XPEnvironment
+  - from lumina_memory.xp_core_unified import XPUnit
+  - from pathlib import Path
+  - numpy
+  - os
+  - sys

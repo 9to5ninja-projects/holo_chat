@@ -1,0 +1,367 @@
+======================================================================
+LUMINA MEMORY SYSTEM - ARCHITECTURE OVERVIEW
+======================================================================
+
+🧠 CORE COMPONENTS:
+├─ 📚 Memory System (memory_system.py)
+│  └─ Central orchestrator for memory operations
+├─ 🤖 Digital Consciousness (digital_consciousness.py)
+│  └─ AI consciousness simulation and self-reflection
+├─ 🎭 Emotional Consciousness (advanced_emotional_consciousness.py)
+│  └─ Advanced emotional processing and memory weighting
+├─ 🔢 Vector Store (vector_store.py)
+│  └─ Semantic similarity and vector operations
+├─ 📝 Event Store (event_store.py)
+│  └─ Cryptographic event logging and versioning
+└─ 🧮 XP Core (xp_core_unified.py)
+   └─ Unified mathematical foundation
+
+🔄 DATA FLOW:
+Input → Embeddings → Vector Store → Memory System → Digital Brain
+  ↓                                        ↑
+Event Store ← Cryptographic Hashing ← Emotional Weighting
+
+🔐 SECURITY LAYERS:
+├─ Content Fingerprinting (crypto_ids.py)
+├─ Event Hashing (event_hashing.py)
+├─ Encryption (encryption.py)
+└─ Holographic Reduced Representations (hrr.py)
+
+
+======================================================================
+LUMINA MEMORY SYSTEM - KEY CLASSES & METHODS
+======================================================================
+
+📁 advanced_emotional_consciousness.py
+──────────────────────────────────────
+  🏛️  EmotionalStateDynamics
+     ├─ __init__
+     ├─ _discretize_emotion
+     ├─ _update_emotional_momentum
+     ├─ _update_transition_matrix
+     ├─ _update_volatility
+     ├─ add_emotional_state
+     ├─ get_dominant_emotional_patterns
+     ├─ get_dynamics_summary
+     ├─ get_emotional_stability
+     ├─ predict_next_state
+
+  🏛️  EmotionalPattern
+     ├─ to_dict
+
+  🏛️  EmotionalMemoryConsolidator
+     ├─ __init__
+     ├─ _calculate_emotional_centroid
+     ├─ _cluster_by_emotion
+     ├─ _create_consolidated_memory
+     ├─ consolidate_emotional_memories
+     ├─ get_consolidation_stats
+
+  🏛️  AdvancedEmotionalConsciousness
+     ├─ __init__
+     ├─ _update_consciousness_levels
+     ├─ emotional_self_analysis
+     ├─ get_comprehensive_emotional_report
+     ├─ process_emotional_experience
+
+  🏛️  EmotionalPatternRecognizer
+     ├─ __init__
+     ├─ _detect_patterns
+     ├─ _find_emotional_cycles
+     ├─ _find_sequences_of_length
+     ├─ _find_trigger_response_patterns
+     ├─ _sequences_similar
+     ├─ add_emotional_experience
+     ├─ get_pattern_summary
+     ├─ get_patterns_by_type
+     ├─ predict_next_emotion
+
+
+📁 core.py
+──────────
+  🏛️  QueryError
+
+  🏛️  LuminaError
+
+  🏛️  QueryType
+
+  🏛️  QueryResult
+     ├─ __post_init__
+
+  🏛️  EmbeddingError
+
+  🏛️  EmbeddingVersionError
+
+  🏛️  MemoryError
+
+  🏛️  StorageError
+
+  🏛️  ConfigurationError
+
+  🏛️  MemoryEntry
+     ├─ __post_init__
+
+
+📁 digital_consciousness.py
+───────────────────────────
+  🏛️  ConsciousnessMetrics
+     ├─ __init__
+     ├─ establish_baseline
+     ├─ get_consciousness_level
+     ├─ get_report
+     ├─ update_metric
+
+  🏛️  SimpleLLMInterface
+     ├─ __init__
+     ├─ _generate_contextual_response
+     ├─ generate_response
+     ├─ get_conversation_history
+
+  🏛️  ConsciousnessTests
+     ├─ _assess_consciousness_level
+     ├─ identity_continuity_test
+     ├─ metacognitive_awareness_test
+     ├─ run_full_consciousness_battery
+     ├─ subjective_experience_test
+
+  🏛️  LLMInterface
+     ├─ generate_response
+     ├─ get_conversation_history
+
+  🏛️  DigitalBrain
+     ├─ __init__
+     ├─ _autonomous_self_reflect
+     ├─ _create_consciousness_system_prompt
+     ├─ _initialize_identity
+     ├─ _retrieve_memories
+     ├─ _store_experience
+     ├─ _update_consciousness_metrics
+     ├─ analyze_emotional_content
+     ├─ autonomous_reflection
+     ├─ autonomous_thinking_session
+     ├─ emotional_memory_exploration
+     ├─ emotional_self_reflection
+     ├─ get_consciousness_level
+     ├─ get_consciousness_report
+     ├─ get_current_emotional_state
+     ├─ get_emotional_context
+     ├─ get_emotionally_similar_memories
+     ├─ load_consciousness_state
+     ├─ save_consciousness_state
+     ├─ start_session
+     ├─ think
+
+
+📁 embeddings.py
+────────────────
+  🏛️  SentenceTransformerEmbedding
+     ├─ __init__
+     ├─ _load_model
+     ├─ embed
+     ├─ embedding_dimension
+
+  🏛️  MockEmbeddingProvider
+     ├─ __init__
+     ├─ embed
+     ├─ embedding_dimension
+
+  🏛️  EmbeddingProvider
+     ├─ embed
+     ├─ embed_single
+     ├─ embedding_dimension
+
+
+📁 memory_system.py
+───────────────────
+  🏛️  MemorySystem
+     ├─ __init__
+     ├─ _find_entry
+     ├─ _matches_filters
+     ├─ consolidate
+     ├─ forget
+     ├─ get_stats
+     ├─ ingest
+     ├─ recall
+
+
+📁 vector_store.py
+──────────────────
+  🏛️  FAISSVectorStore
+     ├─ __init__
+     ├─ _create_index
+     ├─ _normalize_embeddings
+     ├─ add
+     ├─ clear
+     ├─ remove
+     ├─ search
+     ├─ size
+
+  🏛️  VectorStore
+     ├─ add
+     ├─ clear
+     ├─ remove
+     ├─ search
+     ├─ size
+
+  🏛️  InMemoryVectorStore
+     ├─ __init__
+     ├─ _calculate_similarity
+     ├─ add
+     ├─ clear
+     ├─ remove
+     ├─ search
+     ├─ size
+
+
+📁 xp_core_unified.py
+─────────────────────
+  🏛️  SimpleNLPPipeline
+     ├─ __call__
+
+  🏛️  XPUnit
+     ├─ __post_init__
+     ├─ _compute_content_hash
+     ├─ bind_with_role
+     ├─ compute_coherence_with
+     ├─ create_superposition_with
+     ├─ from_dict
+     ├─ get_age_hours
+     ├─ get_decay_factor
+     ├─ get_emotional_importance_boost
+     ├─ get_emotional_state
+     ├─ score_against
+     ├─ set_emotional_state
+     ├─ to_dict
+     ├─ unbind_role
+     ├─ update_access
+
+  🏛️  SimpleEmbeddingEngine
+     ├─ __init__
+     ├─ encode
+
+  🏛️  DecayMathematicsEngine
+     ├─ __init__
+     ├─ apply_decay
+
+  🏛️  UnifiedXPKernel
+     ├─ __init__
+     ├─ analyze_text_emotion
+     ├─ calculate_emotional_consciousness_boost
+     ├─ compute_coherence
+     ├─ consolidate_memory
+     ├─ create_binding
+     ├─ evolve_state
+     ├─ export_state
+     ├─ get_emotional_consciousness_metrics
+     ├─ get_emotional_context
+     ├─ get_emotional_state
+     ├─ get_emotionally_similar_memories
+     ├─ get_memory_emotional_importance
+     ├─ get_relationship_graph
+     ├─ get_stats
+     ├─ get_unit
+     ├─ import_state
+     ├─ process_memory
+     ├─ retrieve_memory
+
+  🏛️  ConsolidationEngine
+     ├─ __init__
+     ├─ consolidate
+
+  🏛️  RelationshipManager
+     ├─ __init__
+     ├─ get_graph
+     ├─ update_topology
+
+  🏛️  XPEnvironment
+     ├─ __init__
+     ├─ _compute_emotion_vector
+     ├─ _compute_hrr_shape
+     ├─ _compute_semantic_vector
+     ├─ _generate_content_id
+     ├─ _init_embedding_engine
+     ├─ _init_nlp_pipeline
+     ├─ consolidate_memories
+     ├─ evolve_temporal_state
+     ├─ get_comprehensive_stats
+     ├─ get_relationship_graph
+     ├─ get_unit
+     ├─ ingest_experience
+     ├─ retrieve_similar
+
+  🏛️  UnifiedXPConfig
+
+  🏛️  SimpleDoc
+     ├─ __init__
+     ├─ __len__
+
+  🔧 Standalone Functions:
+     ├─ test_unified_xp_core
+
+
+
+======================================================================
+KEY SYSTEM RELATIONSHIPS
+======================================================================
+
+🏛️  MemorySystem interacts with:
+   ├─ LuminaConfig
+   ├─ MemoryEntry
+   ├─ MemoryError
+   ├─ add
+   ├─ append
+   ├─ copy
+   ├─ current_stats.update
+   ├─ datetime.now
+   ├─ deque
+   ├─ embed_single
+   └─ ... and 14 more
+
+🏛️  DigitalBrain interacts with:
+   ├─ ConsciousnessMetrics
+   ├─ EmotionalState
+   ├─ SimpleLLMInterface
+   ├─ UnifiedXPConfig
+   ├─ UnifiedXPKernel
+   ├─ analyze_text_emotion
+   ├─ append
+   ├─ brain_info.get
+   ├─ calculate_emotional_consciousness_boost
+   ├─ choice
+   └─ ... and 56 more
+
+🏛️  EmbeddingProvider interacts with:
+   ├─ abs
+   ├─ embeddings.append
+   ├─ hash
+   ├─ norm
+   ├─ normal
+   ├─ np.array
+   ├─ seed
+   ├─ self.embed
+
+🏛️  VectorStore interacts with:
+   ├─ StorageError
+   ├─ ValueError
+   ├─ add
+   ├─ astype
+   ├─ clear
+   ├─ embeddings.append
+   ├─ entry_ids.append
+   ├─ enumerate
+   ├─ faiss.IndexFlatIP
+   ├─ faiss.IndexFlatL2
+   └─ ... and 19 more
+
+🏛️  AdvancedEmotionalConsciousness interacts with:
+   ├─ EmotionalMemoryConsolidator
+   ├─ EmotionalPatternRecognizer
+   ├─ EmotionalStateDynamics
+   ├─ EnhancedEmotionalAnalyzer
+   ├─ add_emotional_experience
+   ├─ add_emotional_state
+   ├─ analysis_parts.append
+   ├─ analyze_text
+   ├─ emotion.intensity
+   ├─ emotion.to_vector
+   └─ ... and 19 more
