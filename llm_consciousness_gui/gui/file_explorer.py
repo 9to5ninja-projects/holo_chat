@@ -14,7 +14,7 @@ from PySide6.QtWidgets import (
 from PySide6.QtCore import Qt, Signal, QTimer
 from PySide6.QtGui import QIcon, QFont, QAction
 
-from parser.ast_parser import ASTParser, CodeElement
+from llm_consciousness_gui.parser.ast_parser import ASTParser, CodeElement
 
 
 class FileExplorerWidget(QWidget):
