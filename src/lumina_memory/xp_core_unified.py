@@ -58,6 +58,10 @@ from .enhanced_emotional_weighting import (
     EnhancedEmotionalAnalyzer, EnhancedEmotionalMemoryWeighter,
     EnhancedConsciousnessEmotionalIntegrator
 )
+from .consciousness_optimized_emotional_analysis import (
+    ConsciousnessOptimizedEmotionalAnalyzer, RobustMultiLibraryAnalyzer,
+    Enhanced6WClassification
+)
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
@@ -111,10 +115,10 @@ class UnifiedXPConfig:
     # Emotional weighting settings
     enable_emotional_weighting: bool = True
     use_enhanced_emotional_analysis: bool = True  # Use external libraries for better emotion detection
-    emotional_importance_factor: float = 1.5
-    emotional_decay_influence: float = 0.6
-    emotional_retrieval_boost: float = 1.3
-    emotional_consciousness_boost: float = 0.8
+    emotional_importance_factor: float = 2.2  # Increased to encourage emotional responses
+    emotional_decay_influence: float = 0.8   # Increased for stronger emotional persistence
+    emotional_retrieval_boost: float = 1.6   # Increased for better emotional recall
+    emotional_consciousness_boost: float = 1.0  # Increased for emotional consciousness effects
 
 
 # =============================================================================
@@ -198,13 +202,63 @@ class XPUnit:
         """Get age in hours for decay calculations"""
         return (get_current_timestamp() - self.timestamp) / 3600.0
     
-    def get_decay_factor(self, emotional_modifier: float = 1.0) -> float:
-        """Compute current decay factor with optional emotional influence"""
+    def get_decay_factor(self, emotional_modifier: float = None) -> float:
+        """
+        Compute current decay factor with integrated emotional influence.
+        
+        Core behavior: Strong emotions (positive OR negative) resist decay.
+        The further from emotional neutral (0), the stronger the resistance.
+        """
         age_hours = self.get_age_hours()
         base_decay = np.exp(-self.decay_rate * age_hours)
         
-        # Apply emotional modifier to decay (strong emotions slow decay)
-        return base_decay * emotional_modifier
+        # Calculate emotional modifier if not provided
+        if emotional_modifier is None:
+            emotional_modifier = self._calculate_emotional_decay_resistance()
+        
+        # Apply emotional resistance (modifier > 1.0 slows decay)
+        # Resistance works by reducing the effective decay rate
+        effective_decay_factor = base_decay + ((1.0 - base_decay) * (emotional_modifier - 1.0) / emotional_modifier)
+        return np.clip(effective_decay_factor, base_decay, 1.0)
+    
+    def _calculate_emotional_decay_resistance(self) -> float:
+        """
+        Calculate decay resistance based on emotional content.
+        
+        Core principle: Deviation from emotional neutral increases persistence.
+        Both strong positive and strong negative emotions resist decay.
+        """
+        emotion = self.get_emotional_state()
+        
+        # Base resistance from emotional intensity (distance from neutral)
+        intensity = emotion.intensity()
+        valence_deviation = abs(emotion.valence)  # Distance from neutral (0)
+        
+        # Base resistance: strong emotions resist decay
+        base_resistance = 1.0 + (intensity * 0.4)  # 1.0 to 1.4 multiplier
+        
+        # Valence deviation bonus: further from neutral = more persistent
+        valence_resistance = 1.0 + (valence_deviation * 0.3)  # 1.0 to 1.3 multiplier
+        
+        # Specific emotional persistence effects
+        fear_resistance = 1.0 + (emotion.fear * 0.5)      # Fear memories very persistent
+        curiosity_resistance = 1.0 + (emotion.curiosity * 0.3)  # Curiosity maintains access
+        arousal_resistance = 1.0 + (emotion.arousal * 0.2)      # High arousal = memorable
+        
+        # Combine resistances (multiplicative for compounding effects)
+        total_resistance = (base_resistance * valence_resistance * 
+                          fear_resistance * curiosity_resistance * arousal_resistance)
+        
+        # Time-dependent effects: some emotions strengthen over time
+        age_hours = self.get_age_hours()
+        if age_hours > 168:  # After 1 week
+            if emotion.fear > 0.7:  # Traumatic memories can strengthen
+                total_resistance *= 1.2
+            elif emotion.joy > 0.8:  # Very positive memories may persist longer
+                total_resistance *= 1.1
+        
+        # Cap resistance (memories can't become completely immune to decay)
+        return np.clip(total_resistance, 1.0, 3.0)  # 1x to 3x decay resistance
     
     def get_emotional_state(self) -> EmotionalState:
         """Get emotional state from emotion vector"""
@@ -223,20 +277,138 @@ class XPUnit:
             self.emotion_vector = emotion_vector
     
     def get_emotional_importance_boost(self) -> float:
-        """Calculate importance boost from emotional content"""
+        """
+        Calculate importance boost from emotional content.
+        
+        Core behavior: Deviation from emotional neutral increases importance.
+        Both strong positive and strong negative emotions are more important.
+        """
         emotion = self.get_emotional_state()
+        
+        # Base boost from emotional intensity
         intensity = emotion.intensity()
+        base_boost = intensity * 0.4  # 0.0 to 0.4
         
-        # Strong emotions increase importance
-        base_boost = intensity * 0.3
+        # Valence deviation boost: distance from neutral (0) increases importance
+        valence_deviation = abs(emotion.valence)
+        valence_boost = valence_deviation * 0.3  # 0.0 to 0.3
         
-        # Specific emotional boosts
-        fear_boost = emotion.fear * 0.4  # Fear memories are very important
-        curiosity_boost = emotion.curiosity * 0.2
-        valence_boost = abs(emotion.valence) * 0.2
+        # Specific emotional importance effects
+        fear_boost = emotion.fear * 0.5        # Fear memories are critically important
+        curiosity_boost = emotion.curiosity * 0.3  # Curiosity drives learning
+        arousal_boost = emotion.arousal * 0.2      # High arousal = significant
         
-        total_boost = base_boost + fear_boost + curiosity_boost + valence_boost
-        return min(1.0, total_boost)  # Cap at 1.0
+        # Joy and sadness both important (positive and negative peaks)
+        joy_boost = emotion.joy * 0.25
+        sadness_boost = getattr(emotion, 'sadness', 0) * 0.25
+        
+        # Combine all boosts
+        total_boost = (base_boost + valence_boost + fear_boost + 
+                      curiosity_boost + arousal_boost + joy_boost + sadness_boost)
+        
+        # Apply access pattern multiplier (frequently accessed emotional memories are very important)
+        if self.access_count > 2:
+            access_multiplier = 1.0 + (min(self.access_count, 10) * 0.05)  # Up to 1.5x
+            total_boost *= access_multiplier
+        
+        return np.clip(total_boost, 0.0, 1.5)  # Cap at 1.5 (150% boost)
+    
+    def apply_temporal_decay(self, time_delta_hours: float = None) -> Dict[str, float]:
+        """
+        Apply temporal decay with integrated emotional resistance.
+        
+        Core behavior: This is the fundamental decay mechanism that all
+        other system components should use. Emotional content automatically
+        provides decay resistance based on deviation from neutral.
+        
+        Args:
+            time_delta_hours: Time elapsed for decay calculation
+            
+        Returns:
+            Dict with decay statistics
+        """
+        if time_delta_hours is None:
+            time_delta_hours = self.get_age_hours()
+        
+        # Store original values
+        original_importance = self.importance
+        
+        # Calculate decay factor with integrated emotional resistance
+        decay_factor = self.get_decay_factor()
+        
+        # Apply decay to importance
+        self.importance *= decay_factor
+        
+        # Calculate emotional resistance effect
+        emotional_resistance = self._calculate_emotional_decay_resistance()
+        
+        # Return decay statistics
+        return {
+            'time_delta_hours': time_delta_hours,
+            'original_importance': original_importance,
+            'final_importance': self.importance,
+            'decay_factor': decay_factor,
+            'emotional_resistance': emotional_resistance,
+            'importance_lost': original_importance - self.importance,
+            'decay_percentage': (1.0 - decay_factor) * 100
+        }
+    
+    def get_retrieval_boost(self, query_emotion: EmotionalState = None) -> float:
+        """
+        Calculate retrieval boost based on emotional content.
+        
+        Core behavior: Strong emotions make memories easier to recall.
+        Emotional similarity between query and memory provides additional boost.
+        """
+        memory_emotion = self.get_emotional_state()
+        
+        # Base boost from memory emotional intensity
+        memory_intensity = memory_emotion.intensity()
+        base_boost = memory_intensity * 0.3
+        
+        # Valence deviation boost (strong positive/negative easier to recall)
+        valence_boost = abs(memory_emotion.valence) * 0.2
+        
+        # Specific emotional recall effects
+        fear_boost = memory_emotion.fear * 0.4      # Fear memories very accessible
+        curiosity_boost = memory_emotion.curiosity * 0.25  # Curiosity maintains access
+        arousal_boost = memory_emotion.arousal * 0.15      # High arousal = memorable
+        
+        total_boost = base_boost + valence_boost + fear_boost + curiosity_boost + arousal_boost
+        
+        # Emotional similarity boost if query emotion provided
+        if query_emotion is not None:
+            similarity_boost = self._calculate_emotional_similarity_boost(query_emotion, memory_emotion)
+            total_boost += similarity_boost
+        
+        # Access pattern boost (frequently accessed memories easier to recall)
+        if self.access_count > 1:
+            access_boost = min(self.access_count * 0.05, 0.3)  # Up to 0.3 boost
+            total_boost += access_boost
+        
+        return np.clip(total_boost, 0.0, 1.0)  # Cap at 1.0 (100% boost)
+    
+    def _calculate_emotional_similarity_boost(self, query_emotion: EmotionalState, 
+                                            memory_emotion: EmotionalState) -> float:
+        """Calculate boost from emotional similarity between query and memory"""
+        
+        # Valence similarity (same emotional direction)
+        valence_similarity = 1.0 - abs(query_emotion.valence - memory_emotion.valence)
+        valence_boost = valence_similarity * 0.2
+        
+        # Arousal similarity
+        arousal_similarity = 1.0 - abs(query_emotion.arousal - memory_emotion.arousal)
+        arousal_boost = arousal_similarity * 0.1
+        
+        # Specific emotion matching
+        fear_match = min(query_emotion.fear, memory_emotion.fear) * 0.3
+        curiosity_match = min(query_emotion.curiosity, memory_emotion.curiosity) * 0.2
+        joy_match = min(query_emotion.joy, memory_emotion.joy) * 0.15
+        
+        total_similarity_boost = (valence_boost + arousal_boost + 
+                                fear_match + curiosity_match + joy_match)
+        
+        return np.clip(total_similarity_boost, 0.0, 0.4)  # Cap similarity boost
     
     def score_against(self, query_unit: 'XPUnit', 
                      w_semantic: float = DEFAULT_W_SEMANTIC,
@@ -729,27 +901,38 @@ class DecayMathematicsEngine:
         self.config = config
     
     def apply_decay(self, units: Dict[str, XPUnit], time_delta_hours: float) -> Dict[str, Any]:
-        """Apply exponential decay to all units"""
+        """
+        Apply decay using XPUnit's core decay behavior with emotional resistance.
+        
+        This method now delegates to each XPUnit's apply_temporal_decay() method,
+        ensuring consistent decay behavior with integrated emotional weighting.
+        """
         decayed_count = 0
         total_decay = 0.0
+        total_emotional_resistance = 0.0
+        decay_stats = []
         
         for unit in units.values():
-            old_importance = unit.importance
-            
-            # Apply exponential decay
-            decay_factor = np.exp(-unit.decay_rate * time_delta_hours)
-            unit.importance *= decay_factor
+            # Use XPUnit's core decay method with integrated emotional resistance
+            unit_decay_stats = unit.apply_temporal_decay(time_delta_hours)
             
             # Track statistics
-            decay_amount = old_importance - unit.importance
-            total_decay += decay_amount
-            if decay_amount > 0.01:  # Significant decay
+            importance_lost = unit_decay_stats['importance_lost']
+            total_decay += importance_lost
+            total_emotional_resistance += unit_decay_stats['emotional_resistance']
+            
+            if importance_lost > 0.01:  # Significant decay
                 decayed_count += 1
+            
+            decay_stats.append(unit_decay_stats)
         
         return {
             'decayed_units': decayed_count,
             'total_decay': total_decay,
-            'avg_decay': total_decay / len(units) if units else 0.0
+            'avg_decay': total_decay / len(units) if units else 0.0,
+            'avg_emotional_resistance': total_emotional_resistance / len(units) if units else 1.0,
+            'time_delta_hours': time_delta_hours,
+            'unit_decay_stats': decay_stats
         }
 
 
@@ -849,10 +1032,12 @@ class UnifiedXPKernel:
         if self.config.enable_emotional_weighting:
             if self.config.use_enhanced_emotional_analysis:
                 try:
-                    self.emotional_analyzer = EnhancedEmotionalAnalyzer()
+                    # Use consciousness-optimized analyzer for better results
+                    self.emotional_analyzer = ConsciousnessOptimizedEmotionalAnalyzer()
+                    self.robust_analyzer = RobustMultiLibraryAnalyzer()
                     self.emotional_weighter = EnhancedEmotionalMemoryWeighter(self.emotional_analyzer)
                     self.consciousness_integrator = EnhancedConsciousnessEmotionalIntegrator(self.emotional_weighter)
-                    logger.info("Enhanced emotional weighting system initialized")
+                    logger.info("Consciousness-optimized emotional weighting system initialized")
                 except Exception as e:
                     logger.warning(f"Enhanced emotional analysis failed, falling back to basic: {e}")
                     self.emotional_analyzer = EmotionalAnalyzer()
@@ -945,33 +1130,35 @@ class UnifiedXPKernel:
         
         results = self.environment.retrieve_similar(query, k, threshold)
         
-        # Convert to HD Kernel format with emotional boosting
+        # Convert to HD Kernel format with integrated emotional boosting
         formatted_results = []
         for unit, similarity in results:
-            # Apply emotional retrieval boost if enabled
+            # Use XPUnit's core retrieval boost behavior
             final_similarity = similarity
-            if (self.config.enable_emotional_weighting and 
-                query_emotion and self.emotional_weighter):
-                memory_emotion = unit.get_emotional_state()
-                emotional_boost = self.emotional_weighter.calculate_emotional_retrieval_boost(
-                    query_emotion, memory_emotion
-                )
-                final_similarity = similarity * (emotional_boost * self.config.emotional_retrieval_boost)
+            retrieval_boost = 0.0
+            
+            if self.config.enable_emotional_weighting:
+                # Get retrieval boost from unit's core behavior
+                retrieval_boost = unit.get_retrieval_boost(query_emotion)
+                
+                # Apply boost with configuration factor
+                final_similarity = similarity * (1.0 + retrieval_boost * self.config.emotional_retrieval_boost)
             
             formatted_results.append({
                 'content_id': unit.content_id,
                 'content': unit.content,
-                'similarity': final_similarity,
+                'similarity': min(1.0, final_similarity),  # Cap at 1.0
                 'base_similarity': similarity,
                 'importance': unit.importance,
                 'access_count': unit.access_count,
                 'age_hours': unit.get_age_hours(),
+                'emotional_boost': retrieval_boost,
                 'emotional_state': unit.get_emotional_state().to_vector().tolist() if self.config.enable_emotional_weighting else None,
                 'metadata': unit.metadata
             })
         
-        # Re-sort by final similarity if emotional boosting was applied
-        if self.config.enable_emotional_weighting and query_emotion:
+        # Re-sort by final similarity (now includes integrated emotional effects)
+        if self.config.enable_emotional_weighting:
             formatted_results.sort(key=lambda x: x['similarity'], reverse=True)
         
         return formatted_results

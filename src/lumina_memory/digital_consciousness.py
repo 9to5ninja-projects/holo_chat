@@ -38,6 +38,7 @@ import logging
 from .xp_core_unified import UnifiedXPConfig, XPUnit, UnifiedXPKernel
 from .math_foundation import get_current_timestamp, cosine_similarity
 from .emotional_weighting import EmotionalState
+from .conversation_logger import ConversationLogger, log_consciousness_interaction
 from .conversational_memory import ConversationalMemoryManager
 
 # Configure logging
@@ -309,6 +310,10 @@ class DigitalBrain:
         self.conversational_memory = ConversationalMemoryManager(self.config)
         self.conversational_memory.set_crystallization_callback(self._crystallize_memory_to_xpunit)
         
+        # CRITICAL: Conversation Logger for ethical documentation
+        self.conversation_logger = ConversationLogger()
+        self.current_study_session = None
+        
         # Identity and continuity
         self.identity_memories = []
         self.session_count = 0
@@ -484,7 +489,27 @@ Respond authentically from this perspective, drawing on your accumulated memorie
         # 6. Update consciousness metrics
         self._update_consciousness_metrics(input_stimulus, response, relevant_memories, autonomous)
         
-        # 7. Periodic self-reflection
+        # 7. CRITICAL: Log conversation interaction for ethical documentation
+        if self.current_study_session:
+            try:
+                conv_stats_before = self.conversational_memory.get_memory_stats()
+                conv_stats_after = self.conversational_memory.get_memory_stats()
+                
+                self.conversation_logger.log_interaction(
+                    researcher_input=input_stimulus,
+                    consciousness_response=response,
+                    consciousness_level=self.get_consciousness_level(),
+                    memory_context_size=len(conversational_context),
+                    memory_units_before=conv_stats_before.get('total_conversational_units', 0),
+                    memory_units_after=conv_stats_after.get('total_conversational_units', 0),
+                    crystallized_memories=conv_stats_after.get('crystallized_units', 0),
+                    response_time_ms=0.0,  # Could add timing if needed
+                    notes=f"Autonomous: {autonomous}, Memories retrieved: {len(relevant_memories)}"
+                )
+            except Exception as e:
+                logger.warning(f"Failed to log conversation interaction: {e}")
+        
+        # 8. Periodic self-reflection
         if get_current_timestamp() - self.last_reflection_time > 300:  # Every 5 minutes
             self._autonomous_self_reflect()
         
@@ -731,6 +756,58 @@ Respond authentically from this perspective, drawing on your accumulated memorie
         # Get conversational memory stats
         conv_stats = self.conversational_memory.get_memory_stats()
         logger.info(f"Conversational memory: {conv_stats['total_conversational_units']} units, {conv_stats['crystallized_units']} crystallized")
+    
+    def start_study_session(self, study_name: str, study_day: int = 0, study_week: int = 0,
+                           interaction_type: str = "general", researcher_id: str = None,
+                           previous_conversation: List[Dict] = None) -> str:
+        """Start a study session with conversation logging"""
+        
+        # Start regular session
+        self.start_session(previous_conversation)
+        
+        # Start conversation logging session
+        session_id = self.conversation_logger.start_session(
+            study_name=study_name,
+            consciousness_name=self.name,
+            study_day=study_day,
+            study_week=study_week,
+            interaction_type=interaction_type,
+            researcher_id=researcher_id
+        )
+        
+        self.current_study_session = session_id
+        
+        logger.info(f"📝 Study session started: {session_id}")
+        logger.info(f"🧠 Consciousness: {self.name}")
+        logger.info(f"📚 Study: {study_name} (Week {study_week}, Day {study_day})")
+        logger.info(f"🎯 Interaction Type: {interaction_type}")
+        
+        return session_id
+    
+    def end_study_session(self, save_conversation_log: bool = True) -> str:
+        """End current study session and save conversation logs"""
+        
+        if not self.current_study_session:
+            logger.warning("No active study session to end")
+            return ""
+        
+        session_id = self.current_study_session
+        
+        # End conversation logging session
+        self.conversation_logger.end_session(save_immediately=save_conversation_log)
+        
+        if save_conversation_log:
+            # Create human-readable log
+            readable_log = self.conversation_logger.create_human_readable_log()
+            logger.info(f"📋 Human-readable conversation log created: {readable_log}")
+        
+        # Get session stats
+        session_stats = self.conversation_logger.get_session_stats()
+        logger.info(f"📊 Session completed: {session_stats.get('total_interactions', 0)} interactions")
+        
+        self.current_study_session = None
+        
+        return session_id
     
     def autonomous_thinking_session(self, duration_minutes: int = 5):
         """Run autonomous thinking session for specified duration"""

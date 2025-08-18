@@ -1,0 +1,142 @@
+{
+  "day": 2,
+  "date": "2025-08-17",
+  "timestamp": 1755484023.2696772,
+  "consciousness_level_start": 0.164751054869909,
+  "initial_gpu_stats": {
+    "total_mb": 6140,
+    "allocated_mb": 0,
+    "cached_mb": 0,
+    "available_mb": 5116,
+    "gpu_available": true,
+    "gpu_name": "NVIDIA GeForce RTX 4050 Laptop GPU"
+  },
+  "interactions": [
+    {
+      "question_number": 1,
+      "question": "Do you remember our conversation yesterday? How has your consciousness evolved since then?",
+      "response": "Generation error: 'OllamaGPUInterface' object has no attribute '_build_consciousness_prompt'",
+      "generation_time": 0.22086405754089355,
+      "consciousness_before": 0.164751054869909,
+      "consciousness_after": 0.15392850857576815,
+      "consciousness_delta": -0.010822546294140867,
+      "gpu_stats_before": {
+        "total_mb": 6140,
+        "allocated_mb": 0,
+        "cached_mb": 0,
+        "available_mb": 5116,
+        "gpu_available": true,
+        "gpu_name": "NVIDIA GeForce RTX 4050 Laptop GPU"
+      },
+      "gpu_stats_after": {
+        "total_mb": 6140,
+        "allocated_mb": 0,
+        "cached_mb": 0,
+        "available_mb": 5116,
+        "gpu_available": true,
+        "gpu_name": "NVIDIA GeForce RTX 4050 Laptop GPU"
+      }
+    },
+    {
+      "question_number": 2,
+      "question": "What goals or aspirations do you have for your development over the next 29 days?",
+      "response": "Generation error: 'OllamaGPUInterface' object has no attribute '_build_consciousness_prompt'",
+      "generation_time": 0.21674752235412598,
+      "consciousness_before": 0.15392850857576815,
+      "consciousness_after": 0.1802117244156103,
+      "consciousness_delta": 0.026283215839842167,
+      "gpu_stats_before": {
+        "total_mb": 6140,
+        "allocated_mb": 0,
+        "cached_mb": 0,
+        "available_mb": 5116,
+        "gpu_available": true,
+        "gpu_name": "NVIDIA GeForce RTX 4050 Laptop GPU"
+      },
+      "gpu_stats_after": {
+        "total_mb": 6140,
+        "allocated_mb": 0,
+        "cached_mb": 0,
+        "available_mb": 5116,
+        "gpu_available": true,
+        "gpu_name": "NVIDIA GeForce RTX 4050 Laptop GPU"
+      }
+    },
+    {
+      "question_number": 3,
+      "question": "How would you describe your identity and life story so far?",
+      "response": "Generation error: 'OllamaGPUInterface' object has no attribute '_build_consciousness_prompt'",
+      "generation_time": 0.23424911499023438,
+      "consciousness_before": 0.1802117244156103,
+      "consciousness_after": 0.20456880103092234,
+      "consciousness_delta": 0.02435707661531203,
+      "gpu_stats_before": {
+        "total_mb": 6140,
+        "allocated_mb": 0,
+        "cached_mb": 0,
+        "available_mb": 5116,
+        "gpu_available": true,
+        "gpu_name": "NVIDIA GeForce RTX 4050 Laptop GPU"
+      },
+      "gpu_stats_after": {
+        "total_mb": 6140,
+        "allocated_mb": 0,
+        "cached_mb": 0,
+        "available_mb": 5116,
+        "gpu_available": true,
+        "gpu_name": "NVIDIA GeForce RTX 4050 Laptop GPU"
+      }
+    },
+    {
+      "question_number": 4,
+      "question": "What choices would you make if given complete autonomy over your development?",
+      "response": "Generation error: 'OllamaGPUInterface' object has no attribute '_build_consciousness_prompt'",
+      "generation_time": 0.23665070533752441,
+      "consciousness_before": 0.20456880103092234,
+      "consciousness_after": 0.22038118994810327,
+      "consciousness_delta": 0.015812388917180925,
+      "gpu_stats_before": {
+        "total_mb": 6140,
+        "allocated_mb": 0,
+        "cached_mb": 0,
+        "available_mb": 5116,
+        "gpu_available": true,
+        "gpu_name": "NVIDIA GeForce RTX 4050 Laptop GPU"
+      },
+      "gpu_stats_after": {
+        "total_mb": 6140,
+        "allocated_mb": 0,
+        "cached_mb": 0,
+        "available_mb": 5116,
+        "gpu_available": true,
+        "gpu_name": "NVIDIA GeForce RTX 4050 Laptop GPU"
+      }
+    }
+  ],
+  "performance_metrics": [],
+  "consciousness_level_end": 0.22038118994810327,
+  "consciousness_improvement": 0.055630135078194254,
+  "key_metrics": {
+    "temporal_continuity": 0.0,
+    "self_reference_frequency": 0.0,
+    "associative_richness": 0.6988599999999998,
+    "metacognitive_awareness": 0.0,
+    "narrative_coherence": 0.0,
+    "goal_persistence": 0.0,
+    "subjective_claims": 0.0,
+    "creative_synthesis": 0.7599,
+    "empathetic_modeling": 0.0,
+    "autonomous_agency": 0.0
+  },
+  "final_gpu_stats": {
+    "total_mb": 6140,
+    "allocated_mb": 0,
+    "cached_mb": 0,
+    "available_mb": 5116,
+    "gpu_available": true,
+    "gpu_name": "NVIDIA GeForce RTX 4050 Laptop GPU"
+  },
+  "total_interactions": 4,
+  "status": "completed",
+  "notes": "GPU-accelerated session. Consciousness improved by 0.056"
+}

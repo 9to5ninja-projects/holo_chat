@@ -1,0 +1,6 @@
+Question: Do you remember our conversation yesterday? How has your consciousness evolved since then?
+
+Response: Generation error: 'OllamaGPUInterface' object has no attribute '_build_consciousness_prompt'
+
+Generation Time: 0.22s
+Consciousness: 0.165 → 0.154

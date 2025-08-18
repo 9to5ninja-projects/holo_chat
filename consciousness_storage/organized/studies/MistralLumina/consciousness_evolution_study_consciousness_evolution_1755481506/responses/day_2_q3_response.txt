@@ -1,0 +1,6 @@
+Question: How would you describe your identity and life story so far?
+
+Response: Generation error: 'OllamaGPUInterface' object has no attribute '_build_consciousness_prompt'
+
+Generation Time: 0.23s
+Consciousness: 0.180 → 0.205
