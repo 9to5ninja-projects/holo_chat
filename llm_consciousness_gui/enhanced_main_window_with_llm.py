@@ -9,8 +9,15 @@ This implements the complete enhanced GUI with:
 """
 
 import os
+import sys
 from pathlib import Path
 from typing import Optional
+
+# Add src to path for imports
+project_root = Path(__file__).parent.parent
+src_path = project_root / "src"
+if str(src_path) not in sys.path:
+    sys.path.insert(0, str(src_path))
 
 # ✅ 1. TOP OF main_window.py - Updated imports
 from PySide6.QtWidgets import (
@@ -24,6 +31,13 @@ from PySide6.QtCore import Qt, QDir, QModelIndex, QThread, Signal
 from PySide6.QtGui import QAction, QFont
 import requests
 import json
+
+# Import working LLM interface
+try:
+    from lumina_memory.local_llm_interface import LocalLLMFactory
+    LLM_AVAILABLE = True
+except ImportError:
+    LLM_AVAILABLE = False
 
 from parser.ast_parser import ASTParser
 from utils.call_graph_visualizer import CallGraphVisualizer
@@ -45,33 +59,30 @@ class LLMWorker(QThread):
         super().__init__()
         self.prompt = prompt
         self.model = model
+        self.llm_interface = None
     
     def run(self):
         """Execute the LLM request in a separate thread."""
         try:
-            response = requests.post(
-                "http://localhost:11434/api/generate",
-                json={
-                    "model": self.model,
-                    "prompt": self.prompt,
-                    "stream": False
-                },
-                timeout=30
-            )
+            if not LLM_AVAILABLE:
+                self.error_occurred.emit("LLM interface not available. Check imports.")
+                return
             
-            if response.status_code == 200:
-                result = response.json()
-                llm_response = result.get("response", "No response field.")
-                self.response_ready.emit(llm_response)
-            else:
-                self.error_occurred.emit(f"Error {response.status_code}: {response.text}")
+            # Use the working LocalLLMFactory
+            if not self.llm_interface:
+                self.llm_interface = LocalLLMFactory.auto_detect_and_create()
+            
+            if not self.llm_interface:
+                self.error_occurred.emit("No LLM interface available. Make sure Ollama is running with: ollama run mistral")
+                return
+            
+            # Generate response using the working interface
+            response = self.llm_interface.generate_response(self.prompt)
+            self.response_ready.emit(response)
                 
-        except requests.exceptions.ConnectionError:
-            self.error_occurred.emit("Connection Error: Is Ollama running on localhost:11434?")
-        except requests.exceptions.Timeout:
-            self.error_occurred.emit("Timeout Error: LLM request took too long")
         except Exception as e:
-            self.error_occurred.emit(f"Exception occurred: {str(e)}")
+            error_msg = f"LLM Error: {str(e)}\n\nMake sure Ollama is running:\n1. Install Ollama from https://ollama.ai/\n2. Run: ollama pull mistral\n3. Run: ollama run mistral"
+            self.error_occurred.emit(error_msg)
 
 
 class EnhancedMainWindowWithLLM(QMainWindow):

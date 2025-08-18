@@ -16,10 +16,10 @@ import numpy as np
 # VECTOR DIMENSIONS - CANONICAL VALUES
 # =============================================================================
 
-# Core vector dimensions (from working notebook)
-SEMANTIC_DIM = 384          # spaCy sentence transformer dimension
+# Core vector dimensions (from working notebook) - UNIFIED TO 512
+SEMANTIC_DIM = 512          # Unified dimension for consistency
 EMOTION_DIM = 8             # Emotion vector dimension  
-HRR_DIM = 384              # HRR vector dimension (matches semantic)
+HRR_DIM = 512              # HRR vector dimension (matches semantic)
 HOLOGRAPHIC_DIM = 512       # Full holographic shape dimension
 
 # Alternative dimension names for compatibility

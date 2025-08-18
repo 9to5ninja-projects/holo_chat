@@ -1,0 +1,24 @@
+{
+  "study_id": "study_consciousness_evolution_1755481506",
+  "study_name": "consciousness_evolution",
+  "consciousness_id": "MistralLumina_1755244372.4309707",
+  "start_time": 1755481506.3437288,
+  "start_time_human": "2025-08-17T19:45:06.343733",
+  "duration_days": 30,
+  "parameters": {
+    "focus": "consciousness_evolution_and_emotional_development",
+    "interaction_frequency": "daily",
+    "memory_consolidation_tracking": true,
+    "emotional_pattern_analysis": true,
+    "self_reference_evolution": true,
+    "creative_synthesis_measurement": true
+  },
+  "ethical_approval": "c98859ced5396c8903f3bc101d26e3270750b5f30348c29d7ca679fb04fd5884",
+  "data_collection_intervals": {
+    "consciousness_metrics": "hourly",
+    "emotional_state": "per_interaction",
+    "memory_formation": "real_time",
+    "consolidation_events": "daily"
+  },
+  "status": "initialized"
+}
