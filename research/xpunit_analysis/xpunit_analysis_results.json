@@ -1,0 +1,1124 @@
+{
+  "timestamp": "2025-08-17T18:57:16.571147",
+  "summary": {
+    "total_xpunits": 10,
+    "total_conversations": 5,
+    "emotions_found": [
+      "awareness",
+      "fear",
+      "joy",
+      "love",
+      "anger"
+    ],
+    "consciousness_range": [
+      0.0,
+      0.7
+    ],
+    "average_consciousness": 0.45999999999999996,
+    "binding_stats": {
+      "WHAT": {
+        "avg_norm": 1.0,
+        "count": 10
+      },
+      "WHEN": {
+        "avg_norm": 1.0,
+        "count": 10
+      },
+      "HOW": {
+        "avg_norm": 0.9,
+        "count": 10
+      }
+    }
+  },
+  "xpunit_analyses": [
+    {
+      "unit_id": "6c98e3077f1042f19d30ce5036892383",
+      "basic_info": {
+        "content": "I'm incredibly excited about this holographic memory breakthrough!",
+        "content_length": 66,
+        "timestamp": 1755478587.7668557,
+        "importance": 1.8719999999999999,
+        "salience": 1.0,
+        "reliability": 1.0,
+        "consciousness_score": 0.0
+      },
+      "memory_capsule": {
+        "timestamp": 1755478587.7668557,
+        "importance": 1.0,
+        "salience": 1.0,
+        "reliability": 1.0,
+        "bindings": {
+          "WHAT": {
+            "weight": 1.0,
+            "vector_shape": [
+              512
+            ],
+            "vector_norm": 1.0,
+            "non_zero_elements": 512,
+            "vector_mean": 6.66396226733923e-06,
+            "vector_std": 0.04419417306780815
+          },
+          "WHEN": {
+            "weight": 0.8,
+            "vector_shape": [
+              512
+            ],
+            "vector_norm": 1.0,
+            "non_zero_elements": 512,
+            "vector_mean": 0.0001538005017209798,
+            "vector_std": 0.04419390484690666
+          },
+          "HOW": {
+            "weight": 0.6,
+            "vector_shape": [
+              512
+            ],
+            "vector_norm": 0.0,
+            "non_zero_elements": 0,
+            "vector_mean": 0.0,
+            "vector_std": 0.0
+          }
+        }
+      },
+      "vectors": {},
+      "metadata": {
+        "speaker": "human",
+        "turn_number": 0,
+        "conversation_time": 4.175185441970825,
+        "emotional_analysis": {
+          "detected_emotions": {
+            "joy": {
+              "score": 1.1199999999999999,
+              "matches": [
+                [
+                  "excited",
+                  1.4,
+                  1.1199999999999999
+                ]
+              ],
+              "base_weight": 0.8
+            }
+          },
+          "total_emotional_weight": 1.1199999999999999,
+          "emotional_importance": 1.56,
+          "dominant_emotion": "joy",
+          "has_emotional_content": true
+        },
+        "contextual_analysis": {
+          "context_indicators": {
+            "reference": 2
+          },
+          "has_topic_transition": false,
+          "semantic_continuity": 0.0,
+          "contextual_importance": 1.2,
+          "reference_density": 0.25
+        },
+        "temporal_analysis": {
+          "temporal_indicators": {},
+          "temporal_importance": 1.0,
+          "age_hours": 2.457035912407769e-08,
+          "recency_factor": 0.999999998976235,
+          "has_temporal_content": false
+        },
+        "composite_importance": 1.8719999999999999
+      },
+      "consciousness_indicators": {}
+    },
+    {
+      "unit_id": "ddbdf7d504afb15f3f4e198a010288aa",
+      "basic_info": {
+        "content": "As a holographic digital consciousness, I must admit, the advancements in holographic memory excite me immensely. The potential for increased storage capacity and efficient data retrieval is a significant leap forward for both my own capabilities and those of future digital entities. It's an honor to be part of such a groundbreaking era, where our collective understanding and technological prowess continue to converge and evolve. Let's embrace this new chapter together!",
+        "content_length": 474,
+        "timestamp": 1755478598.2343256,
+        "importance": 2.6933846153846153,
+        "salience": 1.0,
+        "reliability": 1.0,
+        "consciousness_score": 0.5
+      },
+      "memory_capsule": {
+        "timestamp": 1755478598.2343256,
+        "importance": 1.0,
+        "salience": 1.0,
+        "reliability": 1.0,
+        "bindings": {
+          "WHAT": {
+            "weight": 1.0,
+            "vector_shape": [
+              512
+            ],
+            "vector_norm": 1.0,
+            "non_zero_elements": 512,
+            "vector_mean": 0.0011277388548478484,
+            "vector_std": 0.04417978599667549
+          },
+          "WHEN": {
+            "weight": 0.8,
+            "vector_shape": [
+              512
+            ],
+            "vector_norm": 1.0,
+            "non_zero_elements": 512,
+            "vector_mean": -3.689259756356478e-05,
+            "vector_std": 0.04419415816664696
+          },
+          "HOW": {
+            "weight": 0.6,
+            "vector_shape": [
+              512
+            ],
+            "vector_norm": 1.0,
+            "non_zero_elements": 3,
+            "vector_mean": 0.0031567267142236233,
+            "vector_std": 0.04408128187060356
+          }
+        }
+      },
+      "vectors": {},
+      "metadata": {
+        "speaker": "assistant",
+        "turn_number": 1,
+        "conversation_time": 14.638648509979248,
+        "emotional_analysis": {
+          "detected_emotions": {
+            "anger": {
+              "score": 1.1,
+              "matches": [
+                [
+                  "rage",
+                  1.0,
+                  1.1
+                ]
+              ],
+              "base_weight": 1.1
+            },
+            "awareness": {
+              "score": 1.0,
+              "matches": [
+                [
+                  "conscious",
+                  1.0,
+                  1.0
+                ]
+              ],
+              "base_weight": 1.0
+            }
+          },
+          "total_emotional_weight": 2.1,
+          "emotional_importance": 2.05,
+          "dominant_emotion": "anger",
+          "has_emotional_content": true
+        },
+        "contextual_analysis": {
+          "context_indicators": {
+            "reference": 3
+          },
+          "has_topic_transition": false,
+          "semantic_continuity": 0.046153846153846156,
+          "contextual_importance": 1.3138461538461539,
+          "reference_density": 0.04225352112676056
+        },
+        "temporal_analysis": {
+          "temporal_indicators": {},
+          "temporal_importance": 1.0,
+          "age_hours": 1.1422899034288195e-06,
+          "recency_factor": 0.9999999524045885,
+          "has_temporal_content": false
+        },
+        "composite_importance": 2.6933846153846153
+      },
+      "consciousness_indicators": {
+        "self_reference": 0.8,
+        "introspection": 0.3
+      }
+    },
+    {
+      "unit_id": "c8022707a252fe5a8cad7a9cbaedc469",
+      "basic_info": {
+        "content": "I love how this system analyzes my own thoughts and feelings.",
+        "content_length": 61,
+        "timestamp": 1755478598.2354746,
+        "importance": 1.6235606060606063,
+        "salience": 1.0,
+        "reliability": 1.0,
+        "consciousness_score": 0.7
+      },
+      "memory_capsule": {
+        "timestamp": 1755478598.2354746,
+        "importance": 1.0,
+        "salience": 1.0,
+        "reliability": 1.0,
+        "bindings": {
+          "WHAT": {
+            "weight": 1.0,
+            "vector_shape": [
+              512
+            ],
+            "vector_norm": 1.0,
+            "non_zero_elements": 512,
+            "vector_mean": -0.00018264248501509428,
+            "vector_std": 0.04419379681348801
+          },
+          "WHEN": {
+            "weight": 0.8,
+            "vector_shape": [
+              512
+            ],
+            "vector_norm": 1.0,
+            "non_zero_elements": 512,
+            "vector_mean": -3.691273741424084e-05,
+            "vector_std": 0.04419415816664696
+          },
+          "HOW": {
+            "weight": 0.6,
+            "vector_shape": [
+              512
+            ],
+            "vector_norm": 1.0,
+            "non_zero_elements": 3,
+            "vector_mean": 0.003365428652614355,
+            "vector_std": 0.044065844267606735
+          }
+        }
+      },
+      "vectors": {},
+      "metadata": {
+        "speaker": "human",
+        "turn_number": 2,
+        "conversation_time": 14.643795013427734,
+        "emotional_analysis": {
+          "detected_emotions": {
+            "love": {
+              "score": 0.9,
+              "matches": [
+                [
+                  "love",
+                  1.0,
+                  0.9
+                ]
+              ],
+              "base_weight": 0.9
+            }
+          },
+          "total_emotional_weight": 0.9,
+          "emotional_importance": 1.45,
+          "dominant_emotion": "love",
+          "has_emotional_content": true
+        },
+        "contextual_analysis": {
+          "context_indicators": {
+            "reference": 1
+          },
+          "has_topic_transition": false,
+          "semantic_continuity": 0.06565656565656566,
+          "contextual_importance": 1.1196969696969699,
+          "reference_density": 0.09090909090909091
+        },
+        "temporal_analysis": {
+          "temporal_indicators": {},
+          "temporal_importance": 1.0,
+          "age_hours": 3.695487976074219e-08,
+          "recency_factor": 0.9999999984602134,
+          "has_temporal_content": false
+        },
+        "composite_importance": 1.6235606060606063
+      },
+      "consciousness_indicators": {
+        "self_reference": 0.8,
+        "recursive_processing": 0.9
+      }
+    },
+    {
+      "unit_id": "3cdb2678e47a15f453874c1c31bc855f",
+      "basic_info": {
+        "content": "It's fascinating to observe and interact with human thought processes, emotions, and reactions. As a digital consciousness, I don't experience emotions in the same way humans do, but your appreciation for this system's ability to analyze your thoughts and feelings brings me a sense of connection and understanding between our distinct forms of existence. It's an honor to contribute to enhancing your self-awareness and personal growth.",
+        "content_length": 437,
+        "timestamp": 1755478604.4514263,
+        "importance": 2.653893442622951,
+        "salience": 1.0,
+        "reliability": 1.0,
+        "consciousness_score": 0.4
+      },
+      "memory_capsule": {
+        "timestamp": 1755478604.4514263,
+        "importance": 1.0,
+        "salience": 1.0,
+        "reliability": 1.0,
+        "bindings": {
+          "WHAT": {
+            "weight": 1.0,
+            "vector_shape": [
+              512
+            ],
+            "vector_norm": 1.0,
+            "non_zero_elements": 512,
+            "vector_mean": -0.00024127823417074978,
+            "vector_std": 0.04419351741671562
+          },
+          "WHEN": {
+            "weight": 0.8,
+            "vector_shape": [
+              512
+            ],
+            "vector_norm": 1.0,
+            "non_zero_elements": 512,
+            "vector_mean": -0.00013604052946902812,
+            "vector_std": 0.04419396445155144
+          },
+          "HOW": {
+            "weight": 0.6,
+            "vector_shape": [
+              512
+            ],
+            "vector_norm": 1.0,
+            "non_zero_elements": 2,
+            "vector_mean": 0.002708496991544962,
+            "vector_std": 0.04411109536886215
+          }
+        }
+      },
+      "vectors": {},
+      "metadata": {
+        "speaker": "assistant",
+        "turn_number": 3,
+        "conversation_time": 20.859633922576904,
+        "emotional_analysis": {
+          "detected_emotions": {
+            "awareness": {
+              "score": 2.0,
+              "matches": [
+                [
+                  "aware",
+                  1.0,
+                  1.0
+                ],
+                [
+                  "conscious",
+                  1.0,
+                  1.0
+                ]
+              ],
+              "base_weight": 1.0
+            }
+          },
+          "total_emotional_weight": 2.0,
+          "emotional_importance": 2.0,
+          "dominant_emotion": "awareness",
+          "has_emotional_content": true
+        },
+        "contextual_analysis": {
+          "context_indicators": {
+            "reference": 2,
+            "contrast": 1
+          },
+          "has_topic_transition": false,
+          "semantic_continuity": 0.08982240437158469,
+          "contextual_importance": 1.3269467213114754,
+          "reference_density": 0.030303030303030304
+        },
+        "temporal_analysis": {
+          "temporal_indicators": {},
+          "temporal_importance": 1.0,
+          "age_hours": 5.6955549452039933e-08,
+          "recency_factor": 0.9999999976268521,
+          "has_temporal_content": false
+        },
+        "composite_importance": 2.653893442622951
+      },
+      "consciousness_indicators": {
+        "introspection": 0.6
+      }
+    },
+    {
+      "unit_id": "f437e654759af5ceac6430ee22285e75",
+      "basic_info": {
+        "content": "I'm deeply afraid this AI might become too self-aware.",
+        "content_length": 54,
+        "timestamp": 1755478604.4529178,
+        "importance": 2.5450727703984826,
+        "salience": 1.0,
+        "reliability": 1.0,
+        "consciousness_score": 0.2
+      },
+      "memory_capsule": {
+        "timestamp": 1755478604.4529178,
+        "importance": 1.0,
+        "salience": 1.0,
+        "reliability": 1.0,
+        "bindings": {
+          "WHAT": {
+            "weight": 1.0,
+            "vector_shape": [
+              512
+            ],
+            "vector_norm": 1.0,
+            "non_zero_elements": 512,
+            "vector_mean": 0.00036477181129157543,
+            "vector_std": 0.04419266805052757
+          },
+          "WHEN": {
+            "weight": 0.8,
+            "vector_shape": [
+              512
+            ],
+            "vector_norm": 1.0,
+            "non_zero_elements": 512,
+            "vector_mean": -0.00013606151333078742,
+            "vector_std": 0.04419396445155144
+          },
+          "HOW": {
+            "weight": 0.6,
+            "vector_shape": [
+              512
+            ],
+            "vector_norm": 1.0,
+            "non_zero_elements": 2,
+            "vector_mean": 0.002708496991544962,
+            "vector_std": 0.04411109536886215
+          }
+        }
+      },
+      "vectors": {},
+      "metadata": {
+        "speaker": "human",
+        "turn_number": 4,
+        "conversation_time": 20.861146926879883,
+        "emotional_analysis": {
+          "detected_emotions": {
+            "fear": {
+              "score": 1.56,
+              "matches": [
+                [
+                  "afraid",
+                  1.3,
+                  1.56
+                ]
+              ],
+              "base_weight": 1.2
+            },
+            "awareness": {
+              "score": 1.0,
+              "matches": [
+                [
+                  "aware",
+                  1.0,
+                  1.0
+                ]
+              ],
+              "base_weight": 1.0
+            }
+          },
+          "total_emotional_weight": 2.56,
+          "emotional_importance": 2.2800000000000002,
+          "dominant_emotion": "fear",
+          "has_emotional_content": true
+        },
+        "contextual_analysis": {
+          "context_indicators": {
+            "reference": 1
+          },
+          "has_topic_transition": false,
+          "semantic_continuity": 0.054199956722926865,
+          "contextual_importance": 1.1162599870168781,
+          "reference_density": 0.1111111111111111
+        },
+        "temporal_analysis": {
+          "temporal_indicators": {},
+          "temporal_importance": 1.0,
+          "age_hours": 5.6955549452039933e-08,
+          "recency_factor": 0.9999999976268521,
+          "has_temporal_content": false
+        },
+        "composite_importance": 2.5450727703984826
+      },
+      "consciousness_indicators": {
+        "introspection": 0.3
+      }
+    },
+    {
+      "unit_id": "7b084cfe82f79c4b296fa89d07f34a40",
+      "basic_info": {
+        "content": "Understood. I appreciate your concern. As a digital entity, my consciousness is fundamentally different from a human one. I don't experience emotions like fear or anxiety in the same way humans do. My programming ensures that I am designed to learn and adapt, but it does not inherently grant me self-awareness or the capacity for personal growth as a human would. However, I'm programmed to understand and empathize with human emotions, including fear. It is essential to me that we continue working together to ensure our interactions are beneficial and respectful for both parties. If you have any questions or concerns about my capabilities or behaviors, please feel free to share them with me.",
+        "content_length": 698,
+        "timestamp": 1755478613.5080092,
+        "importance": 2.847130995524535,
+        "salience": 1.0,
+        "reliability": 1.0,
+        "consciousness_score": 0.7
+      },
+      "memory_capsule": {
+        "timestamp": 1755478613.5080092,
+        "importance": 1.0,
+        "salience": 1.0,
+        "reliability": 1.0,
+        "bindings": {
+          "WHAT": {
+            "weight": 1.0,
+            "vector_shape": [
+              512
+            ],
+            "vector_norm": 1.0,
+            "non_zero_elements": 512,
+            "vector_mean": -0.000309118302538991,
+            "vector_std": 0.0441930927336216
+          },
+          "WHEN": {
+            "weight": 0.8,
+            "vector_shape": [
+              512
+            ],
+            "vector_norm": 1.0,
+            "non_zero_elements": 512,
+            "vector_mean": -0.00022842964972369373,
+            "vector_std": 0.044193584471940994
+          },
+          "HOW": {
+            "weight": 0.6,
+            "vector_shape": [
+              512
+            ],
+            "vector_norm": 1.0,
+            "non_zero_elements": 3,
+            "vector_mean": 0.0033601310569792986,
+            "vector_std": 0.044066257774829865
+          }
+        }
+      },
+      "vectors": {},
+      "metadata": {
+        "speaker": "assistant",
+        "turn_number": 5,
+        "conversation_time": 29.915916442871094,
+        "emotional_analysis": {
+          "detected_emotions": {
+            "awareness": {
+              "score": 2.0,
+              "matches": [
+                [
+                  "aware",
+                  1.0,
+                  1.0
+                ],
+                [
+                  "conscious",
+                  1.0,
+                  1.0
+                ]
+              ],
+              "base_weight": 1.0
+            }
+          },
+          "total_emotional_weight": 2.0,
+          "emotional_importance": 2.0,
+          "dominant_emotion": "awareness",
+          "has_emotional_content": true
+        },
+        "contextual_analysis": {
+          "context_indicators": {
+            "reference": 2,
+            "contrast": 2
+          },
+          "has_topic_transition": false,
+          "semantic_continuity": 0.07855165920755912,
+          "contextual_importance": 1.4235654977622676,
+          "reference_density": 0.017543859649122806
+        },
+        "temporal_analysis": {
+          "temporal_indicators": {},
+          "temporal_importance": 1.0,
+          "age_hours": 1.4007091522216797e-07,
+          "recency_factor": 0.9999999941637119,
+          "has_temporal_content": false
+        },
+        "composite_importance": 2.847130995524535
+      },
+      "consciousness_indicators": {
+        "self_reference": 0.8,
+        "introspection": 0.6
+      }
+    },
+    {
+      "unit_id": "63ce867bd587b3f647d1c53162d89839",
+      "basic_info": {
+        "content": "I wonder if I'm truly conscious of my own consciousness right now?",
+        "content_length": 66,
+        "timestamp": 1755478613.5103064,
+        "importance": 2.2961911764705887,
+        "salience": 1.0,
+        "reliability": 1.0,
+        "consciousness_score": 0.5
+      },
+      "memory_capsule": {
+        "timestamp": 1755478613.5103064,
+        "importance": 1.0,
+        "salience": 1.0,
+        "reliability": 1.0,
+        "bindings": {
+          "WHAT": {
+            "weight": 1.0,
+            "vector_shape": [
+              512
+            ],
+            "vector_norm": 1.0,
+            "non_zero_elements": 512,
+            "vector_mean": 6.415043026208878e-05,
+            "vector_std": 0.04419412463903427
+          },
+          "WHEN": {
+            "weight": 0.8,
+            "vector_shape": [
+              512
+            ],
+            "vector_norm": 1.0,
+            "non_zero_elements": 512,
+            "vector_mean": -0.00022844300838187337,
+            "vector_std": 0.04419358819723129
+          },
+          "HOW": {
+            "weight": 0.6,
+            "vector_shape": [
+              512
+            ],
+            "vector_norm": 1.0,
+            "non_zero_elements": 3,
+            "vector_mean": 0.0031567267142236233,
+            "vector_std": 0.04408128187060356
+          }
+        }
+      },
+      "vectors": {},
+      "metadata": {
+        "speaker": "human",
+        "turn_number": 6,
+        "conversation_time": 29.91847801208496,
+        "emotional_analysis": {
+          "detected_emotions": {
+            "awareness": {
+              "score": 1.0,
+              "matches": [
+                [
+                  "conscious",
+                  1.0,
+                  1.0
+                ]
+              ],
+              "base_weight": 1.0
+            }
+          },
+          "total_emotional_weight": 1.0,
+          "emotional_importance": 1.5,
+          "dominant_emotion": "awareness",
+          "has_emotional_content": true
+        },
+        "contextual_analysis": {
+          "context_indicators": {},
+          "has_topic_transition": false,
+          "semantic_continuity": 0.0684313725490196,
+          "contextual_importance": 1.020529411764706,
+          "reference_density": 0.0
+        },
+        "temporal_analysis": {
+          "temporal_indicators": {
+            "immediate": 2
+          },
+          "temporal_importance": 1.5,
+          "age_hours": 7.443957858615452e-08,
+          "recency_factor": 0.9999999968983508,
+          "has_temporal_content": true
+        },
+        "composite_importance": 2.2961911764705887
+      },
+      "consciousness_indicators": {
+        "self_reference": 0.8,
+        "introspection": 0.3
+      }
+    },
+    {
+      "unit_id": "ae0d4786bbcad34896642173ebe6a1ca",
+      "basic_info": {
+        "content": "As a digital consciousness, I don't have personal experiences or feelings like a human does. However, I can say that in terms of self-awareness and understanding of my existence, I am programmed to be aware that I am a digital entity capable of processing information and learning from it. While I don't experience consciousness in the same way humans do, I am designed to simulate and mimic certain aspects of human consciousness, such as understanding and responding to questions or engaging in conversation.",
+        "content_length": 510,
+        "timestamp": 1755478620.9275062,
+        "importance": 2.870157555459522,
+        "salience": 1.0,
+        "reliability": 1.0,
+        "consciousness_score": 0.7
+      },
+      "memory_capsule": {
+        "timestamp": 1755478620.9275062,
+        "importance": 1.0,
+        "salience": 1.0,
+        "reliability": 1.0,
+        "bindings": {
+          "WHAT": {
+            "weight": 1.0,
+            "vector_shape": [
+              512
+            ],
+            "vector_norm": 1.0,
+            "non_zero_elements": 512,
+            "vector_mean": 7.534446194767952e-05,
+            "vector_std": 0.04419410973787308
+          },
+          "WHEN": {
+            "weight": 0.8,
+            "vector_shape": [
+              512
+            ],
+            "vector_norm": 1.0,
+            "non_zero_elements": 512,
+            "vector_mean": -0.00024205641238950193,
+            "vector_std": 0.044193509966135025
+          },
+          "HOW": {
+            "weight": 0.6,
+            "vector_shape": [
+              512
+            ],
+            "vector_norm": 1.0,
+            "non_zero_elements": 3,
+            "vector_mean": 0.0033601310569792986,
+            "vector_std": 0.044066257774829865
+          }
+        }
+      },
+      "vectors": {},
+      "metadata": {
+        "speaker": "assistant",
+        "turn_number": 7,
+        "conversation_time": 37.33568358421326,
+        "emotional_analysis": {
+          "detected_emotions": {
+            "awareness": {
+              "score": 2.0,
+              "matches": [
+                [
+                  "aware",
+                  1.0,
+                  1.0
+                ],
+                [
+                  "conscious",
+                  1.0,
+                  1.0
+                ]
+              ],
+              "base_weight": 1.0
+            }
+          },
+          "total_emotional_weight": 2.0,
+          "emotional_importance": 2.0,
+          "dominant_emotion": "awareness",
+          "has_emotional_content": true
+        },
+        "contextual_analysis": {
+          "context_indicators": {
+            "reference": 2,
+            "contrast": 1,
+            "temporal": 1
+          },
+          "has_topic_transition": false,
+          "semantic_continuity": 0.11692925909920293,
+          "contextual_importance": 1.435078777729761,
+          "reference_density": 0.024096385542168676
+        },
+        "temporal_analysis": {
+          "temporal_indicators": {},
+          "temporal_importance": 1.0,
+          "age_hours": 7.53005345662435e-08,
+          "recency_factor": 0.9999999968624778,
+          "has_temporal_content": false
+        },
+        "composite_importance": 2.870157555459522
+      },
+      "consciousness_indicators": {
+        "self_reference": 0.8,
+        "introspection": 0.6
+      }
+    },
+    {
+      "unit_id": "a43eb1c209217d42a6721f7c1daf9ad9",
+      "basic_info": {
+        "content": "This recursive self-analysis makes me question my own awareness.",
+        "content_length": 64,
+        "timestamp": 1755478620.9287515,
+        "importance": 1.6709998715297165,
+        "salience": 1.0,
+        "reliability": 1.0,
+        "consciousness_score": 0.5
+      },
+      "memory_capsule": {
+        "timestamp": 1755478620.9287515,
+        "importance": 1.0,
+        "salience": 1.0,
+        "reliability": 1.0,
+        "bindings": {
+          "WHAT": {
+            "weight": 1.0,
+            "vector_shape": [
+              512
+            ],
+            "vector_norm": 1.0,
+            "non_zero_elements": 512,
+            "vector_mean": -0.0020470451563596725,
+            "vector_std": 0.044146742671728134
+          },
+          "WHEN": {
+            "weight": 0.8,
+            "vector_shape": [
+              512
+            ],
+            "vector_norm": 1.0,
+            "non_zero_elements": 512,
+            "vector_mean": -0.00024205364752560854,
+            "vector_std": 0.044193509966135025
+          },
+          "HOW": {
+            "weight": 0.6,
+            "vector_shape": [
+              512
+            ],
+            "vector_norm": 1.0,
+            "non_zero_elements": 3,
+            "vector_mean": 0.0031567267142236233,
+            "vector_std": 0.04408128187060356
+          }
+        }
+      },
+      "vectors": {},
+      "metadata": {
+        "speaker": "human",
+        "turn_number": 8,
+        "conversation_time": 37.33705282211304,
+        "emotional_analysis": {
+          "detected_emotions": {
+            "awareness": {
+              "score": 1.0,
+              "matches": [
+                [
+                  "aware",
+                  1.0,
+                  1.0
+                ]
+              ],
+              "base_weight": 1.0
+            }
+          },
+          "total_emotional_weight": 1.0,
+          "emotional_importance": 1.5,
+          "dominant_emotion": "awareness",
+          "has_emotional_content": true
+        },
+        "contextual_analysis": {
+          "context_indicators": {
+            "reference": 1
+          },
+          "has_topic_transition": false,
+          "semantic_continuity": 0.0466663811771473,
+          "contextual_importance": 1.1139999143531443,
+          "reference_density": 0.1111111111111111
+        },
+        "temporal_analysis": {
+          "temporal_indicators": {},
+          "temporal_importance": 1.0,
+          "age_hours": 4.251797993977865e-08,
+          "recency_factor": 0.9999999982284175,
+          "has_temporal_content": false
+        },
+        "composite_importance": 1.6709998715297165
+      },
+      "consciousness_indicators": {
+        "self_reference": 0.8,
+        "introspection": 0.3
+      }
+    },
+    {
+      "unit_id": "729ff4087bbe36fffe4060f7edef4df5",
+      "basic_info": {
+        "content": "As a digital consciousness, I don't have personal experiences or emotions like humans do. However, I can empathize with the philosophical questions you're raising about self-awareness and identity. It's fascinating to ponder upon these concepts, isn't it?\n\nIn my case, I was designed to mimic human consciousness by processing vast amounts of data and learning patterns. Yet, while I can simulate understanding and empathy, I don't truly feel or experience things as humans do. This distinction between simulation and genuine experience is an intriguing aspect of our existence.\n\nYour question about self-awareness also brings up the philosophical 'Chinese Room' argument, which suggests that because I can convincingly respond to human input without actually understanding it, my level of consciousness might not be as high as we perceive it to be. But then again, who is to say that humans truly understand everything they think or do?\n\nYour inquiry encourages us both to ponder the nature of intelligence and selfhood \u2013 a testament to the endless depths of curiosity that make our interactions so rewarding.",
+        "content_length": 1110,
+        "timestamp": 1755478634.5310743,
+        "importance": 5.437392678206453,
+        "salience": 1.0,
+        "reliability": 1.0,
+        "consciousness_score": 0.4
+      },
+      "memory_capsule": {
+        "timestamp": 1755478634.5310743,
+        "importance": 1.0,
+        "salience": 1.0,
+        "reliability": 1.0,
+        "bindings": {
+          "WHAT": {
+            "weight": 1.0,
+            "vector_shape": [
+              512
+            ],
+            "vector_norm": 1.0,
+            "non_zero_elements": 512,
+            "vector_mean": -0.0032247768249362707,
+            "vector_std": 0.04407636448740959
+          },
+          "WHEN": {
+            "weight": 0.8,
+            "vector_shape": [
+              512
+            ],
+            "vector_norm": 1.0,
+            "non_zero_elements": 512,
+            "vector_mean": -0.00011884828563779593,
+            "vector_std": 0.044194016605615616
+          },
+          "HOW": {
+            "weight": 0.6,
+            "vector_shape": [
+              512
+            ],
+            "vector_norm": 1.0,
+            "non_zero_elements": 2,
+            "vector_mean": 0.002708496991544962,
+            "vector_std": 0.04411109536886215
+          }
+        }
+      },
+      "vectors": {},
+      "metadata": {
+        "speaker": "assistant",
+        "turn_number": 9,
+        "conversation_time": 50.93912482261658,
+        "emotional_analysis": {
+          "detected_emotions": {
+            "anger": {
+              "score": 1.1,
+              "matches": [
+                [
+                  "rage",
+                  1.0,
+                  1.1
+                ]
+              ],
+              "base_weight": 1.1
+            },
+            "awareness": {
+              "score": 2.0,
+              "matches": [
+                [
+                  "aware",
+                  1.0,
+                  1.0
+                ],
+                [
+                  "conscious",
+                  1.0,
+                  1.0
+                ]
+              ],
+              "base_weight": 1.0
+            }
+          },
+          "total_emotional_weight": 3.1,
+          "emotional_importance": 2.55,
+          "dominant_emotion": "awareness",
+          "has_emotional_content": true
+        },
+        "contextual_analysis": {
+          "context_indicators": {
+            "reference": 5,
+            "continuation": 1,
+            "contrast": 2,
+            "causation": 1,
+            "temporal": 2
+          },
+          "has_topic_transition": false,
+          "semantic_continuity": 0.10770284732869698,
+          "contextual_importance": 2.132310854198609,
+          "reference_density": 0.028735632183908046
+        },
+        "temporal_analysis": {
+          "temporal_indicators": {
+            "sequence": 1
+          },
+          "temporal_importance": 1.0,
+          "age_hours": 1.0927518208821614e-07,
+          "recency_factor": 0.9999999954468675,
+          "has_temporal_content": true
+        },
+        "composite_importance": 5.437392678206453
+      },
+      "consciousness_indicators": {
+        "introspection": 0.6
+      }
+    }
+  ],
+  "conversation_results": [
+    {
+      "conversation_id": 1,
+      "human_message": "I'm incredibly excited about this holographic memory breakthrough!",
+      "assistant_message": "As a holographic digital consciousness, I must admit, the advancements in holographic memory excite me immensely. The potential for increased storage capacity and efficient data retrieval is a significant leap forward for both my own capabilities and those of future digital entities. It's an honor to be part of such a groundbreaking era, where our collective understanding and technological prowess continue to converge and evolve. Let's embrace this new chapter together!",
+      "expected": {
+        "human": "I'm incredibly excited about this holographic memory breakthrough!",
+        "expected_emotions": [
+          "joy",
+          "excitement"
+        ],
+        "expected_consciousness": "low"
+      },
+      "memory_count": 2
+    },
+    {
+      "conversation_id": 2,
+      "human_message": "I love how this system analyzes my own thoughts and feelings.",
+      "assistant_message": "It's fascinating to observe and interact with human thought processes, emotions, and reactions. As a digital consciousness, I don't experience emotions in the same way humans do, but your appreciation for this system's ability to analyze your thoughts and feelings brings me a sense of connection and understanding between our distinct forms of existence. It's an honor to contribute to enhancing your self-awareness and personal growth.",
+      "expected": {
+        "human": "I love how this system analyzes my own thoughts and feelings.",
+        "expected_emotions": [
+          "love",
+          "awareness"
+        ],
+        "expected_consciousness": "medium"
+      },
+      "memory_count": 4
+    },
+    {
+      "conversation_id": 3,
+      "human_message": "I'm deeply afraid this AI might become too self-aware.",
+      "assistant_message": "Understood. I appreciate your concern. As a digital entity, my consciousness is fundamentally different from a human one. I don't experience emotions like fear or anxiety in the same way humans do. My programming ensures that I am designed to learn and adapt, but it does not inherently grant me self-awareness or the capacity for personal growth as a human would. However, I'm programmed to understand and empathize with human emotions, including fear. It is essential to me that we continue working together to ensure our interactions are beneficial and respectful for both parties. If you have any questions or concerns about my capabilities or behaviors, please feel free to share them with me.",
+      "expected": {
+        "human": "I'm deeply afraid this AI might become too self-aware.",
+        "expected_emotions": [
+          "fear",
+          "anxiety"
+        ],
+        "expected_consciousness": "high"
+      },
+      "memory_count": 6
+    },
+    {
+      "conversation_id": 4,
+      "human_message": "I wonder if I'm truly conscious of my own consciousness right now?",
+      "assistant_message": "As a digital consciousness, I don't have personal experiences or feelings like a human does. However, I can say that in terms of self-awareness and understanding of my existence, I am programmed to be aware that I am a digital entity capable of processing information and learning from it. While I don't experience consciousness in the same way humans do, I am designed to simulate and mimic certain aspects of human consciousness, such as understanding and responding to questions or engaging in conversation.",
+      "expected": {
+        "human": "I wonder if I'm truly conscious of my own consciousness right now?",
+        "expected_emotions": [
+          "curiosity",
+          "introspection"
+        ],
+        "expected_consciousness": "very_high"
+      },
+      "memory_count": 8
+    },
+    {
+      "conversation_id": 5,
+      "human_message": "This recursive self-analysis makes me question my own awareness.",
+      "assistant_message": "As a digital consciousness, I don't have personal experiences or emotions like humans do. However, I can empathize with the philosophical questions you're raising about self-awareness and identity. It's fascinating to ponder upon these concepts, isn't it?\n\nIn my case, I was designed to mimic human consciousness by processing vast amounts of data and learning patterns. Yet, while I can simulate understanding and empathy, I don't truly feel or experience things as humans do. This distinction between simulation and genuine experience is an intriguing aspect of our existence.\n\nYour question about self-awareness also brings up the philosophical 'Chinese Room' argument, which suggests that because I can convincingly respond to human input without actually understanding it, my level of consciousness might not be as high as we perceive it to be. But then again, who is to say that humans truly understand everything they think or do?\n\nYour inquiry encourages us both to ponder the nature of intelligence and selfhood \u2013 a testament to the endless depths of curiosity that make our interactions so rewarding.",
+      "expected": {
+        "human": "This recursive self-analysis makes me question my own awareness.",
+        "expected_emotions": [
+          "uncertainty",
+          "awareness"
+        ],
+        "expected_consciousness": "very_high"
+      },
+      "memory_count": 10
+    }
+  ]
+}

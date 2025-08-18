@@ -1,0 +1,62 @@
+{
+  "storage_analysis": {
+    "entity_name": "MistralLumina",
+    "analysis_timestamp": "2025-08-17T21:46:03.582196",
+    "vector_database": {
+      "total_vector_files": 0,
+      "total_embedding_files": 0,
+      "storage_size_mb": 21.15073013305664,
+      "file_details": []
+    },
+    "consciousness_states": {
+      "total_state_files": 1,
+      "has_latest_state": true,
+      "state_details": [
+        {
+          "filename": "consciousness_state_1755245403.8183315.json",
+          "timestamp": null,
+          "memory_count": 0,
+          "experience_count": 0
+        }
+      ],
+      "xpunit_evolution": [],
+      "latest_state": {
+        "timestamp": null,
+        "consciousness_level": null,
+        "memory_count": 0,
+        "experience_count": 0,
+        "keys": [
+          "metadata",
+          "config",
+          "consciousness_metrics",
+          "emotional_state",
+          "memory_core",
+          "memory_blockchain_hash",
+          "integrity"
+        ]
+      }
+    },
+    "studies": {
+      "total_study_files": 1,
+      "study_details": [
+        {
+          "filename": "study_consciousness_evolution_1755481506.json",
+          "error": "object of type 'int' has no len()"
+        }
+      ],
+      "xpunit_growth_pattern": []
+    },
+    "summary": {
+      "total_estimated_xpunits": 0,
+      "storage_efficiency": "unknown",
+      "growth_pattern": "unknown",
+      "deduplication_status": "unknown",
+      "recommendations": []
+    }
+  },
+  "live_analysis": {
+    "error": "-1",
+    "traceback": "Traceback (most recent call last):\n  File \"E:\\holo_chat\\research\\xpunit_analysis\\xpunit_accumulation_analyzer.py\", line 284, in analyze_live_system\n    latest_unit = current_units[-1]\n                  ~~~~~~~~~~~~~^^^^\nKeyError: -1\n"
+  },
+  "analysis_timestamp": "2025-08-17T21:46:14.717814"
+}

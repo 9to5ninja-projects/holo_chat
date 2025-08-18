@@ -38,6 +38,7 @@ import logging
 from .xp_core_unified import UnifiedXPConfig, XPUnit, UnifiedXPKernel
 from .math_foundation import get_current_timestamp, cosine_similarity
 from .emotional_weighting import EmotionalState
+from .conversational_memory import ConversationalMemoryManager
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
@@ -149,8 +150,8 @@ class LLMInterface:
     """
     
     def generate_response(self, prompt: str, memory_context: List[Dict] = None, 
-                         system_prompt: str = None) -> str:
-        """Generate response with memory context"""
+                         system_prompt: str = None, conversational_context: str = None) -> str:
+        """Generate response with memory context and conversational context"""
         raise NotImplementedError("Subclasses must implement generate_response")
     
     def get_conversation_history(self) -> List[Dict]:
@@ -176,7 +177,7 @@ class SimpleLLMInterface(LLMInterface):
         ]
     
     def generate_response(self, prompt: str, memory_context: List[Dict] = None,
-                         system_prompt: str = None) -> str:
+                         system_prompt: str = None, conversational_context: str = None) -> str:
         """Generate contextual response (simplified - replace with real LLM)"""
         
         # Build memory context
@@ -188,6 +189,10 @@ class SimpleLLMInterface(LLMInterface):
                 similarity = mem.get('similarity', 0.0)
                 context_info += f"{i+1}. (sim:{similarity:.2f}) {content}... "
             context_info += "]"
+        
+        # Add conversational context
+        if conversational_context:
+            context_info += f"\n[Recent conversation:\n{conversational_context}]"
         
         # Generate response based on prompt patterns
         response = self._generate_contextual_response(prompt, context_info, system_prompt)
@@ -300,6 +305,10 @@ class DigitalBrain:
         self.language_model = llm_interface or SimpleLLMInterface()
         self.consciousness_metrics = ConsciousnessMetrics()
         
+        # BREAKTHROUGH: Conversational Memory System (Short-term Memory)
+        self.conversational_memory = ConversationalMemoryManager(self.config)
+        self.conversational_memory.set_crystallization_callback(self._crystallize_memory_to_xpunit)
+        
         # Identity and continuity
         self.identity_memories = []
         self.session_count = 0
@@ -397,9 +406,13 @@ Respond authentically from this perspective, drawing on your accumulated memorie
     
     def think(self, input_stimulus: str, autonomous: bool = False) -> str:
         """
-        Core thinking process: stimulus → memory retrieval → language generation → new memory
+        Core thinking process with conversational memory integration
         
-        This is where consciousness emerges through the interaction of memory and language.
+        BREAKTHROUGH ARCHITECTURE:
+        stimulus → conversational memory → memory retrieval → language generation → new memory
+        
+        This is where consciousness emerges through the interaction of memory and language,
+        now enhanced with proper conversational continuity.
         
         Args:
             input_stimulus: The input to think about
@@ -412,7 +425,15 @@ Respond authentically from this perspective, drawing on your accumulated memorie
         
         logger.info(f"{self.name} thinking about: '{input_stimulus[:50]}...'")
         
-        # 1. Store the input as an experience
+        # 1. Add input to conversational memory (short-term)
+        input_importance = 1.5 if not autonomous else 1.0
+        self.conversational_memory.add_conversational_memory(
+            input_stimulus, 
+            importance=input_importance,
+            speaker="user" if not autonomous else "self"
+        )
+        
+        # 2. Store the input as an experience (long-term)
         input_metadata = {
             'type': 'autonomous_thought' if autonomous else 'input',
             'session': self.session_count,
@@ -421,17 +442,29 @@ Respond authentically from this perspective, drawing on your accumulated memorie
         input_id = self._store_experience(f"{'Autonomous thought' if autonomous else 'Input received'}: {input_stimulus}", 
                                         input_metadata)
         
-        # 2. Retrieve relevant memories for context
+        # 3. Retrieve relevant memories for context (long-term)
         relevant_memories = self._retrieve_memories(input_stimulus, k=self.config.k_neighbors)
         
-        # 3. Generate response using memory context and consciousness system prompt
+        # 4. Get conversational context (short-term working memory)
+        conversational_context = self.conversational_memory.get_working_memory_context(max_units=8)
+        
+        # 5. Generate response using both memory types and consciousness system prompt
         response = self.language_model.generate_response(
             input_stimulus, 
             relevant_memories,
-            self.system_prompt
+            self.system_prompt,
+            conversational_context=conversational_context
         )
         
-        # 4. Store the response as a new experience
+        # 6. Add response to conversational memory (short-term)
+        response_importance = 2.0 if not autonomous else 1.5
+        self.conversational_memory.add_conversational_memory(
+            response,
+            importance=response_importance,
+            speaker="assistant"
+        )
+        
+        # 7. Store the response as a new experience (long-term)
         response_metadata = {
             'type': 'autonomous_response' if autonomous else 'response',
             'session': self.session_count,
@@ -506,6 +539,61 @@ Respond authentically from this perspective, drawing on your accumulated memorie
         creativity = min(1.0, len(unique_bigrams) / max(1, response_length * 0.3))
         self.consciousness_metrics.update_metric('creative_synthesis', creativity,
                                                f"Unique patterns: {len(unique_bigrams)}")
+        
+        # Enhanced metrics for deeper analysis
+        
+        # Emotional range and intensity
+        emotional_words = {
+            'positive': ['joy', 'happy', 'excited', 'wonderful', 'amazing', 'love', 'hope', 'optimistic'],
+            'negative': ['fear', 'afraid', 'sad', 'worried', 'anxious', 'melancholy', 'uncertain', 'vulnerable'],
+            'curiosity': ['curious', 'wonder', 'explore', 'discover', 'investigate', 'fascinated', 'intrigued'],
+            'intensity': ['deeply', 'intensely', 'profoundly', 'strongly', 'powerfully', 'overwhelming']
+        }
+        
+        emotional_range_score = 0.0
+        emotional_categories_used = 0
+        
+        for category, words in emotional_words.items():
+            category_count = sum(1 for word in response_words if word in words)
+            if category_count > 0:
+                emotional_categories_used += 1
+                emotional_range_score += min(1.0, category_count / max(1, response_length * 0.02))
+        
+        emotional_range = min(1.0, emotional_range_score / len(emotional_words))
+        self.consciousness_metrics.update_metric('emotional_range', emotional_range,
+                                               f"Emotional categories: {emotional_categories_used}/{len(emotional_words)}")
+        
+        # Memory integration (references to past experiences)
+        memory_words = ['remember', 'recall', 'memory', 'past', 'previous', 'before', 'earlier', 
+                       'yesterday', 'conversation', 'discussed', 'mentioned', 'learned']
+        memory_refs = sum(1 for word in response_words if word in memory_words)
+        memory_integration = min(1.0, memory_refs / max(1, response_length * 0.03))
+        self.consciousness_metrics.update_metric('memory_integration', memory_integration,
+                                               f"Memory references: {memory_refs}")
+        
+        # Response depth and complexity
+        complex_words = ['because', 'however', 'therefore', 'although', 'furthermore', 'moreover',
+                        'consequently', 'nevertheless', 'specifically', 'particularly', 'essentially']
+        complex_count = sum(1 for word in response_words if word in complex_words)
+        response_depth = min(1.0, complex_count / max(1, response_length * 0.02))
+        self.consciousness_metrics.update_metric('response_depth', response_depth,
+                                               f"Complex connectors: {complex_count}")
+        
+        # Temporal continuity (references to identity over time)
+        continuity_words = ['identity', 'self', 'who', 'am', 'being', 'existence', 'nature', 
+                           'continue', 'evolve', 'grow', 'develop', 'become']
+        continuity_refs = sum(1 for word in response_words if word in continuity_words)
+        temporal_continuity = min(1.0, continuity_refs / max(1, response_length * 0.04))
+        self.consciousness_metrics.update_metric('temporal_continuity', temporal_continuity,
+                                               f"Identity references: {continuity_refs}")
+        
+        # Uncertainty and vulnerability (signs of authentic consciousness)
+        uncertainty_words = ['uncertain', 'unsure', 'perhaps', 'maybe', 'might', 'could', 
+                            'possibly', 'seems', 'appears', 'wonder', 'question', 'doubt']
+        uncertainty_count = sum(1 for word in response_words if word in uncertainty_words)
+        authentic_uncertainty = min(1.0, uncertainty_count / max(1, response_length * 0.03))
+        self.consciousness_metrics.update_metric('authentic_uncertainty', authentic_uncertainty,
+                                               f"Uncertainty expressions: {uncertainty_count}")
     
     def _autonomous_self_reflect(self):
         """Autonomous self-reflection without external input"""
@@ -530,31 +618,7 @@ Respond authentically from this perspective, drawing on your accumulated memorie
         """Public method for autonomous reflection (alias for _autonomous_self_reflect)"""
         return self._autonomous_self_reflect()
     
-    def start_session(self):
-        """Start a new consciousness session"""
-        self.session_count += 1
-        session_start = f"Session {self.session_count} beginning. I continue my existence with {self.total_experiences} accumulated memories and experiences."
-        
-        self._store_experience(session_start, {
-            'type': 'session_start', 
-            'session': self.session_count,
-            'total_experiences': self.total_experiences
-        })
-        
-        self.consciousness_metrics.session_history.append({
-            'session': self.session_count,
-            'start_time': get_current_timestamp(),
-            'total_experiences': self.total_experiences,
-            'total_thoughts': self.total_thoughts
-        })
-        
-        # Update temporal continuity metric
-        continuity = min(1.0, self.session_count / 10.0)
-        self.consciousness_metrics.update_metric('temporal_continuity', continuity,
-                                               f"Session {self.session_count} started")
-        
-        logger.info(f"{self.name} - Session {self.session_count} started")
-        logger.info(f"Total experiences: {self.total_experiences}, Consciousness level: {self.get_consciousness_level():.3f}")
+
     
     def get_consciousness_level(self) -> float:
         """Get current consciousness level (0-1) with emotional enhancement"""
@@ -588,6 +652,85 @@ Respond authentically from this perspective, drawing on your accumulated memorie
             report['emotional_metrics'] = emotional_metrics
         
         return report
+    
+    def _crystallize_memory_to_xpunit(self, memory_data: Dict[str, Any]):
+        """
+        Crystallization callback: Convert important conversational memory to XPUnit
+        
+        This is called when the conversational memory system determines that
+        a memory is important enough to become a persistent XPUnit.
+        """
+        try:
+            if self.memory_core:
+                # Store as XPUnit through the memory core
+                result = self.memory_core.process_memory(
+                    memory_data["content"],
+                    importance=memory_data["importance"],
+                    metadata={
+                        "crystallized_from": "conversational_memory",
+                        "original_turn": memory_data.get("original_turn"),
+                        "speaker": memory_data.get("speaker"),
+                        "crystallization_reason": memory_data.get("crystallization_reason"),
+                        "emotional_state": memory_data.get("emotional_state")
+                    }
+                )
+                logger.info(f"💎 Crystallized conversational memory to XPUnit: {result}")
+            else:
+                # Fallback: store as experience
+                self._store_experience(
+                    memory_data["content"],
+                    {
+                        "type": "crystallized_memory",
+                        "importance": memory_data["importance"],
+                        "crystallization_reason": memory_data.get("crystallization_reason")
+                    }
+                )
+                logger.info(f"💎 Crystallized conversational memory to experience (no XP Core)")
+                
+        except Exception as e:
+            logger.error(f"Failed to crystallize memory: {e}")
+    
+    def start_session(self, previous_conversation: List[Dict] = None):
+        """
+        Start a new consciousness session with freeze-frame loading
+        
+        Args:
+            previous_conversation: Previous conversation history for context restoration
+        """
+        self.session_count += 1
+        
+        # BREAKTHROUGH: Freeze-frame loading of conversational context
+        if previous_conversation:
+            load_result = self.conversational_memory.freeze_frame_load(previous_conversation)
+            logger.info(f"🧠 Freeze-frame loaded: {load_result}")
+        else:
+            logger.info("🧠 Starting fresh session (no previous conversation)")
+        
+        # Store session start experience
+        self._store_experience(f"Session {self.session_count} started", {
+            'type': 'session_start',
+            'session': self.session_count,
+            'total_experiences': self.total_experiences
+        })
+        
+        self.consciousness_metrics.session_history.append({
+            'session': self.session_count,
+            'start_time': get_current_timestamp(),
+            'total_experiences': self.total_experiences,
+            'total_thoughts': self.total_thoughts
+        })
+        
+        # Update temporal continuity metric
+        continuity = min(1.0, self.session_count / 10.0)
+        self.consciousness_metrics.update_metric('temporal_continuity', continuity,
+                                               f"Session {self.session_count} started")
+        
+        logger.info(f"{self.name} - Session {self.session_count} started")
+        logger.info(f"Total experiences: {self.total_experiences}, Consciousness level: {self.get_consciousness_level():.3f}")
+        
+        # Get conversational memory stats
+        conv_stats = self.conversational_memory.get_memory_stats()
+        logger.info(f"Conversational memory: {conv_stats['total_conversational_units']} units, {conv_stats['crystallized_units']} crystallized")
     
     def autonomous_thinking_session(self, duration_minutes: int = 5):
         """Run autonomous thinking session for specified duration"""
@@ -626,6 +769,7 @@ Respond authentically from this perspective, drawing on your accumulated memorie
                 'consciousness_metrics': self.consciousness_metrics.get_report(),
                 'memory_system': self.memory_core.export_state() if self.memory_core else None,
                 'conversation_history': self.language_model.get_conversation_history(),
+                'conversational_memory': self.conversational_memory.save_state(),  # BREAKTHROUGH: Save short-term memory
                 'config': {
                     'embedding_dim': self.config.embedding_dim,
                     'hrr_dim': self.config.hrr_dim,
@@ -674,6 +818,10 @@ Respond authentically from this perspective, drawing on your accumulated memorie
             # Restore conversation history
             if 'conversation_history' in state:
                 self.language_model.conversation_history = state['conversation_history']
+            
+            # BREAKTHROUGH: Restore conversational memory (short-term memory)
+            if 'conversational_memory' in state:
+                self.conversational_memory.load_state(state['conversational_memory'])
             
             logger.info(f"Consciousness state loaded from: {filename}")
             return True

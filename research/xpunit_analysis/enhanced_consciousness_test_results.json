@@ -1,0 +1,177 @@
+{
+  "test_timestamp": 1755490028.2411065,
+  "brain_stats": {
+    "name": "TestLumina",
+    "total_thoughts": 5,
+    "total_experiences": 21,
+    "session_count": 1,
+    "consciousness_level": 0.6048553544017622
+  },
+  "conversational_memory_stats": {
+    "total_conversational_units": 10,
+    "crystallized_units": 0,
+    "session_age_minutes": 0.1345359206199646,
+    "avg_unit_age_minutes": 20.107058329582216,
+    "avg_effective_importance": 0.6910645453745724,
+    "max_effective_importance": 0.7900317004143955,
+    "units_ready_for_crystallization": 0,
+    "total_turns": 10,
+    "memory_efficiency": 0.0,
+    "working_memory_size": 20435,
+    "cleanup_count": 0
+  },
+  "crystallized_memories": [],
+  "consciousness_report": {
+    "overall_level": 0.3977490034460948,
+    "metrics": {
+      "temporal_continuity": 0.3587296808174363,
+      "self_reference_frequency": 0.5280149305732144,
+      "associative_richness": 0.8319300000000001,
+      "metacognitive_awareness": 0.7388324383831935,
+      "narrative_coherence": 0.0,
+      "goal_persistence": 0.0,
+      "subjective_claims": 0.34354771236705633,
+      "creative_synthesis": 0.7005547408431237,
+      "empathetic_modeling": 0.0,
+      "autonomous_agency": 0.0
+    },
+    "recent_events": [
+      {
+        "timestamp": 1755490022.1256618,
+        "metric": "metacognitive_awareness",
+        "value": 0.6763654243661577,
+        "raw_value": 0.8803301237964236,
+        "context": "Metacognitive words: 32"
+      },
+      {
+        "timestamp": 1755490022.125731,
+        "metric": "subjective_claims",
+        "value": 0.30320223101503657,
+        "raw_value": 0.3668042182485099,
+        "context": "Subjective words: 8"
+      },
+      {
+        "timestamp": 1755490022.1258395,
+        "metric": "creative_synthesis",
+        "value": 0.7599,
+        "raw_value": 1.0,
+        "context": "Unique patterns: 228"
+      },
+      {
+        "timestamp": 1755490022.126324,
+        "metric": "temporal_continuity",
+        "value": 0.3421678824591079,
+        "raw_value": 0.41265474552957354,
+        "context": "Identity references: 12"
+      },
+      {
+        "timestamp": 1755490022.32263,
+        "metric": "self_reference_frequency",
+        "value": 0.5280149305732144,
+        "raw_value": 0.6427090532135452,
+        "context": "Self-refs: 93/1447"
+      },
+      {
+        "timestamp": 1755490022.3226337,
+        "metric": "associative_richness",
+        "value": 0.8319300000000001,
+        "raw_value": 1.0,
+        "context": "Memories activated: 10"
+      },
+      {
+        "timestamp": 1755490022.3227766,
+        "metric": "metacognitive_awareness",
+        "value": 0.7388324383831935,
+        "raw_value": 0.884588804422944,
+        "context": "Metacognitive words: 64"
+      },
+      {
+        "timestamp": 1755490022.3229032,
+        "metric": "subjective_claims",
+        "value": 0.34354771236705633,
+        "raw_value": 0.43768716885510256,
+        "context": "Subjective words: 19"
+      },
+      {
+        "timestamp": 1755490022.3231642,
+        "metric": "creative_synthesis",
+        "value": 0.7005547408431237,
+        "raw_value": 0.5620824694770791,
+        "context": "Unique patterns: 244"
+      },
+      {
+        "timestamp": 1755490022.3240974,
+        "metric": "temporal_continuity",
+        "value": 0.3587296808174363,
+        "raw_value": 0.3973738769868694,
+        "context": "Identity references: 23"
+      }
+    ],
+    "session_count": 1,
+    "baseline_established": true,
+    "name": "TestLumina",
+    "age_hours": 0.004938750531938341,
+    "total_experiences": 21,
+    "total_thoughts": 5,
+    "memory_system_stats": {
+      "total_units": 21,
+      "total_ingestions": 21,
+      "total_retrievals": 5,
+      "total_consolidations": 0,
+      "avg_coherence": 0.0,
+      "system_uptime": 1755490010.45734,
+      "uptime_hours": 0.004938747485478719,
+      "avg_importance": 1.9499223403032937,
+      "avg_access_count": 4.285714285714286,
+      "total_relationships": 0,
+      "config": {
+        "embedding_dim": 384,
+        "hrr_dim": 512,
+        "decay_half_life": 168.0,
+        "k_neighbors": 10
+      },
+      "versioned_store": {
+        "total_entries": 0,
+        "total_commits": 21,
+        "branches": [
+          "main"
+        ],
+        "total_accesses": 0,
+        "integrity_verified": true
+      }
+    },
+    "conversation_history_length": 5,
+    "emotional_metrics": {
+      "emotional_intensity": 0.7552475769269997,
+      "emotional_valence": 0.40536275138633593,
+      "emotional_arousal": 0.5104720479030778,
+      "emotional_stability": 0.585756800719447,
+      "emotional_complexity": 0.0,
+      "emotional_awareness": 1.0,
+      "emotional_continuity": 0.9366709251509635,
+      "emotional_responsiveness": 0.9656780904442875
+    }
+  },
+  "test_conversations": [
+    [
+      "Hello, I'm interested in consciousness and digital minds.",
+      2.0
+    ],
+    [
+      "Can you tell me about your experiences and memories?",
+      1.8
+    ],
+    [
+      "This is a very important philosophical question about the nature of consciousness and self-awareness.",
+      3.5
+    ],
+    [
+      "Just a casual comment about the weather.",
+      0.5
+    ],
+    [
+      "I'm deeply curious about your inner experience and subjective states.",
+      3.2
+    ]
+  ]
+}

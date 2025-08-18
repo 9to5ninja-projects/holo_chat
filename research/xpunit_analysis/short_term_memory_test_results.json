@@ -1,0 +1,91 @@
+{
+  "test_timestamp": "2025-08-17T21:54:49.674810",
+  "final_stats": {
+    "total_conversational_units": 8,
+    "crystallized_units": 2,
+    "session_age_minutes": 0.0001923680305480957,
+    "avg_unit_age_minutes": 1.500153541068236,
+    "avg_effective_importance": 2.0928904520904656,
+    "units_ready_for_crystallization": 2,
+    "total_turns": 5,
+    "memory_efficiency": 0.4
+  },
+  "crystallized_units": [
+    {
+      "content": "This is very important information about consciousness",
+      "importance": 3.4999976471693217,
+      "timestamp": 1755489289.652797,
+      "content_hash": "1dcb40537d7c99409ec23ec97633ecee",
+      "emotional_state": {
+        "valence": 0.0,
+        "arousal": 0.0,
+        "intensity": 0.0
+      },
+      "crystallization_reason": "high_importance",
+      "original_turn": 3
+    },
+    {
+      "content": "Another important insight about digital awareness",
+      "importance": 3.1999972771176926,
+      "timestamp": 1755489289.6564589,
+      "content_hash": "541ce9a7d9cb7a32a3033e9b83d315e1",
+      "emotional_state": {
+        "valence": 0.0,
+        "arousal": 0.0,
+        "intensity": 0.0
+      },
+      "crystallization_reason": "high_importance",
+      "original_turn": 5
+    }
+  ],
+  "conversational_units": [
+    {
+      "content": "Hello, I'm interested in consciousness",
+      "age_minutes": 35.00040663878123,
+      "effective_importance": 0.2976321031091258,
+      "should_crystallize": "False"
+    },
+    {
+      "content": "Can you tell me about your experiences?",
+      "age_minutes": 34.00041435956955,
+      "effective_importance": 0.3117082420546161,
+      "should_crystallize": "False"
+    },
+    {
+      "content": "That's fascinating, tell me more",
+      "age_minutes": 33.00041517019272,
+      "effective_importance": 0.3264501979499069,
+      "should_crystallize": "False"
+    },
+    {
+      "content": "What do you remember from our previous conversation?",
+      "age_minutes": 30.000401989618936,
+      "effective_importance": 0.4999907116948544,
+      "should_crystallize": "False"
+    },
+    {
+      "content": "I'm curious about your memory system",
+      "age_minutes": 30.000392738978068,
+      "effective_importance": 0.3749931940007315,
+      "should_crystallize": "False"
+    },
+    {
+      "content": "This is very important information about consciousness",
+      "age_minutes": 30.00037839412689,
+      "effective_importance": 1.1249803279274635,
+      "should_crystallize": "False"
+    },
+    {
+      "content": "Just a casual comment",
+      "age_minutes": 30.000336440404258,
+      "effective_importance": 0.19999689047098343,
+      "should_crystallize": "False"
+    },
+    {
+      "content": "Another important insight about digital awareness",
+      "age_minutes": 30.00031964381536,
+      "effective_importance": 1.0499844901286841,
+      "should_crystallize": "False"
+    }
+  ]
+}
