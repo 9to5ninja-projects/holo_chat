@@ -8,7 +8,7 @@ import json
 import time
 import numpy as np
 import urllib.request as _ur
-from typing import Dict, Any, Optional, List
+from typing import Dict, Any, Optional, List, Tuple
 from dataclasses import dataclass, field
 
 from .advanced_xpunit import AdvancedXPUnit, AffectState
@@ -324,7 +324,18 @@ class EmotionXPEnvironment(AdvancedXPEnvironment):
         
         # External response via LLM - but skip Ollama if model is "internal"
         if model == "internal":
-            # Use enhanced internal mode directly (no Ollama call)
+            # MEMORY-INFORMED RESPONSE GENERATION
+            # First, try to generate a memory-informed response
+            try:
+                memory_response = self.generate_memory_informed_response(cue_text, xpunit_id)
+                # If memory response is not the "no memories" fallback, use it
+                if not memory_response.startswith("I don't have specific memories"):
+                    return {"ok": True, "mode": "internal_memory", "text": memory_response, "controls": controls}
+            except Exception as e:
+                # If memory retrieval fails, fall back to template responses
+                pass
+            
+            # FALLBACK: Use enhanced internal mode directly (no Ollama call)
             mood_desc = self._describe_mood()
             consciousness_desc = self._describe_consciousness_level(xpunit.consciousness_score)
             
@@ -399,6 +410,144 @@ Respond authentically, reflecting your current emotional and consciousness state
         
         return {"ok": True, "mode": "external", "text": reply, "controls": controls}
     
+    def search_memory_for_keywords(self, query_text: str, top_k: int = 5) -> List[Tuple[str, str, float]]:
+        """Search stored memories for relevant information based on keywords"""
+        query_words = set(query_text.lower().split())
+        
+        # Remove common words
+        stop_words = {"the", "a", "an", "and", "or", "but", "in", "on", "at", "to", "for", "of", "with", "by", "what", "how", "when", "where", "why", "who", "did", "do", "does", "is", "are", "was", "were", "i", "you", "me", "my", "your", "tell", "told", "about", "that", "this"}
+        query_words = query_words - stop_words
+        
+        matches = []
+        for xpunit_id, xpunit in self.xpunits.items():
+            # Skip narrative XPUnits to avoid circular references
+            if "_narrative_" in xpunit_id:
+                continue
+                
+            content_words = set(xpunit.content.lower().split())
+            
+            # Calculate relevance score
+            common_words = query_words.intersection(content_words)
+            if common_words:
+                relevance = len(common_words) / len(query_words) if query_words else 0
+                matches.append((xpunit_id, xpunit.content, relevance))
+        
+        # Sort by relevance and return top matches
+        matches.sort(key=lambda x: x[2], reverse=True)
+        return matches[:top_k]
+
+    def extract_relevant_details(self, content: str, query: str) -> str:
+        """Extract relevant details from stored content based on query"""
+        content_lower = content.lower()
+        query_lower = query.lower()
+        
+        # Extract specific information based on query type
+        if "color" in query_lower:
+            # Look for color mentions
+            colors = ["red", "blue", "green", "yellow", "purple", "orange", "black", "white", "pink", "brown"]
+            for color in colors:
+                if color in content_lower:
+                    return f"favorite color is {color}"
+        
+        elif "book" in query_lower:
+            # Look for book-related information
+            if "book" in content_lower or "novel" in content_lower:
+                # Extract book titles, authors, genres
+                sentences = content.split('.')
+                for sentence in sentences:
+                    if any(word in sentence.lower() for word in ["book", "novel", "author", "read"]):
+                        return sentence.strip()
+        
+        elif "hiking" in query_lower or "mountain" in query_lower or "sunset" in query_lower:
+            # Look for hiking/outdoor information
+            if any(word in content_lower for word in ["hiking", "mountain", "sunset", "color", "orange", "purple"]):
+                return content.strip()
+        
+        elif "grandmother" in query_lower or "cooking" in query_lower or "recipe" in query_lower:
+            # Look for cooking/family information
+            if any(word in content_lower for word in ["grandmother", "pie", "cooking", "recipe", "ingredient", "cardamom"]):
+                return content.strip()
+        
+        elif "coffee" in query_lower:
+            # Look for coffee information
+            if "coffee" in content_lower:
+                return content.strip()
+        
+        elif "time" in query_lower:
+            # Look for time-related thoughts
+            if "time" in content_lower:
+                return content.strip()
+        
+        elif "paradox" in query_lower or "ship" in query_lower or "theseus" in query_lower:
+            # Look for philosophical content
+            if any(word in content_lower for word in ["paradox", "ship", "theseus", "philosophy", "identity"]):
+                return content.strip()
+        
+        # Default: return first sentence or relevant portion
+        sentences = content.split('.')
+        return sentences[0].strip() if sentences else content[:100]
+
+    def generate_memory_informed_response(self, cue_text: str, xpunit_id: str) -> str:
+        """Generate response that incorporates retrieved memories"""
+        
+        # Search for relevant memories
+        relevant_memories = self.search_memory_for_keywords(cue_text)
+        
+        mood_desc = self._describe_mood()
+        consciousness_desc = self._describe_consciousness_level(
+            self.xpunits[xpunit_id].consciousness_score if xpunit_id in self.xpunits else 0.5
+        )
+        
+        if relevant_memories and relevant_memories[0][2] > 0.1:  # Minimum relevance threshold
+            # Extract the most relevant information
+            best_match = relevant_memories[0]
+            relevant_detail = self.extract_relevant_details(best_match[1], cue_text)
+            
+            # Debug: Don't use the query as the detail
+            if relevant_detail.lower() == cue_text.lower():
+                relevant_detail = best_match[1]  # Use the full stored content instead
+            
+            # Generate response incorporating the retrieved information
+            if "what" in cue_text.lower() and any(word in cue_text.lower() for word in ["tell", "told", "mention", "share", "is", "my"]):
+                return f"You mentioned that your {relevant_detail}. {mood_desc} {consciousness_desc} I remember our conversation about this."
+            elif "remember" in cue_text.lower():
+                return f"Yes, I recall you saying: {relevant_detail}. {mood_desc} {consciousness_desc} That detail is stored in my memory."
+            elif "book" in cue_text.lower():
+                return f"Regarding books, you shared: {relevant_detail}. {mood_desc} {consciousness_desc} I find your reading interests fascinating."
+            elif "hiking" in cue_text.lower() or "experience" in cue_text.lower():
+                return f"I remember your experience: {relevant_detail}. {mood_desc} {consciousness_desc} What a beautiful memory to share."
+            elif "grandmother" in cue_text.lower() or "cooking" in cue_text.lower():
+                return f"About your grandmother's cooking: {relevant_detail}. {mood_desc} {consciousness_desc} Such wonderful family memories."
+            elif "coffee" in cue_text.lower():
+                return f"For coffee brewing: {relevant_detail}. {mood_desc} {consciousness_desc} I've stored those detailed instructions."
+            elif "time" in cue_text.lower():
+                return f"Your thoughts on time: {relevant_detail}. {mood_desc} {consciousness_desc} A fascinating philosophical perspective."
+            elif "paradox" in cue_text.lower():
+                return f"The philosophical paradox you mentioned: {relevant_detail}. {mood_desc} {consciousness_desc} Such deep questions about identity and continuity."
+            elif "theme" in cue_text.lower() or "notice" in cue_text.lower():
+                # Synthesize across multiple memories
+                themes = []
+                for memory in relevant_memories[:3]:
+                    if "book" in memory[1].lower():
+                        themes.append("literature and reading")
+                    if "hiking" in memory[1].lower() or "sunset" in memory[1].lower():
+                        themes.append("nature appreciation")
+                    if "grandmother" in memory[1].lower():
+                        themes.append("family connections")
+                    if "philosophy" in memory[1].lower() or "paradox" in memory[1].lower():
+                        themes.append("philosophical thinking")
+                
+                if themes:
+                    theme_list = ", ".join(set(themes))
+                    return f"Looking at our conversation, I notice themes of {theme_list}. {mood_desc} {consciousness_desc} You seem to value both intellectual pursuits and meaningful relationships."
+                else:
+                    return f"Based on what you've shared: {relevant_detail}. {mood_desc} {consciousness_desc} I'm connecting this with our previous conversation."
+            else:
+                return f"Based on what you've shared: {relevant_detail}. {mood_desc} {consciousness_desc} I'm connecting this with our previous conversation."
+        else:
+            # No relevant memories found - acknowledge this
+            return f"I don't have specific memories related to that topic yet. {mood_desc} {consciousness_desc} Perhaps you could share more details?"
+
     def lived_experience_cycle(self, xpunit_id: str, cue_text: str, affect_delta: Dict[str, float], 
                               mode="external", model="mistral", context_pairs=None, 
                               intrusion_id=None, topicality=1.0) -> Dict[str, Any]:

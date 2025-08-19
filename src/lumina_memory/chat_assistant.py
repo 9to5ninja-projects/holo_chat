@@ -139,7 +139,7 @@ class ChatAssistant:
         
         return {"valence": valence, "arousal": arousal, "dominance": dominance}
     
-    def chat(self, user_message: str, model: str = "mistral") -> Dict[str, Any]:
+    def chat(self, user_message: str, model: str = "internal") -> Dict[str, Any]:
         """
         Main chat function with automatic emotion/memory integration
         
