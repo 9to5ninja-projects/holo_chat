@@ -19,7 +19,7 @@ sys.path.insert(0, str(project_root))
 
 # Import our holographic memory system
 try:
-    from src.lumina_memory.enhanced_xpunit import EnhancedXPEnvironment
+    from src.lumina_memory.emotion_engine import EmotionXPEnvironment
     from src.lumina_memory.holographic_memory import (
         HolographicAssociativeMemory, MemoryCapsule, 
         cosine_similarity, normalize_vector
@@ -70,12 +70,12 @@ class MemorySystemAdapter:
         self.dimension = dimension
         
         if MEMORY_AVAILABLE:
-            self.memory_env = EnhancedXPEnvironment(dimension=dimension)
+            self.memory_env = EmotionXPEnvironment(dimension=dimension)
             self.holographic_memory = self.memory_env.holographic_memory
             
             # Initialize emotion engine environment
             try:
-                from src.lumina_memory.emotion_engine import EnhancedXPEnvironment as EmotionEnhancedEnv
+                from src.lumina_memory.emotion_engine import EmotionXPEnvironment as EmotionEnhancedEnv
                 self.emotion_environment = EmotionEnhancedEnv(dimension=dimension)
             except ImportError as e:
                 print(f"Warning: Could not import emotion engine: {e}")

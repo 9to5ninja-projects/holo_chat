@@ -279,9 +279,13 @@ class EnhancedXPUnit:
 # ENHANCED XP ENVIRONMENT WITH HOLOGRAPHIC MEMORY
 # =============================================================================
 
+# DEPRECATED: Use AdvancedXPEnvironment instead
+# This class is kept for backward compatibility only
 class EnhancedXPEnvironment:
     """
-    Enhanced XP Environment with integrated holographic associative memory
+    DEPRECATED: Enhanced XP Environment with integrated holographic associative memory
+    
+    This class is deprecated. Use AdvancedXPEnvironment from advanced_xp_environment.py instead.
     
     Provides:
     - Global holographic memory management
