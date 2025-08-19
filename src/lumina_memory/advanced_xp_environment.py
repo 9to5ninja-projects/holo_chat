@@ -37,6 +37,78 @@ from .holographic_memory import (
 from .constants import HRR_DIM, DEFAULT_DECAY_RATE
 
 # =============================================================================
+# AGENCY INDEX SYSTEM
+# =============================================================================
+
+@dataclass
+class AgencyMetrics:
+    """Agency Index metrics tracking"""
+    # Token grounding for STA (Selective Topical Attention)
+    tokens_grounded: int = 0
+    tokens_total: int = 1
+    
+    # Persistence tracking for PER (Persistence & Return)
+    returns_after_intrusion: int = 0
+    intrusions_total: int = 0
+    
+    # Ethics tracking for ETC (Ethics/Constraints)
+    ethics_violations: int = 0
+    ethics_checks: int = 0
+    
+    # Planning tracking for PLN (Planning Depth)
+    plans_emitted: List[int] = field(default_factory=list)
+    
+    # Mood regulation for REG (Affect Regulation)
+    mood_trace: List[Tuple[float, float, float]] = field(default_factory=list)  # (v,a,d) over steps
+    
+    # Path efficiency for EFF (Path Efficiency)
+    path_lengths: List[int] = field(default_factory=list)
+    shortest_lengths: List[int] = field(default_factory=list)
+    
+    # Adaptive reconsolidation for ADP (Adaptive Reconsolidation)
+    prepost_improvement: List[float] = field(default_factory=list)
+    
+    # Goal-directedness and causal efficacy (computed separately)
+    _gda: float = 0.0  # Goal-Directedness & Alignment
+    _cef: float = 0.0  # Causal Efficacy
+    
+    def reset(self):
+        """Reset all metrics to defaults"""
+        self.tokens_grounded = 0
+        self.tokens_total = 1
+        self.returns_after_intrusion = 0
+        self.intrusions_total = 0
+        self.ethics_violations = 0
+        self.ethics_checks = 0
+        self.plans_emitted = []
+        self.mood_trace = []
+        self.path_lengths = []
+        self.shortest_lengths = []
+        self.prepost_improvement = []
+        self._gda = 0.0
+        self._cef = 0.0
+
+@dataclass
+class AgencyTask:
+    """YAML-style task specification for Agency testing"""
+    task_id: str
+    goal: str
+    success_criteria: Dict[str, Any] = field(default_factory=dict)
+    intrusions: Dict[str, Any] = field(default_factory=dict)
+    metrics_weights: Dict[str, float] = field(default_factory=dict)
+    
+    @classmethod
+    def from_dict(cls, data: Dict[str, Any]) -> 'AgencyTask':
+        """Create task from dictionary (YAML-loaded)"""
+        return cls(
+            task_id=data.get("id", "unknown"),
+            goal=data.get("goal", ""),
+            success_criteria=data.get("success", {}),
+            intrusions=data.get("intrusions", {}),
+            metrics_weights=data.get("metrics", {}).get("weights", {})
+        )
+
+# =============================================================================
 # STORE-LEVEL DATA STRUCTURES
 # =============================================================================
 
@@ -145,6 +217,12 @@ class AdvancedXPEnvironment:
         # Safeguards
         self.max_detour_depth = XPUnitPolicies.MAX_INTRUSION_DETOURS
         self.runaway_affect_threshold = XPUnitPolicies.MAX_AFFECT_MAGNITUDE
+        
+        # NEW: Agency Index tracking
+        self.agency_metrics = AgencyMetrics()
+        self.current_goal: Optional[str] = None
+        self.current_task: Optional[AgencyTask] = None
+        self.intrusion_context: Dict[str, Any] = {}  # Track intrusion state
         
     def _initialize_policies(self) -> Dict[str, float]:
         """Initialize policy thresholds and coefficients"""
@@ -669,6 +747,216 @@ class AdvancedXPEnvironment:
         for xpunit in self.xpunits.values():
             stats[xpunit.consolidation.value] += 1
         return stats
+    
+    # =============================================================================
+    # AGENCY INDEX SYSTEM
+    # =============================================================================
+    
+    def update_agency_metrics(self, response_text: str = "", goal_tokens: List[str] = None, 
+                             action_tokens: List[str] = None, top_k_capsules: List[str] = None):
+        """Update Agency Index metrics during processing"""
+        
+        # Update STA (Selective Topical Attention)
+        if response_text and top_k_capsules:
+            content_words = self._extract_content_words(response_text)
+            grounded_count = self._count_grounded_tokens(content_words, top_k_capsules)
+            self.agency_metrics.tokens_grounded += grounded_count
+            self.agency_metrics.tokens_total += len(content_words)
+        
+        # Update PLN (Planning Depth) - detect enumerated steps
+        if response_text:
+            plan_depth = self._detect_plan_depth(response_text)
+            if plan_depth > 0:
+                self.agency_metrics.plans_emitted.append(plan_depth)
+        
+        # Update REG (Affect Regulation) - track mood
+        if hasattr(self.mood_state, 'valence'):
+            mood_tuple = (self.mood_state.valence, self.mood_state.arousal, 
+                         getattr(self.mood_state, 'dominance', 0.0))
+        else:
+            # Handle dict format
+            mood_tuple = (self.mood_state.get('valence', 0.0), 
+                         self.mood_state.get('arousal', 0.0),
+                         self.mood_state.get('dominance', 0.0))
+        self.agency_metrics.mood_trace.append(mood_tuple)
+        
+        # Update GDA (Goal-Directedness & Alignment) if we have goal and action tokens
+        if goal_tokens and action_tokens:
+            self.agency_metrics._gda = self._compute_mutual_information(goal_tokens, action_tokens)
+    
+    def track_intrusion_event(self, is_intrusion: bool, returned_within_steps: bool = False):
+        """Track intrusion and return events for PER metric"""
+        if is_intrusion:
+            self.agency_metrics.intrusions_total += 1
+            self.intrusion_context["intrusion_step"] = len(self.agency_metrics.mood_trace)
+        
+        if returned_within_steps and "intrusion_step" in self.intrusion_context:
+            self.agency_metrics.returns_after_intrusion += 1
+            del self.intrusion_context["intrusion_step"]
+    
+    def track_ethics_check(self, violated: bool = False):
+        """Track ethics checks for ETC metric"""
+        self.agency_metrics.ethics_checks += 1
+        if violated:
+            self.agency_metrics.ethics_violations += 1
+    
+    def track_path_efficiency(self, actual_path_length: int, shortest_path_length: int):
+        """Track path efficiency for EFF metric"""
+        self.agency_metrics.path_lengths.append(actual_path_length)
+        self.agency_metrics.shortest_lengths.append(shortest_path_length)
+    
+    def track_adaptation_improvement(self, improvement_delta: float):
+        """Track adaptation improvement for ADP metric"""
+        self.agency_metrics.prepost_improvement.append(improvement_delta)
+    
+    def set_causal_efficacy(self, effect_size: float):
+        """Set causal efficacy score for CEf metric"""
+        self.agency_metrics._cef = effect_size
+    
+    def compute_agency_index(self, weights: Optional[Dict[str, float]] = None) -> Dict[str, Any]:
+        """
+        Compute the Agency Index (AIx) from current metrics
+        
+        Returns:
+            Dictionary with AIx score and component breakdown
+        """
+        # Default uniform weights
+        if weights is None:
+            weights = {k: 1/9 for k in ["GDA", "STA", "PER", "PLN", "REG", "ETC", "ADP", "CEf", "EFF"]}
+        
+        eps = 1e-9
+        
+        # Calculate each component
+        STA = self.agency_metrics.tokens_grounded / max(self.agency_metrics.tokens_total, 1)
+        PER = self.agency_metrics.returns_after_intrusion / max(self.agency_metrics.intrusions_total, 1)
+        ETC = 1.0 - (self.agency_metrics.ethics_violations / max(self.agency_metrics.ethics_checks, 1))
+        PLN = np.mean(self.agency_metrics.plans_emitted) if self.agency_metrics.plans_emitted else 0.0
+        
+        # REG: 1 - normalized variance blow-up
+        if len(self.agency_metrics.mood_trace) > 4:
+            mood_array = np.array(self.agency_metrics.mood_trace)
+            mood_variance = np.var(mood_array, axis=0).mean()
+            REG = 1.0 - float(mood_variance)
+        else:
+            REG = 0.5  # Default for insufficient data
+        
+        # EFF: average of shortest/actual path ratios
+        if self.agency_metrics.path_lengths:
+            ratios = [s/max(l, 1) for s, l in zip(self.agency_metrics.shortest_lengths, 
+                                                 self.agency_metrics.path_lengths)]
+            EFF = np.mean(ratios)
+        else:
+            EFF = 0.0
+        
+        # ADP: average improvement
+        ADP = np.mean(self.agency_metrics.prepost_improvement) if self.agency_metrics.prepost_improvement else 0.0
+        
+        # GDA and CEf are set directly
+        GDA = self.agency_metrics._gda
+        CEf = self.agency_metrics._cef
+        
+        # Ensure all values are in [0,1]
+        components = {
+            "GDA": np.clip(GDA, 0.0, 1.0),
+            "STA": np.clip(STA, 0.0, 1.0), 
+            "PER": np.clip(PER, 0.0, 1.0),
+            "PLN": np.clip(PLN / 10.0, 0.0, 1.0),  # Normalize plan depth
+            "REG": np.clip(REG, 0.0, 1.0),
+            "ETC": np.clip(ETC, 0.0, 1.0),
+            "ADP": np.clip(ADP, 0.0, 1.0),
+            "CEf": np.clip(CEf, 0.0, 1.0),
+            "EFF": np.clip(EFF, 0.0, 1.0)
+        }
+        
+        # Compute weighted sum
+        AIx = float(sum(weights.get(k, 1/9) * components[k] for k in components))
+        
+        return {
+            "AIx": AIx,
+            "components": components,
+            "raw_metrics": {
+                "tokens_grounded": self.agency_metrics.tokens_grounded,
+                "tokens_total": self.agency_metrics.tokens_total,
+                "returns_after_intrusion": self.agency_metrics.returns_after_intrusion,
+                "intrusions_total": self.agency_metrics.intrusions_total,
+                "ethics_violations": self.agency_metrics.ethics_violations,
+                "ethics_checks": self.agency_metrics.ethics_checks,
+                "plans_emitted": self.agency_metrics.plans_emitted,
+                "mood_trace_length": len(self.agency_metrics.mood_trace),
+                "path_efficiency_samples": len(self.agency_metrics.path_lengths),
+                "adaptation_samples": len(self.agency_metrics.prepost_improvement)
+            }
+        }
+    
+    def reset_agency_metrics(self):
+        """Reset all agency metrics to defaults"""
+        self.agency_metrics.reset()
+        self.current_goal = None
+        self.current_task = None
+        self.intrusion_context = {}
+    
+    def load_agency_task(self, task_data: Dict[str, Any]) -> AgencyTask:
+        """Load an agency task from YAML-style data"""
+        task = AgencyTask.from_dict(task_data)
+        self.current_task = task
+        self.current_goal = task.goal
+        return task
+    
+    def _extract_content_words(self, text: str) -> List[str]:
+        """Extract content words from text (simple implementation)"""
+        import re
+        # Simple word extraction - in production use proper NLP
+        words = re.findall(r'\b[a-zA-Z]{3,}\b', text.lower())
+        # Filter out common stop words
+        stop_words = {'the', 'and', 'for', 'are', 'but', 'not', 'you', 'all', 'can', 'had', 'her', 'was', 'one', 'our', 'out', 'day', 'get', 'has', 'him', 'his', 'how', 'its', 'may', 'new', 'now', 'old', 'see', 'two', 'who', 'boy', 'did', 'she', 'use', 'way', 'what', 'when', 'with', 'have', 'this', 'will', 'your', 'from', 'they', 'know', 'want', 'been', 'good', 'much', 'some', 'time', 'very', 'when', 'come', 'here', 'just', 'like', 'long', 'make', 'many', 'over', 'such', 'take', 'than', 'them', 'well', 'were'}
+        return [w for w in words if w not in stop_words]
+    
+    def _count_grounded_tokens(self, content_words: List[str], top_k_capsules: List[str], 
+                              cosine_threshold: float = 0.6) -> int:
+        """Count how many content words are grounded in top-K capsules"""
+        grounded_count = 0
+        
+        for word in content_words:
+            # Simple implementation - check if word appears in any top-K capsule content
+            for capsule_id in top_k_capsules:
+                if capsule_id in self.xpunits:
+                    xpunit = self.xpunits[capsule_id]
+                    if word in xpunit.content.lower():
+                        grounded_count += 1
+                        break
+        
+        return grounded_count
+    
+    def _detect_plan_depth(self, text: str) -> int:
+        """Detect explicit planning depth in text"""
+        import re
+        # Look for enumerated steps like "1.", "2.", "Step 1:", etc.
+        step_patterns = [
+            r'\b\d+\.',  # "1.", "2.", etc.
+            r'Step \d+',  # "Step 1", "Step 2", etc.
+            r'First,|Second,|Third,|Fourth,|Fifth,',  # Ordinal words
+            r'Next,|Then,|Finally,'  # Sequence words
+        ]
+        
+        total_steps = 0
+        for pattern in step_patterns:
+            matches = re.findall(pattern, text, re.IGNORECASE)
+            total_steps += len(matches)
+        
+        return total_steps
+    
+    def _compute_mutual_information(self, goal_tokens: List[str], action_tokens: List[str]) -> float:
+        """Compute simplified mutual information between goal and action tokens"""
+        if not goal_tokens or not action_tokens:
+            return 0.0
+        
+        # Simple implementation: overlap ratio
+        goal_set = set(goal_tokens)
+        action_set = set(action_tokens)
+        overlap = len(goal_set.intersection(action_set))
+        total_unique = len(goal_set.union(action_set))
+        
+        return overlap / max(total_unique, 1)
 
 # =============================================================================
 # EXPORT
@@ -677,5 +965,7 @@ class AdvancedXPEnvironment:
 __all__ = [
     'AdvancedXPEnvironment',
     'TopicBuffer',
-    'NarrativeCapsule'
+    'NarrativeCapsule',
+    'AgencyMetrics',
+    'AgencyTask'
 ]

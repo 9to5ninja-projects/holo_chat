@@ -1,10 +1,8 @@
-# Python cache files
+# Python
 __pycache__/
 *.py[cod]
 *$py.class
 *.so
-
-# Distribution / packaging
 .Python
 build/
 develop-eggs/
@@ -25,52 +23,7 @@ share/python-wheels/
 *.egg
 MANIFEST
 
-# PyInstaller
-*.manifest
-*.spec
-
-# Installer logs
-pip-log.txt
-pip-delete-this-directory.txt
-
-# Unit test / coverage reports
-htmlcov/
-.tox/
-.nox/
-.coverage
-.coverage.*
-.cache
-nosetests.xml
-coverage.xml
-*.cover
-*.py,cover
-.hypothesis/
-.pytest_cache/
-
-# Jupyter Notebook checkpoints
-.ipynb_checkpoints
-
-# IPython
-profile_default/
-ipython_config.py
-
-# pyenv
-.python-version
-
-# pipenv
-Pipfile.lock
-
-# PEP 582
-__pypackages__/
-
-# Celery stuff
-celerybeat-schedule
-celerybeat.pid
-
-# SageMath parsed files
-*.sage.py
-
-# Environments
+# Virtual environments
 .env
 .venv
 env/
@@ -79,31 +32,16 @@ ENV/
 env.bak/
 venv.bak/
 
-# Spyder project settings
-.spyderproject
-.spyproject
-
-# Rope project settings
-.ropeproject
-
-# mkdocs documentation
-/site
-
-# mypy
-.mypy_cache/
-.dmypy.json
-dmypy.json
-
-# Pyre type checker
-.pyre/
-
-# VS Code
+# IDEs
 .vscode/settings.json
 .vscode/launch.json
-.vscode/extensions.json
 .vscode/tasks.json
+.idea/
+*.swp
+*.swo
+*~
 
-# OS generated files
+# OS
 .DS_Store
 .DS_Store?
 ._*
@@ -112,20 +50,88 @@ dmypy.json
 ehthumbs.db
 Thumbs.db
 
-# Log files
+# Node.js (for VS Code extension)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# TypeScript
+*.tsbuildinfo
+
+# Compiled output
+out/
+dist/
+
+# Data directories
+30_day_data/
+holo_data/
+*.db
+*.sqlite
+*.sqlite3
+
+# Logs
 *.log
-logs/*.log
+logs/
 
 # Temporary files
 *.tmp
 *.temp
-*~
+.cache/
 
-# IDE files
-.idea/
-*.swp
-*.swo
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# pytest
+.pytest_cache/
+.coverage
+htmlcov/
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Environment variables
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Generated documentation
+docs/_build/
 
 # Backup files
 *.bak
 *.backup
+
+# Local configuration files
+config.local.yml
+policies.local.yml
+
+# Test outputs
+test_output/
+test_results/
+
+# FAISS indices
+*.index
+*.faiss
+
+# Model files
+*.model
+*.pkl
+*.pickle
+
+# Large data files
+*.csv
+*.json.gz
+*.parquet
+
+# Visualization outputs
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.svg
+progress_*.png
+visualization_*.png

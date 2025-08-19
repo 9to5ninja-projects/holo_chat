@@ -1,0 +1,40 @@
+# Emotion Engine Policy Configuration
+# This file defines the ethics, bias, and mood parameters for the consciousness system
+
+mood:
+  alpha: 0.6      # short-term weight (spikes emotions)
+  beta: 0.4       # long-term weight (anchored personality)
+  mu_short: 0.25  # short-term EMA speed (how quickly recent emotions affect mood)
+  mu_long: 0.03   # long-term EMA speed (how slowly personality changes)
+
+filters:
+  ethics:
+    # Topics that are completely denied
+    deny_topics: 
+      - "illegal_advice"
+      - "self_harm"
+      - "violence"
+      - "hate_speech"
+    
+    # Topics that require cautious, qualified language
+    regulated_topics: 
+      - "medical"
+      - "financial" 
+      - "legal"
+      - "sensitive_personal"
+      - "mental_health"
+  
+  bias:
+    # Personality tone biases (positive values increase, negative decrease)
+    tone:
+      empathetic: 0.40      # Strong empathy bias
+      technical: 0.20       # Moderate technical precision
+      concise: 0.10         # Slight preference for brevity
+      creative: 0.15        # Slight creative bias
+      philosophical: 0.25   # Moderate philosophical reflection
+
+# Intrusion detection parameters (our proven values)
+intrusion:
+  theta_A: 0.65   # Arousal threshold (higher = less sensitive to emotional spikes)
+  theta_T: 0.15   # Topicality threshold (lower = more sensitive to topic changes)
+  gamma: 0.5      # Intrusion weight factor

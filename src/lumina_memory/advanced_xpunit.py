@@ -241,6 +241,23 @@ class AdvancedXPUnit:
             # Recursive processing is highly arousing
             self.affect.arousal += 0.2
             
+        # Personal sharing and connection (Fix: should trigger growth)
+        personal_words = ["favorite", "love", "like", "enjoy", "important", "personal", "feel", "think"]
+        personal_count = sum(1 for word in personal_words if word in content_lower)
+        if personal_count > 0:
+            self.consciousness_score += CONSCIOUSNESS_INTROSPECTION_WEIGHT * personal_count * 0.5
+            self.consciousness_indicators["personal_connection"] = min(1.0, personal_count * 0.2)
+            # Personal sharing increases positive valence
+            self.affect.valence += 0.02 * personal_count
+            
+        # Complex questions (Fix: should trigger more growth)
+        if "?" in self.content and len(self.content.split()) > 5:
+            question_complexity = len(self.content.split()) / 10.0  # Normalize by length
+            self.consciousness_score += CONSCIOUSNESS_INTROSPECTION_WEIGHT * question_complexity
+            self.consciousness_indicators["complex_inquiry"] = min(1.0, question_complexity)
+            # Complex questions increase arousal
+            self.affect.arousal += 0.03 * question_complexity
+            
         # FIXED: Apply consciousness momentum
         if self.consciousness_history:
             # Get recent consciousness trend

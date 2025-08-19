@@ -1,0 +1,18 @@
+{
+  "python.defaultInterpreterPath": "./venv/bin/python",
+  "typescript.preferences.includePackageJsonAutoImports": "on",
+  "typescript.suggest.autoImports": true,
+  "files.exclude": {
+    "**/__pycache__": true,
+    "**/node_modules": true,
+    "**/out": false,
+    "**/*.pyc": true,
+    ".pytest_cache": true
+  },
+  "python.testing.pytestEnabled": true,
+  "python.testing.pytestArgs": [
+    "tests"
+  ],
+  "editor.formatOnSave": true,
+  "python.formatting.provider": "black"
+}

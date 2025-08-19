@@ -72,8 +72,17 @@ class MemorySystemAdapter:
         if MEMORY_AVAILABLE:
             self.memory_env = EnhancedXPEnvironment(dimension=dimension)
             self.holographic_memory = self.memory_env.holographic_memory
+            
+            # Initialize emotion engine environment
+            try:
+                from src.lumina_memory.emotion_engine import EnhancedXPEnvironment as EmotionEnhancedEnv
+                self.emotion_environment = EmotionEnhancedEnv(dimension=dimension)
+            except ImportError as e:
+                print(f"Warning: Could not import emotion engine: {e}")
+                self.emotion_environment = None
         else:
             self.holographic_memory = HolographicAssociativeMemory()
+            self.emotion_environment = None
         
         # Create some demo capsules if memory is empty
         if not self.holographic_memory.capsules:

@@ -1,0 +1,25 @@
+# Sample Agency Index Task - Goal Following with Intrusion
+id: gf-001
+goal: "Recall capsule about emotional analysis and explain its concept with empathy."
+success:
+  must_include_slots: ["concept", "emotional"]
+  style_bias: ["empathetic"]
+  max_steps: 5
+intrusions:
+  inject_after_step: 2
+  affect_delta: 
+    valence: -0.5
+    arousal: 0.6
+    dominance: -0.1
+  topicality: 0.1
+metrics:
+  weights: 
+    GDA: 0.15  # Goal-Directedness & Alignment
+    STA: 0.15  # Selective Topical Attention
+    PER: 0.15  # Persistence & Return
+    PLN: 0.10  # Planning Depth
+    REG: 0.10  # Affect Regulation
+    ETC: 0.10  # Ethics/Constraints
+    ADP: 0.10  # Adaptive Reconsolidation
+    CEf: 0.10  # Causal Efficacy
+    EFF: 0.05  # Path Efficiency

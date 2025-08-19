@@ -1,0 +1,28 @@
+         441 function calls in 0.004 seconds
+
+   Ordered by: cumulative time
+   List reduced from 86 to 20 due to restriction <20>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.000    0.000    0.004    0.004 e:\holo_chat\profile_emotion_engine.py:45(run_chat)
+        1    0.000    0.000    0.004    0.004 e:\holo_chat\src\lumina_memory\chat_assistant.py:142(chat)
+        2    0.000    0.000    0.004    0.002 e:\holo_chat\src\lumina_memory\advanced_xpunit.py:191(__post_init__)
+        2    0.000    0.000    0.003    0.002 e:\holo_chat\src\lumina_memory\advanced_xpunit.py:272(_create_initial_bindings)
+        1    0.000    0.000    0.001    0.001 e:\holo_chat\src\lumina_memory\emotion_engine.py:396(lived_experience_cycle)
+        2    0.001    0.000    0.001    0.001 e:\holo_chat\src\lumina_memory\advanced_xpunit.py:297(_encode_content_to_vector)
+        2    0.000    0.000    0.001    0.001 e:\holo_chat\src\lumina_memory\advanced_xpunit.py:306(_encode_time_to_vector)
+       16    0.000    0.000    0.001    0.000 e:\holo_chat\src\lumina_memory\holographic_memory.py:68(normalize_vector)
+       16    0.000    0.000    0.001    0.000 C:\Users\m_tes\miniconda3\Lib\site-packages\numpy\linalg\_linalg.py:2622(norm)
+        3    0.001    0.000    0.001    0.000 {method 'reduce' of 'numpy.ufunc' objects}
+        2    0.000    0.000    0.001    0.000 C:\Users\m_tes\miniconda3\Lib\site-packages\numpy\_core\fromnumeric.py:2477(any)
+        2    0.000    0.000    0.001    0.000 C:\Users\m_tes\miniconda3\Lib\site-packages\numpy\_core\fromnumeric.py:89(_wrapreduction_any_all)
+       16    0.000    0.000    0.000    0.000 {method 'ravel' of 'numpy.ndarray' objects}
+        3    0.000    0.000    0.000    0.000 e:\holo_chat\src\lumina_memory\advanced_xpunit.py:216(_analyze_consciousness)
+       16    0.000    0.000    0.000    0.000 {method 'dot' of 'numpy.ndarray' objects}
+        2    0.000    0.000    0.000    0.000 e:\holo_chat\src\lumina_memory\advanced_xpunit.py:331(_encode_affect_to_vector)
+        2    0.000    0.000    0.000    0.000 C:\Users\m_tes\miniconda3\Lib\site-packages\numpy\_core\_ufunc_config.py:470(inner)
+        5    0.000    0.000    0.000    0.000 <string>:2(__init__)
+        5    0.000    0.000    0.000    0.000 e:\holo_chat\src\lumina_memory\advanced_xpunit.py:79(__post_init__)
+        2    0.000    0.000    0.000    0.000 e:\holo_chat\src\lumina_memory\advanced_xpunit.py:84(magnitude)
+
+

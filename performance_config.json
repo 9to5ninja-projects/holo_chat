@@ -1,0 +1,7 @@
+{
+  "default_mode": "internal",
+  "fallback_enabled": true,
+  "performance_target": "< 0.1s per message",
+  "ollama_timeout": 5.0,
+  "use_gpu_when_available": true
+}
