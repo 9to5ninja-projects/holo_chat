@@ -511,7 +511,7 @@ Respond authentically, reflecting your current emotional and consciousness state
             narrative_xpunit.metadata["intrusion_handled"] = True
             
             # Track intrusion for Agency Index
-            self.env.track_intrusion_event(is_intrusion=True)
+            self.track_intrusion_event(is_intrusion=True)
     
     def _update_agency_metrics_for_experience(self, response_text: str, cue_text: str, 
                                             focal_xpunit, controls: Dict[str, Any]):
@@ -522,10 +522,10 @@ Respond authentically, reflecting your current emotional and consciousness state
         action_tokens = self._extract_action_tokens(response_text)
         
         # Get top-K capsules for STA metric (simplified - use recent capsules)
-        top_k_capsules = list(self.env.xpunits.keys())[-10:]  # Last 10 capsules as proxy
+        top_k_capsules = list(self.xpunits.keys())[-10:]  # Last 10 capsules as proxy
         
         # Update metrics in environment
-        self.env.update_agency_metrics(
+        self.update_agency_metrics(
             response_text=response_text,
             goal_tokens=goal_tokens,
             action_tokens=action_tokens,
@@ -534,9 +534,9 @@ Respond authentically, reflecting your current emotional and consciousness state
         
         # Track ethics checks if controls indicate filtering
         if controls.get("blocked", False):
-            self.env.track_ethics_check(violated=True)
+            self.track_ethics_check(violated=True)
         elif "ethics" in controls.get("notes", []):
-            self.env.track_ethics_check(violated=False)
+            self.track_ethics_check(violated=False)
     
     def _extract_goal_tokens(self, cue_text: str) -> List[str]:
         """Extract goal-related tokens from cue text"""
