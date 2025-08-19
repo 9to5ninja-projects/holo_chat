@@ -20,7 +20,7 @@ from typing import Dict, List, Any, Optional
 from dataclasses import dataclass
 from pathlib import Path
 
-from .emotion_engine import EnhancedXPEnvironment
+from .emotion_engine import EmotionXPEnvironment
 from .advanced_xpunit import AdvancedXPUnit, AffectState
 
 
@@ -62,7 +62,7 @@ class ChatAssistant:
         """Initialize chat assistant with emotion engine"""
         
         # Create enhanced environment
-        self.env = EnhancedXPEnvironment(dimension=512)
+        self.env = EmotionXPEnvironment(dimension=512)
         
         # Load policies if provided
         if policies_path and Path(policies_path).exists():

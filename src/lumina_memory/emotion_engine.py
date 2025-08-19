@@ -155,9 +155,9 @@ class EmotionEngine:
         return "\n".join(f"- {b}" for b in bullets)
 
 
-class EnhancedXPEnvironment(AdvancedXPEnvironment):
+class EmotionXPEnvironment(AdvancedXPEnvironment):
     """
-    Enhanced XP Environment with Emotion Engine capabilities
+    Emotion XP Environment with Emotion Engine capabilities
     
     This extends our proven AdvancedXPEnvironment with:
     - Mood synthesis (short-term + long-term affect)

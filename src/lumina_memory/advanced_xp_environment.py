@@ -34,6 +34,9 @@ from .holographic_memory import (
     circular_convolution, circular_correlation, normalize_vector, cosine_similarity
 )
 
+# Import base XPEnvironment
+from .xp_core_unified import XPEnvironment
+
 from .constants import HRR_DIM, DEFAULT_DECAY_RATE
 
 # =============================================================================
@@ -174,7 +177,7 @@ class NarrativeCapsule:
 # ADVANCED XP ENVIRONMENT
 # =============================================================================
 
-class AdvancedXPEnvironment:
+class AdvancedXPEnvironment(XPEnvironment):
     """
     Advanced XP Environment - The complete consciousness memory system
     
@@ -187,6 +190,7 @@ class AdvancedXPEnvironment:
     """
     
     def __init__(self, dimension: int = HRR_DIM, decay_rate: float = DEFAULT_DECAY_RATE):
+        super().__init__()
         self.dimension = dimension
         self.decay_rate = decay_rate
         
