@@ -1,0 +1,176 @@
+{
+  "test_date": "20250819_021829",
+  "basic_persistence": {
+    "persistence_fidelity": 1.0,
+    "data_integrity": 1.0,
+    "count_match": true,
+    "ids_match": true,
+    "content_integrity": true,
+    "persistence_health": "HEALTHY",
+    "health_good": true,
+    "original_count": 10,
+    "reloaded_count": 10,
+    "content_mismatches": []
+  },
+  "accumulative_memory": {
+    "accumulation_success": 0.0,
+    "accumulation_correct": true,
+    "no_duplicates": false,
+    "session_separation": true,
+    "expected_counts": [
+      20,
+      50,
+      75
+    ],
+    "actual_counts": [
+      20,
+      50,
+      75
+    ],
+    "final_count": 75,
+    "session_breakdown": {
+      "session_1": 20,
+      "session_2": 30,
+      "session_3": 25
+    }
+  },
+  "cognitive_integration": {
+    "capability_achievement": 0.0,
+    "patterns_achieved": 0,
+    "total_patterns_tested": 5,
+    "avg_quality_score": 0.44833333333333336,
+    "avg_processing_time": 0.012816762924194336,
+    "memory_integration_good": false,
+    "total_memories": 21,
+    "pattern_results": [
+      {
+        "query": "What fascinates you most about the intersection of...",
+        "expected_pattern": "curiosity_response",
+        "pattern_detected": false,
+        "quality_score": 0.4083333333333334,
+        "processing_time": 0.014596223831176758,
+        "response_length": 85,
+        "complexity": "high"
+      },
+      {
+        "query": "How do my interests in AI ethics, music compositio...",
+        "expected_pattern": "extended_context_synthesis",
+        "pattern_detected": false,
+        "quality_score": 0.47500000000000003,
+        "processing_time": 0.011159658432006836,
+        "response_length": 85,
+        "complexity": "very_high"
+      },
+      {
+        "query": "Help me develop a systematic framework for evaluat...",
+        "expected_pattern": "multi_domain_synthesis",
+        "pattern_detected": false,
+        "quality_score": 0.47500000000000003,
+        "processing_time": 0.011477947235107422,
+        "response_length": 85,
+        "complexity": "very_high"
+      },
+      {
+        "query": "I'm struggling with ensuring our AI development re...",
+        "expected_pattern": "mentor_archetype",
+        "pattern_detected": false,
+        "quality_score": 0.4083333333333334,
+        "processing_time": 0.011732339859008789,
+        "response_length": 85,
+        "complexity": "high"
+      },
+      {
+        "query": "How might I creatively combine my background in mu...",
+        "expected_pattern": "creative_archetype",
+        "pattern_detected": false,
+        "quality_score": 0.47500000000000003,
+        "processing_time": 0.015117645263671875,
+        "response_length": 85,
+        "complexity": "very_high"
+      }
+    ]
+  },
+  "session_continuity": {
+    "overall_session_persistence": 0.0,
+    "avg_memory_recall": 0.0,
+    "avg_context_development": 0.0,
+    "avg_persistence_quality": 0.0,
+    "baseline_persistence": 0.544,
+    "improvement_over_baseline": -0.544,
+    "continuity_results": [
+      {
+        "query": "Can you help me think through how to apply those m...",
+        "test_type": "specific_recall",
+        "memory_recall": 0.0,
+        "context_development": 0.0,
+        "persistence_quality": 0.0,
+        "processing_time": 0.009434223175048828,
+        "response_length": 85
+      },
+      {
+        "query": "I'd like to explore how that digital consciousness...",
+        "test_type": "cross_domain_synthesis",
+        "memory_recall": 0.0,
+        "context_development": 0.0,
+        "persistence_quality": 0.0,
+        "processing_time": 0.009843826293945312,
+        "response_length": 85
+      },
+      {
+        "query": "What specific elements should that framework inclu...",
+        "test_type": "continuation_development",
+        "memory_recall": 0.0,
+        "context_development": 0.0,
+        "persistence_quality": 0.0,
+        "processing_time": 0.00883793830871582,
+        "response_length": 85
+      }
+    ]
+  },
+  "performance_scalability": {
+    "acceptable_performance": false,
+    "max_overhead": 4.341365682292238,
+    "linear_scaling": false,
+    "scaling_factor": 2.1207582238262552,
+    "performance_results": [
+      {
+        "size": 100,
+        "ingestion_time": 0.5245232582092285,
+        "startup_time": 0.05115056037902832,
+        "search_time": 0.004343509674072266,
+        "storage_size_mb": 2.320812225341797,
+        "ingestion_rate": 190.64931523038533,
+        "startup_rate": 1955.0127947571793,
+        "search_results": 10
+      },
+      {
+        "size": 500,
+        "ingestion_time": 3.904627561569214,
+        "startup_time": 0.2824079990386963,
+        "search_time": 0.010756492614746094,
+        "storage_size_mb": 11.604487419128418,
+        "ingestion_rate": 128.05318615306223,
+        "startup_rate": 1770.4880941828021,
+        "search_results": 10
+      },
+      {
+        "size": 1000,
+        "ingestion_time": 11.123870134353638,
+        "startup_time": 0.6295821666717529,
+        "search_time": 0.01885676383972168,
+        "storage_size_mb": 23.211464881896973,
+        "ingestion_rate": 89.89677045147434,
+        "startup_rate": 1588.355028044136,
+        "search_results": 10
+      }
+    ]
+  },
+  "overall_success": 0.2,
+  "detailed_results": [],
+  "status": "NEEDS_WORK",
+  "basic_persistence_score": 1.0,
+  "accumulative_memory_score": 0.0,
+  "cognitive_integration_score": 0.0,
+  "session_continuity_score": 0.0,
+  "performance_scalability_score": 0.0
+}
