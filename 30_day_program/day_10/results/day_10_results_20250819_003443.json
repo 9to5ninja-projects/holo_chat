@@ -1,0 +1,34 @@
+{
+  "test_date": "2025-08-19T00:34:43.510765",
+  "day": 10,
+  "focus": "Consistency and Integration Refinement",
+  "phases": {
+    "archetype_consistency": {
+      "average_score": 0.29000000000000004,
+      "target": 0.4,
+      "status": "NEEDS_WORK"
+    },
+    "context_integration": {
+      "average_score": 0.35,
+      "target": 0.4,
+      "status": "PARTIAL"
+    },
+    "integrated_capabilities": {
+      "average_score": 0.304,
+      "target": 0.4,
+      "status": "NEEDS_WORK"
+    },
+    "maintained_excellence": {
+      "average_score": 0.38666666666666666,
+      "target": 0.4,
+      "status": "PARTIAL"
+    }
+  },
+  "overall_assessment": {
+    "overall_score": 0.33266666666666667,
+    "success_rate": 0.0,
+    "status": "NEEDS_WORK",
+    "target_score": 0.4
+  },
+  "session_id": "day10_session_1755585283"
+}

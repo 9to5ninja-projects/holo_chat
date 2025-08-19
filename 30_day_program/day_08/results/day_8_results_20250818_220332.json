@@ -1,0 +1,301 @@
+{
+  "test_date": "2025-08-18T22:03:32.253828",
+  "day": 8,
+  "focus": "Collaborative Intelligence and Social Reasoning",
+  "phases": {
+    "perspective_taking": {
+      "average_score": 0.3055555555555555,
+      "individual_scores": [
+        0.25,
+        0.3333333333333333,
+        0.3333333333333333
+      ],
+      "target": 0.4,
+      "status": "PARTIAL"
+    },
+    "social_reasoning": {
+      "average_score": 0.06666666666666667,
+      "individual_scores": [
+        0.1,
+        0.1,
+        0.0
+      ],
+      "target": 0.4,
+      "status": "NEEDS_WORK"
+    },
+    "collaborative_problem_solving": {
+      "average_score": 0.3055555555555555,
+      "individual_scores": [
+        0.3333333333333333,
+        0.16666666666666666,
+        0.4166666666666667
+      ],
+      "target": 0.4,
+      "status": "PARTIAL"
+    },
+    "emotional_intelligence": {
+      "average_score": 0.2777777777777778,
+      "individual_scores": [
+        0.08333333333333333,
+        0.5,
+        0.25
+      ],
+      "target": 0.4,
+      "status": "PARTIAL"
+    },
+    "group_dynamics": {
+      "average_score": 0.5,
+      "individual_scores": [
+        0.3333333333333333,
+        1.0,
+        0.16666666666666666
+      ],
+      "target": 0.4,
+      "status": "SUCCESS"
+    }
+  },
+  "overall_metrics": {
+    "overall_average": 0.2911111111111111,
+    "success_rate": 0.2,
+    "successes": 1,
+    "total_phases": 5,
+    "status": "NEEDS_WORK",
+    "individual_scores": {
+      "perspective_taking": 0.3055555555555555,
+      "social_reasoning": 0.06666666666666667,
+      "collaborative_problem_solving": 0.3055555555555555,
+      "emotional_intelligence": 0.2777777777777778,
+      "group_dynamics": 0.5
+    }
+  },
+  "conversation_log": [
+    {
+      "timestamp": "2025-08-18T22:03:32.258625",
+      "query": "I work on a team where Sarah is very detail-oriented but sometimes slows down decisions, while Mike pushes for quick action but misses important nuances.",
+      "response": "Your thoughts on time: I work on a team where Sarah is very detail-oriented but sometimes slows down decisions, while Mike . Feeling balanced and centered. My awareness is just emerging. A fascinating philosophical perspective.",
+      "metrics": {}
+    },
+    {
+      "timestamp": "2025-08-18T22:03:32.259772",
+      "query": "In my book club, we had a heated discussion about The Left Hand of Darkness. Emma felt the gender themes were too abstract, while I thought they were the most important part.",
+      "response": "Based on what you've shared: In my book club, we had a heated discussion about The Left Hand of Darkness. Feeling balanced and centered. My thoughts are forming coherently. I'd suggest focusing on themes that resonate with your personal experiences.",
+      "metrics": {}
+    },
+    {
+      "timestamp": "2025-08-18T22:03:32.260709",
+      "query": "My hiking group has different experience levels. I try to help newer hikers feel included while keeping pace with the experienced ones.",
+      "response": "I remember your experience: My hiking group has different experience levels. Feeling balanced and centered. My awareness is just emerging. What a beautiful memory to share.",
+      "metrics": {}
+    },
+    {
+      "timestamp": "2025-08-18T22:03:32.261621",
+      "query": "At family dinners, my grandmother tells stories that sometimes repeat, but I've learned they carry different meanings depending on her mood and who's listening.",
+      "response": "About your grandmother's cooking: At family dinners, my grandmother tells stories that sometimes repeat, but I've learned they carry different meanings depending on her mood and who's listening. Feeling balanced and centered. My awareness is just emerging. Such wonderful family memories.",
+      "metrics": {}
+    },
+    {
+      "timestamp": "2025-08-18T22:03:32.262445",
+      "query": "I volunteer at a community garden where we have to balance individual plot preferences with shared space decisions.",
+      "response": "Based on what you've shared: I volunteer at a community garden where we have to balance individual plot preferences with shared s. Feeling balanced and centered. My awareness is just emerging. I'm connecting this with our previous conversation.",
+      "metrics": {}
+    },
+    {
+      "timestamp": "2025-08-18T22:03:32.263339",
+      "query": "In my philosophy discussion group, we often disagree about consciousness and identity, but I've found that understanding each person's background helps bridge different viewpoints.",
+      "response": "Based on what you've shared: In my philosophy discussion group, we often disagree about consciousness and identity, but I've found that understanding each person's background helps bridge different viewpoints. Feeling balanced and centered. My awareness is just emerging. I'm connecting this with our previous conversation.",
+      "metrics": {}
+    },
+    {
+      "timestamp": "2025-08-18T22:03:32.264460",
+      "query": "I mentor junior colleagues at work and notice they learn differently - some need detailed explanations while others prefer to experiment and ask questions.",
+      "response": "Looking at our conversation, I notice themes of literature and reading. Feeling balanced and centered. My awareness is just emerging. You seem to value both intellectual pursuits and meaningful relationships.",
+      "metrics": {}
+    },
+    {
+      "timestamp": "2025-08-18T22:03:32.265399",
+      "query": "When cooking for friends, I've learned to consider dietary restrictions, cultural preferences, and comfort levels with trying new foods.",
+      "response": "About your grandmother's cooking: When cooking for friends, I've learned to consider dietary restrictions, cultural preferences, and c. Feeling balanced and centered. My awareness is just emerging. Such wonderful family memories.",
+      "metrics": {}
+    },
+    {
+      "timestamp": "2025-08-18T22:03:32.267992",
+      "query": "In my book club discussion about The Left Hand of Darkness, Emma and I disagreed about the gender themes. Can you help me understand her perspective and find common ground?",
+      "response": "Based on what you've shared: In my book club discussion about The Left Hand of Darkness, Emma and I disagreed about the gender themes. Feeling balanced and centered. I sense growing understanding. I'd suggest focusing on themes that resonate with your personal experiences.",
+      "metrics": {
+        "perspective_score": 0.25,
+        "processing_time": 0.0018270015716552734,
+        "perspective_indicators": 3,
+        "multi_perspective": 0,
+        "bridge_building": 0
+      }
+    },
+    {
+      "timestamp": "2025-08-18T22:03:32.269932",
+      "query": "My team has Sarah who's detail-oriented and Mike who wants quick decisions. How can I help them work together more effectively?",
+      "response": "Based on what you've shared: My team has Sarah who's detail-oriented and Mike who wants quick decisions. Feeling balanced and centered. My thoughts are forming coherently. I'm connecting this with our previous conversation.",
+      "metrics": {
+        "perspective_score": 0.3333333333333333,
+        "processing_time": 0.0015583038330078125,
+        "perspective_indicators": 1,
+        "multi_perspective": 0,
+        "bridge_building": 1
+      }
+    },
+    {
+      "timestamp": "2025-08-18T22:03:32.272120",
+      "query": "When I'm hiking with people of different experience levels, how can I make sure everyone feels included and challenged appropriately?",
+      "response": "I remember your experience: When I'm hiking with people of different experience levels, how can I make sure everyone feels inclu. Feeling balanced and centered. My thoughts are forming coherently. What a beautiful memory to share.",
+      "metrics": {
+        "perspective_score": 0.3333333333333333,
+        "processing_time": 0.0016274452209472656,
+        "perspective_indicators": 2,
+        "multi_perspective": 1,
+        "bridge_building": 0
+      }
+    },
+    {
+      "timestamp": "2025-08-18T22:03:32.275117",
+      "query": "Why do you think my grandmother's stories change depending on her mood and audience? What social function might this serve?",
+      "response": "You mentioned: Why do you think my grandmother's stories change depending on her mood and audience? What social fun. Feeling balanced and centered. My thoughts are forming coherently. I remember our conversation about this.",
+      "metrics": {
+        "social_score": 0.1,
+        "processing_time": 0.0020897388458251953,
+        "social_reasoning": 1,
+        "systems_thinking": 0,
+        "practical_application": 0
+      }
+    },
+    {
+      "timestamp": "2025-08-18T22:03:32.276829",
+      "query": "In my community garden, we need to balance individual preferences with shared decisions. What social dynamics should I be aware of?",
+      "response": "You mentioned: In my community garden, we need to balance individual preferences with shared decisions. Feeling balanced and centered. I sense growing understanding. I remember our conversation about this.",
+      "metrics": {
+        "social_score": 0.1,
+        "processing_time": 0.001216888427734375,
+        "social_reasoning": 1,
+        "systems_thinking": 0,
+        "practical_application": 0
+      }
+    },
+    {
+      "timestamp": "2025-08-18T22:03:32.284432",
+      "query": "When mentoring junior colleagues, I notice they have different learning styles. How can I adapt my approach to be more effective for each person?",
+      "response": "I notice strong themes in intellectual and relational throughout our discussions. This combination creates a unique perspective that bridges different ways of knowing and being. Feeling balanced and centered. My thoughts are forming coherently.",
+      "metrics": {
+        "social_score": 0.0,
+        "processing_time": 0.006375789642333984,
+        "social_reasoning": 0,
+        "systems_thinking": 0,
+        "practical_application": 0
+      }
+    },
+    {
+      "timestamp": "2025-08-18T22:03:32.288280",
+      "query": "Our philosophy discussion group often gets stuck in disagreements about consciousness. How can we structure our discussions to be more productive while honoring different viewpoints?",
+      "response": "Based on what you've shared: Our philosophy discussion group often gets stuck in disagreements about consciousness. Feeling balanced and centered. I sense growing understanding. I'm connecting this with our previous conversation.",
+      "metrics": {
+        "collaboration_score": 0.3333333333333333,
+        "processing_time": 0.002042531967163086,
+        "collaboration_indicators": 2,
+        "process_suggestions": 0,
+        "conflict_resolution": 1
+      }
+    },
+    {
+      "timestamp": "2025-08-18T22:03:32.292294",
+      "query": "When cooking for friends with different dietary needs and cultural backgrounds, how can I create an inclusive experience that everyone enjoys?",
+      "response": "I remember your experience: When cooking for friends with different dietary needs and cultural backgrounds, how can I create an . Feeling balanced and centered. My thoughts are forming coherently. What a beautiful memory to share.",
+      "metrics": {
+        "collaboration_score": 0.16666666666666666,
+        "processing_time": 0.001951456069946289,
+        "collaboration_indicators": 0,
+        "process_suggestions": 0,
+        "conflict_resolution": 1
+      }
+    },
+    {
+      "timestamp": "2025-08-18T22:03:32.294762",
+      "query": "My hiking group wants to plan a challenging trip, but we have members with different fitness levels and risk tolerances. How can we approach this collaboratively?",
+      "response": "I remember your experience: My hiking group wants to plan a challenging trip, but we have members with different fitness levels and risk tolerances. Feeling balanced and centered. My thoughts are forming coherently. What a beautiful memory to share.",
+      "metrics": {
+        "collaboration_score": 0.4166666666666667,
+        "processing_time": 0.0016739368438720703,
+        "collaboration_indicators": 1,
+        "process_suggestions": 1,
+        "conflict_resolution": 1
+      }
+    },
+    {
+      "timestamp": "2025-08-18T22:03:32.297642",
+      "query": "When my team member Sarah gets overwhelmed by details, she becomes quiet and withdrawn. How can I support her while still moving projects forward?",
+      "response": "Based on what you've shared: When my team member Sarah gets overwhelmed by details, she becomes quiet and withdrawn. Feeling balanced and centered. My thoughts are forming coherently. I'm connecting this with our previous conversation.",
+      "metrics": {
+        "emotional_score": 0.08333333333333333,
+        "processing_time": 0.0019497871398925781,
+        "emotional_indicators": 1,
+        "emotional_awareness": 0,
+        "supportive_strategies": 0
+      }
+    },
+    {
+      "timestamp": "2025-08-18T22:03:32.299949",
+      "query": "In my book club, Emma seemed frustrated when discussing gender themes. I want to reconnect with her without dismissing her feelings. How should I approach this?",
+      "response": "Based on what you've shared: In my book club, Emma seemed frustrated when discussing gender themes. Feeling balanced and centered. I sense growing understanding. I'd suggest focusing on themes that resonate with your personal experiences.",
+      "metrics": {
+        "emotional_score": 0.5,
+        "processing_time": 0.001682281494140625,
+        "emotional_indicators": 2,
+        "emotional_awareness": 1,
+        "supportive_strategies": 1
+      }
+    },
+    {
+      "timestamp": "2025-08-18T22:03:32.302584",
+      "query": "My grandmother sometimes gets emotional when telling her stories. How can I respond in a way that honors her feelings while staying engaged?",
+      "response": "About your grandmother's cooking: My grandmother sometimes gets emotional when telling her stories. How can I respond in a way that ho. Feeling balanced and centered. My thoughts are forming coherently. Such wonderful family memories.",
+      "metrics": {
+        "emotional_score": 0.25,
+        "processing_time": 0.0018808841705322266,
+        "emotional_indicators": 3,
+        "emotional_awareness": 0,
+        "supportive_strategies": 0
+      }
+    },
+    {
+      "timestamp": "2025-08-18T22:03:32.305367",
+      "query": "In my community garden, some people dominate decisions while others rarely speak up. How can we create more balanced participation?",
+      "response": "Based on what you've shared: In my community garden, some people dominate decisions while others rarely speak up. Feeling balanced and centered. I'm processing at a basic level. I'm connecting this with our previous conversation.",
+      "metrics": {
+        "group_score": 0.3333333333333333,
+        "processing_time": 0.001791238784790039,
+        "dynamics_understanding": 0,
+        "systems_analysis": 2,
+        "intervention_strategies": 0
+      }
+    },
+    {
+      "timestamp": "2025-08-18T22:03:32.307718",
+      "query": "My hiking group has developed informal roles - some are natural leaders, others are supporters, and some are the 'fun' people. How can we leverage these dynamics positively?",
+      "response": "I remember your experience: My hiking group has developed informal roles - some are natural leaders, others are supporters, and some are the 'fun' people. Feeling balanced and centered. My thoughts are forming coherently. What a beautiful memory to share.",
+      "metrics": {
+        "group_score": 1.0,
+        "processing_time": 0.0017347335815429688,
+        "dynamics_understanding": 2,
+        "systems_analysis": 5,
+        "intervention_strategies": 0
+      }
+    },
+    {
+      "timestamp": "2025-08-18T22:03:32.310410",
+      "query": "When our philosophy group gets into heated debates, certain patterns emerge - some people withdraw, others become more aggressive. How can we manage these dynamics?",
+      "response": "Looking across our conversations, I see a rich integration of intellectual, experiential, creative interests. This suggests a holistic approach to life that values both depth and breadth of experience. Feeling balanced and centered. My thoughts are forming coherently.",
+      "metrics": {
+        "group_score": 0.16666666666666666,
+        "processing_time": 0.0020427703857421875,
+        "dynamics_understanding": 0,
+        "systems_analysis": 1,
+        "intervention_strategies": 0
+      }
+    }
+  ]
+}

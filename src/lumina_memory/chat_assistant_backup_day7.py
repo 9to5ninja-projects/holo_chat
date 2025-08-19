@@ -139,39 +139,6 @@ class ChatAssistant:
         
         return {"valence": valence, "arousal": arousal, "dominance": dominance}
     
-    def add_memory(self, content: str, affect_delta: Dict[str, float] = None) -> str:
-        """Add a memory to the system without requiring a chat interaction"""
-        
-        if affect_delta is None:
-            affect_delta = {"valence": 0.1, "arousal": 0.05, "dominance": 0.05}
-        
-        # Create XPUnit for the memory
-        memory_affect = AffectState(
-            valence=affect_delta["valence"],
-            arousal=affect_delta["arousal"]
-        )
-        if hasattr(AffectState, 'dominance'):
-            memory_affect.dominance = affect_delta["dominance"]
-        
-        memory_id = f"memory_{int(time.time()*1000000)}"
-        memory_xpunit = AdvancedXPUnit(
-            content_id=memory_id,
-            content=content,
-            affect=memory_affect
-        )
-        
-        # Add metadata
-        memory_xpunit.metadata.update({
-            "type": "background_memory",
-            "timestamp": time.time(),
-            "source": "manual_addition"
-        })
-        
-        # Add to environment
-        self.env.xpunits[memory_xpunit.content_id] = memory_xpunit
-        
-        return memory_id
-    
     def chat(self, user_message: str, model: str = "internal") -> Dict[str, Any]:
         """
         Main chat function with automatic emotion/memory integration

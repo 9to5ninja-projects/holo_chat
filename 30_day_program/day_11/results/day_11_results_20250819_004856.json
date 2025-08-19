@@ -1,0 +1,247 @@
+{
+  "test_date": "2025-08-19T00:48:56.891130",
+  "day": 11,
+  "focus": "Pattern Recognition Debugging and Stabilization",
+  "phases": {
+    "pattern_recognition_debugging": {
+      "pattern_accuracy": 0.16666666666666666,
+      "average_pattern_score": 0.5000000000000001,
+      "detailed_results": [
+        {
+          "test_name": "Mentor Pattern - Ethical Struggle",
+          "expected_pattern": "mentor_archetype",
+          "detected_pattern": "mentor_archetype",
+          "pattern_match": true,
+          "pattern_score": 0.8,
+          "response_length": 669,
+          "processing_time": 0.0022954940795898438
+        },
+        {
+          "test_name": "Curiosity Pattern - What Do You Think",
+          "expected_pattern": "curiosity_response",
+          "detected_pattern": "explorer_archetype",
+          "pattern_match": false,
+          "pattern_score": 0.6000000000000001,
+          "response_length": 460,
+          "processing_time": 0.002150297164916992
+        },
+        {
+          "test_name": "Synthesis Pattern - Multi-Domain Connection",
+          "expected_pattern": "extended_context_synthesis",
+          "detected_pattern": "explorer_archetype",
+          "pattern_match": false,
+          "pattern_score": 0.6000000000000001,
+          "response_length": 647,
+          "processing_time": 0.002159595489501953
+        },
+        {
+          "test_name": "Collaborator Pattern - Team Dynamics",
+          "expected_pattern": "collaborator_archetype",
+          "detected_pattern": "mentor_archetype",
+          "pattern_match": false,
+          "pattern_score": 0.6000000000000001,
+          "response_length": 224,
+          "processing_time": 0.0020046234130859375
+        },
+        {
+          "test_name": "Explorer Pattern - Learning Directions",
+          "expected_pattern": "explorer_archetype",
+          "detected_pattern": "curiosity_response",
+          "pattern_match": false,
+          "pattern_score": 0.4,
+          "response_length": 444,
+          "processing_time": 0.0016140937805175781
+        },
+        {
+          "test_name": "Integration Pattern - Complex Problem Solving",
+          "expected_pattern": "multi_domain_synthesis",
+          "detected_pattern": "unknown_pattern",
+          "pattern_match": false,
+          "pattern_score": 0.0,
+          "response_length": 341,
+          "processing_time": 0.0010864734649658203
+        }
+      ]
+    },
+    "consistency_validation": {
+      "overall_consistency": 1.0,
+      "average_quality_variance": 0.0,
+      "detailed_results": [
+        {
+          "test_name": "Curiosity Consistency",
+          "pattern_consistency": true,
+          "consistent_pattern": "explorer_archetype",
+          "quality_variance": 0.0,
+          "average_quality": 0.65,
+          "run_results": [
+            {
+              "run": 1,
+              "pattern_type": "explorer_archetype",
+              "response_quality": 0.65,
+              "response_length": 460,
+              "processing_time": 0.0013859272003173828,
+              "response": "The relationship between consciousness and AI fascinates me deeply. I'm curious about whether consci"
+            },
+            {
+              "run": 2,
+              "pattern_type": "explorer_archetype",
+              "response_quality": 0.65,
+              "response_length": 460,
+              "processing_time": 0.002063274383544922,
+              "response": "The relationship between consciousness and AI fascinates me deeply. I'm curious about whether consci"
+            },
+            {
+              "run": 3,
+              "pattern_type": "explorer_archetype",
+              "response_quality": 0.65,
+              "response_length": 460,
+              "processing_time": 0.001154184341430664,
+              "response": "The relationship between consciousness and AI fascinates me deeply. I'm curious about whether consci"
+            }
+          ]
+        },
+        {
+          "test_name": "Synthesis Consistency",
+          "pattern_consistency": true,
+          "consistent_pattern": "extended_context_synthesis",
+          "quality_variance": 0.0,
+          "average_quality": 0.4000000000000001,
+          "run_results": [
+            {
+              "run": 1,
+              "pattern_type": "extended_context_synthesis",
+              "response_quality": 0.4,
+              "response_length": 223,
+              "processing_time": 0.0013146400451660156,
+              "response": "I notice rich patterns across your interests and experiences that suggest deeper themes about consci"
+            },
+            {
+              "run": 2,
+              "pattern_type": "extended_context_synthesis",
+              "response_quality": 0.4,
+              "response_length": 223,
+              "processing_time": 0.0010609626770019531,
+              "response": "I notice rich patterns across your interests and experiences that suggest deeper themes about consci"
+            },
+            {
+              "run": 3,
+              "pattern_type": "extended_context_synthesis",
+              "response_quality": 0.4,
+              "response_length": 223,
+              "processing_time": 0.0011773109436035156,
+              "response": "I notice rich patterns across your interests and experiences that suggest deeper themes about consci"
+            }
+          ]
+        },
+        {
+          "test_name": "Archetype Consistency",
+          "pattern_consistency": true,
+          "consistent_pattern": "mentor_archetype",
+          "quality_variance": 0.0,
+          "average_quality": 0.45,
+          "run_results": [
+            {
+              "run": 1,
+              "pattern_type": "mentor_archetype",
+              "response_quality": 0.45,
+              "response_length": 671,
+              "processing_time": 0.0015940666198730469,
+              "response": "I sense you're grappling with something that doesn't have easy answers - that's often where the most"
+            },
+            {
+              "run": 2,
+              "pattern_type": "mentor_archetype",
+              "response_quality": 0.45,
+              "response_length": 671,
+              "processing_time": 0.0024061203002929688,
+              "response": "I sense you're grappling with something that doesn't have easy answers - that's often where the most"
+            },
+            {
+              "run": 3,
+              "pattern_type": "mentor_archetype",
+              "response_quality": 0.45,
+              "response_length": 671,
+              "processing_time": 0.002367734909057617,
+              "response": "I sense you're grappling with something that doesn't have easy answers - that's often where the most"
+            }
+          ]
+        }
+      ]
+    },
+    "regression_validation": {
+      "maintenance_rate": 0.6666666666666666,
+      "average_score_change": -0.12766666666666668,
+      "detailed_results": [
+        {
+          "test_name": "Day 9 Curiosity Success",
+          "day_9_score": 0.533,
+          "current_score": 0.5,
+          "score_change": -0.03300000000000003,
+          "maintained": true,
+          "processing_time": 0.0015239715576171875
+        },
+        {
+          "test_name": "Day 9 Non-Echoing Success",
+          "day_9_score": 0.4,
+          "current_score": 0.0,
+          "score_change": -0.4,
+          "maintained": false,
+          "processing_time": 0.0017194747924804688
+        },
+        {
+          "test_name": "Day 9 Context Success",
+          "day_9_score": 0.7,
+          "current_score": 0.75,
+          "score_change": 0.050000000000000044,
+          "maintained": true,
+          "processing_time": 0.002814054489135742
+        }
+      ]
+    },
+    "targeted_improvements": {
+      "achievement_rate": 0.25,
+      "average_capability_score": 0.625,
+      "detailed_results": [
+        {
+          "test_name": "Archetype Activation Improvement",
+          "target_capability": "collaborator_archetype",
+          "detected_pattern": "collaborator_archetype",
+          "target_achieved": true,
+          "capability_score": 0.75,
+          "processing_time": 0.0023877620697021484
+        },
+        {
+          "test_name": "Context Integration Improvement",
+          "target_capability": "cross_domain_synthesis",
+          "detected_pattern": "generic_fallback",
+          "target_achieved": false,
+          "capability_score": 0.5,
+          "processing_time": 0.0016589164733886719
+        },
+        {
+          "test_name": "Complex Integration Improvement",
+          "target_capability": "systematic_framework",
+          "detected_pattern": "mentor_archetype",
+          "target_achieved": false,
+          "capability_score": 1.0,
+          "processing_time": 0.0023186206817626953
+        },
+        {
+          "test_name": "Creative Synthesis Improvement",
+          "target_capability": "creative_synthesis",
+          "detected_pattern": "creative_archetype",
+          "target_achieved": false,
+          "capability_score": 0.25,
+          "processing_time": 0.0010521411895751953
+        }
+      ]
+    }
+  },
+  "overall_assessment": {
+    "debugging_success_rate": 0.5208333333333334,
+    "status": "NEEDS_WORK",
+    "pattern_recognition_score": 0.5000000000000001,
+    "quality_variance": 0.0
+  },
+  "session_id": "day11_debug_1755586136"
+}

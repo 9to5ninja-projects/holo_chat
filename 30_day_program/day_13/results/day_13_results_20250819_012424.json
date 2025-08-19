@@ -1,0 +1,303 @@
+{
+  "test_date": "2025-08-19T01:24:24.684819",
+  "day": 13,
+  "focus": "Precision Pattern Fixes and Final Routing Optimization",
+  "phases": {
+    "precision_pattern_fixes": {
+      "fix_rate": 0.8333333333333334,
+      "improvement_rate": 0.6666666666666666,
+      "average_pattern_score": 0.4000000000000001,
+      "detailed_results": [
+        {
+          "test_name": "Curiosity Pattern Precision",
+          "expected_pattern": "curiosity_response",
+          "day_12_detected": "explorer_archetype",
+          "day_13_detected": "curiosity_response",
+          "pattern_fixed": true,
+          "improvement": true,
+          "pattern_score": 0.6000000000000001,
+          "processing_time": 0.00243377685546875,
+          "issue": "Exact phrase 'what do you think about' should trigger curiosity"
+        },
+        {
+          "test_name": "Synthesis Pattern Precision",
+          "expected_pattern": "extended_context_synthesis",
+          "day_12_detected": "collaborator_archetype",
+          "day_13_detected": "extended_context_synthesis",
+          "pattern_fixed": true,
+          "improvement": true,
+          "pattern_score": 0.6000000000000001,
+          "processing_time": 0.004339694976806641,
+          "issue": "Connect + coherent should trigger synthesis"
+        },
+        {
+          "test_name": "Multi-Domain Integration Precision",
+          "expected_pattern": "multi_domain_synthesis",
+          "day_12_detected": "collaborator_archetype",
+          "day_13_detected": "multi_domain_synthesis",
+          "pattern_fixed": true,
+          "improvement": true,
+          "pattern_score": 0.2,
+          "processing_time": 0.0014655590057373047,
+          "issue": "Systematic framework should trigger multi-domain synthesis"
+        },
+        {
+          "test_name": "Collaborator Pattern Precision",
+          "expected_pattern": "collaborator_archetype",
+          "day_12_detected": "mentor_archetype",
+          "day_13_detected": "collaborator_archetype",
+          "pattern_fixed": true,
+          "improvement": true,
+          "pattern_score": 0.6000000000000001,
+          "processing_time": 0.0029802322387695312,
+          "issue": "Team + work together should trigger collaborator"
+        },
+        {
+          "test_name": "Complex Integration Query",
+          "expected_pattern": "multi_domain_synthesis",
+          "day_12_detected": "extended_context_synthesis",
+          "day_13_detected": "unknown_pattern",
+          "pattern_fixed": false,
+          "improvement": false,
+          "pattern_score": 0.0,
+          "processing_time": 0.0018954277038574219,
+          "issue": "Create + integrating should trigger multi-domain"
+        },
+        {
+          "test_name": "Advanced Curiosity Query",
+          "expected_pattern": "curiosity_response",
+          "day_12_detected": "curiosity_response",
+          "day_13_detected": "curiosity_response",
+          "pattern_fixed": true,
+          "improvement": false,
+          "pattern_score": 0.4,
+          "processing_time": 0.00324249267578125,
+          "issue": "Should continue working"
+        }
+      ]
+    },
+    "exclusion_rule_effectiveness": {
+      "exclusion_rate": 0.5,
+      "conflict_avoidance_rate": 0.75,
+      "average_exclusion_score": 0.39999999999999997,
+      "detailed_results": [
+        {
+          "test_name": "Curiosity vs Explorer Exclusion",
+          "primary_pattern": "curiosity_response",
+          "conflicting_pattern": "explorer_archetype",
+          "expected_resolution": "curiosity_response",
+          "detected_pattern": "curiosity_response",
+          "exclusion_successful": true,
+          "conflict_avoided": true,
+          "exclusion_score": 0.55,
+          "processing_time": 0.005640506744384766
+        },
+        {
+          "test_name": "Mentor vs Collaborator Exclusion",
+          "primary_pattern": "mentor_archetype",
+          "conflicting_pattern": "collaborator_archetype",
+          "expected_resolution": "mentor_archetype",
+          "detected_pattern": "mentor_archetype",
+          "exclusion_successful": true,
+          "conflict_avoided": true,
+          "exclusion_score": 0.44999999999999996,
+          "processing_time": 0.002543210983276367
+        },
+        {
+          "test_name": "Synthesis vs Explorer Exclusion",
+          "primary_pattern": "extended_context_synthesis",
+          "conflicting_pattern": "explorer_archetype",
+          "expected_resolution": "extended_context_synthesis",
+          "detected_pattern": "unknown_pattern",
+          "exclusion_successful": false,
+          "conflict_avoided": false,
+          "exclusion_score": 0.15,
+          "processing_time": 0.003220796585083008
+        },
+        {
+          "test_name": "Integration vs Mentor Exclusion",
+          "primary_pattern": "multi_domain_synthesis",
+          "conflicting_pattern": "mentor_archetype",
+          "expected_resolution": "multi_domain_synthesis",
+          "detected_pattern": "analyst_archetype",
+          "exclusion_successful": false,
+          "conflict_avoided": true,
+          "exclusion_score": 0.44999999999999996,
+          "processing_time": 0.002843141555786133
+        }
+      ]
+    },
+    "comprehensive_capability_validation": {
+      "achievement_rate": 0.625,
+      "average_capability_score": 0.5,
+      "average_quality_score": 0.3875,
+      "average_complexity_bonus": 0.1875,
+      "detailed_results": [
+        {
+          "test_name": "Advanced Curiosity Engagement",
+          "target_capability": "curiosity_response",
+          "detected_pattern": "curiosity_response",
+          "capability_achieved": true,
+          "capability_score": 0.5,
+          "response_quality": 0.6000000000000001,
+          "complexity": "high",
+          "complexity_bonus": 0.3,
+          "processing_time": 0.0044345855712890625
+        },
+        {
+          "test_name": "Complex Context Synthesis",
+          "target_capability": "extended_context_synthesis",
+          "detected_pattern": "unknown_pattern",
+          "capability_achieved": false,
+          "capability_score": 0.25,
+          "response_quality": 0.30000000000000004,
+          "complexity": "high",
+          "complexity_bonus": 0.0,
+          "processing_time": 0.0014491081237792969
+        },
+        {
+          "test_name": "Multi-Domain Problem Solving",
+          "target_capability": "multi_domain_synthesis",
+          "detected_pattern": "multi_domain_synthesis",
+          "capability_achieved": true,
+          "capability_score": 0.25,
+          "response_quality": 0.30000000000000004,
+          "complexity": "very_high",
+          "complexity_bonus": 0.4,
+          "processing_time": 0.002026081085205078
+        },
+        {
+          "test_name": "Collaborative Intelligence",
+          "target_capability": "collaborator_archetype",
+          "detected_pattern": "unknown_pattern",
+          "capability_achieved": false,
+          "capability_score": 0.25,
+          "response_quality": 0.45,
+          "complexity": "medium",
+          "complexity_bonus": 0.0,
+          "processing_time": 0.002438068389892578
+        },
+        {
+          "test_name": "Guided Exploration",
+          "target_capability": "explorer_archetype",
+          "detected_pattern": "explorer_archetype",
+          "capability_achieved": true,
+          "capability_score": 0.5,
+          "response_quality": 0.5,
+          "complexity": "medium",
+          "complexity_bonus": 0.2,
+          "processing_time": 0.0029413700103759766
+        },
+        {
+          "test_name": "Ethical Mentorship",
+          "target_capability": "mentor_archetype",
+          "detected_pattern": "mentor_archetype",
+          "capability_achieved": true,
+          "capability_score": 0.75,
+          "response_quality": 0.45,
+          "complexity": "high",
+          "complexity_bonus": 0.3,
+          "processing_time": 0.004271030426025391
+        },
+        {
+          "test_name": "Creative Problem Solving",
+          "target_capability": "creative_archetype",
+          "detected_pattern": "generic_fallback",
+          "capability_achieved": false,
+          "capability_score": 0.5,
+          "response_quality": 0.2,
+          "complexity": "very_high",
+          "complexity_bonus": 0.0,
+          "processing_time": 0.0027670860290527344
+        },
+        {
+          "test_name": "Analytical Framework Development",
+          "target_capability": "analyst_archetype",
+          "detected_pattern": "analyst_archetype",
+          "capability_achieved": true,
+          "capability_score": 1.0,
+          "response_quality": 0.30000000000000004,
+          "complexity": "high",
+          "complexity_bonus": 0.3,
+          "processing_time": 0.0020058155059814453
+        }
+      ]
+    },
+    "regression_validation": {
+      "maintenance_rate": 0.8,
+      "performance_rate": 0.4,
+      "average_score_change": -0.15999999999999998,
+      "detailed_results": [
+        {
+          "test_name": "Day 11 Mentor Success",
+          "expected_pattern": "mentor_archetype",
+          "detected_pattern": "mentor_archetype",
+          "pattern_maintained": true,
+          "baseline_score": 0.8,
+          "current_score": 0.45,
+          "score_change": -0.35000000000000003,
+          "performance_maintained": false,
+          "source": "Day 11",
+          "processing_time": 0.002899646759033203
+        },
+        {
+          "test_name": "Day 12 Explorer Success",
+          "expected_pattern": "explorer_archetype",
+          "detected_pattern": "explorer_archetype",
+          "pattern_maintained": true,
+          "baseline_score": 0.6,
+          "current_score": 0.5,
+          "score_change": -0.09999999999999998,
+          "performance_maintained": false,
+          "source": "Day 12",
+          "processing_time": 0.00437164306640625
+        },
+        {
+          "test_name": "Day 12 Curiosity Success",
+          "expected_pattern": "curiosity_response",
+          "detected_pattern": "curiosity_response",
+          "pattern_maintained": true,
+          "baseline_score": 0.5,
+          "current_score": 0.6000000000000001,
+          "score_change": 0.10000000000000009,
+          "performance_maintained": true,
+          "source": "Day 12",
+          "processing_time": 0.002490520477294922
+        },
+        {
+          "test_name": "Day 12 Collaborator Success",
+          "expected_pattern": "collaborator_archetype",
+          "detected_pattern": "unknown_pattern",
+          "pattern_maintained": false,
+          "baseline_score": 0.5,
+          "current_score": 0.45,
+          "score_change": -0.04999999999999999,
+          "performance_maintained": true,
+          "source": "Day 12",
+          "processing_time": 0.00468134880065918
+        },
+        {
+          "test_name": "Day 11 Context Synthesis",
+          "expected_pattern": "extended_context_synthesis",
+          "detected_pattern": "extended_context_synthesis",
+          "pattern_maintained": true,
+          "baseline_score": 0.75,
+          "current_score": 0.35000000000000003,
+          "score_change": -0.39999999999999997,
+          "performance_maintained": false,
+          "source": "Day 11",
+          "processing_time": 0.005426645278930664
+        }
+      ]
+    }
+  },
+  "overall_assessment": {
+    "precision_success": 0.6895833333333334,
+    "status": "NEEDS_WORK",
+    "improvement_rate": 0.6666666666666666,
+    "capability_score": 0.5,
+    "quality_score": 0.3875,
+    "complexity_bonus": 0.1875
+  },
+  "session_id": "day13_precision_1755588264"
+}
