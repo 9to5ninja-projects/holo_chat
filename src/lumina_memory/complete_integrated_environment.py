@@ -36,6 +36,7 @@ from .persistent_xp_environment import PersistentXPEnvironment, PersistentXPUnit
 from .emotion_engine import EmotionXPEnvironment
 from .xp_core_unified import XPEnvironment, XPUnit, UnifiedXPConfig
 from .math_foundation import get_current_timestamp
+from .mathematical_memory_intelligence import MathematicalMemoryIntelligence
 
 logger = logging.getLogger(__name__)
 
@@ -67,12 +68,15 @@ class SessionMetrics:
 
 
 class EnhancedMathematicalMemoryManager:
-    """Enhanced mathematical memory manager with complete optimization"""
+    """Enhanced mathematical memory manager with Day 18 intelligence"""
     
     def __init__(self, persistent_env: PersistentXPEnvironment):
         self.persistent_env = persistent_env
         
-        # Enhanced mathematical parameters
+        # Initialize Day 18 mathematical intelligence
+        self.mathematical_intelligence = MathematicalMemoryIntelligence()
+        
+        # Legacy parameters for compatibility
         self.consolidation_threshold = 1000
         self.importance_decay_rate = 0.95
         self.access_frequency_weight = 0.3
@@ -93,180 +97,66 @@ class EnhancedMathematicalMemoryManager:
             'access_pattern_accuracy': 0.0
         }
         
-        logger.info("Enhanced Mathematical Memory Manager initialized")
+        logger.info("Enhanced Mathematical Memory Manager initialized with Day 18 intelligence")
     
     def calculate_enhanced_importance(self, unit: XPUnit) -> float:
-        """Enhanced importance calculation with multiple factors"""
+        """Enhanced importance calculation using Day 18 mathematical intelligence"""
         try:
-            current_time = get_current_timestamp()
+            # Use the advanced mathematical intelligence
+            context = {
+                'existing_units': list(self.persistent_env.units.values()),
+                'relationship_graph': getattr(self.persistent_env, 'relationship_graph', {}),
+                'access_history': getattr(self, 'access_history', [])
+            }
             
-            # Time-based factors
-            age = max(current_time - unit.timestamp, 0)
-            recency_factor = np.exp(-age / (30 * 24 * 3600))  # 30-day decay
+            importance = self.mathematical_intelligence.calculate_enhanced_importance(unit, context)
             
-            access_age = max(current_time - unit.last_access, 0)
-            access_factor = np.exp(-access_age / (7 * 24 * 3600))  # 7-day decay
+            # Record access for learning
+            self.mathematical_intelligence.record_access(unit.content_id, 'importance_calculation')
             
-            # Content analysis factors
-            content_length = len(unit.content)
-            content_complexity = min(content_length / 200, 1.0)
-            
-            # Metadata richness
-            metadata_richness = 0.0
-            if unit.metadata:
-                metadata_richness = min(len(unit.metadata) / 10, 1.0)
-                
-                # Special importance for certain content types
-                if 'type' in unit.metadata:
-                    content_type = unit.metadata['type']
-                    if content_type in ['user_message', 'assistant_response']:
-                        metadata_richness *= 1.2
-                    elif content_type == 'cognitive_pattern':
-                        metadata_richness *= 1.5
-            
-            # Intrinsic importance
-            intrinsic_importance = getattr(unit, 'importance', 0.5)
-            
-            # Cognitive pattern bonus
-            cognitive_bonus = 0.0
-            if unit.metadata and 'cognitive_patterns' in unit.metadata:
-                cognitive_bonus = len(unit.metadata['cognitive_patterns']) * 0.1
-            
-            # Combined enhanced importance
-            importance = (
-                self.recency_weight * recency_factor +
-                self.access_frequency_weight * access_factor +
-                self.importance_weight * intrinsic_importance +
-                0.1 * content_complexity +
-                0.1 * metadata_richness +
-                0.1 * cognitive_bonus
-            )
-            
-            return max(0.0, min(1.0, importance))
+            return importance
             
         except Exception as e:
             logger.error(f"Failed to calculate enhanced importance: {e}")
             return 0.5
     
     def predict_access_frequency(self, unit: XPUnit) -> float:
-        """Predict future access frequency using enhanced algorithms"""
+        """Predict future access frequency using Day 18 mathematical intelligence"""
         try:
-            current_time = get_current_timestamp()
+            # Use the advanced mathematical intelligence
+            context = {
+                'existing_units': list(self.persistent_env.units.values()),
+                'recent_units': list(self.persistent_env.units.keys())[-10:],  # Last 10 units
+                'relationship_graph': getattr(self.persistent_env, 'relationship_graph', {})
+            }
             
-            # Historical access pattern analysis
-            access_count = getattr(unit, 'access_count', 0)
-            time_since_creation = max(current_time - unit.timestamp, 1)
-            historical_frequency = access_count / (time_since_creation / (24 * 3600))  # accesses per day
+            frequency = self.mathematical_intelligence.predict_access_frequency(unit, context)
             
-            # Recency of last access
-            time_since_access = max(current_time - unit.last_access, 0)
-            recency_score = np.exp(-time_since_access / (14 * 24 * 3600))
-            
-            # Content type prediction
-            content_type_multiplier = 1.0
-            if unit.metadata and 'type' in unit.metadata:
-                content_type = unit.metadata['type']
-                if content_type in ['user_message', 'assistant_response']:
-                    content_type_multiplier = 1.3
-                elif content_type == 'cognitive_pattern':
-                    content_type_multiplier = 1.5
-                elif content_type in ['system', 'error']:
-                    content_type_multiplier = 0.7
-            
-            # Cognitive pattern influence
-            cognitive_multiplier = 1.0
-            if unit.metadata and 'cognitive_patterns' in unit.metadata:
-                pattern_count = len(unit.metadata['cognitive_patterns'])
-                cognitive_multiplier = 1.0 + (pattern_count * 0.2)
-            
-            # Importance influence
-            importance = self.calculate_enhanced_importance(unit)
-            importance_multiplier = 0.5 + (importance * 0.5)
-            
-            # Combined prediction
-            predicted_frequency = (
-                historical_frequency * 0.4 +
-                recency_score * 0.3 +
-                importance * 0.3
-            ) * content_type_multiplier * cognitive_multiplier * importance_multiplier
-            
-            return max(0.0, min(1.0, predicted_frequency))
+            return frequency
             
         except Exception as e:
             logger.error(f"Failed to predict access frequency: {e}")
             return 0.5
     
     def optimize_storage_comprehensive(self) -> Dict[str, Any]:
-        """Comprehensive storage optimization with performance tracking"""
+        """Comprehensive storage optimization using Day 18 mathematical intelligence"""
         try:
-            start_time = time.time()
+            # Use the advanced mathematical intelligence for optimization
+            relationship_graph = getattr(self.persistent_env, 'relationship_graph', {})
             
-            optimization_stats = {
-                'units_processed': len(self.persistent_env.units),
-                'tier_assignments': {'hot': 0, 'warm': 0, 'cold': 0, 'archive': 0},
-                'consolidation_opportunities': 0,
-                'storage_efficiency_improvement': 0.0,
-                'optimization_time': 0.0,
-                'performance_metrics': {}
-            }
-            
-            # Process all units with enhanced algorithms
-            for unit_id, unit in self.persistent_env.units.items():
-                try:
-                    # Calculate enhanced metrics
-                    importance = self.calculate_enhanced_importance(unit)
-                    access_frequency = self.predict_access_frequency(unit)
-                    
-                    # Determine optimal storage tier
-                    if access_frequency >= self.hot_threshold:
-                        tier = 'hot'
-                    elif access_frequency >= self.warm_threshold:
-                        tier = 'warm'
-                    elif access_frequency >= self.cold_threshold:
-                        tier = 'cold'
-                    else:
-                        tier = 'archive'
-                    
-                    optimization_stats['tier_assignments'][tier] += 1
-                    
-                    # Update unit metadata with optimization results
-                    if not unit.metadata:
-                        unit.metadata = {}
-                    
-                    current_time = get_current_timestamp()
-                    unit.metadata.update({
-                        'storage_tier': tier,
-                        'importance_score': importance,
-                        'predicted_access_frequency': access_frequency,
-                        'last_optimization': current_time
-                    })
-                    
-                    # Identify consolidation opportunities
-                    if tier in ['cold', 'archive'] and access_frequency < 0.1:
-                        optimization_stats['consolidation_opportunities'] += 1
-                    
-                except Exception as e:
-                    logger.error(f"Failed to optimize unit {unit_id[:16]}: {e}")
-            
-            optimization_time = time.time() - start_time
-            optimization_stats['optimization_time'] = optimization_time
+            optimization_stats = self.mathematical_intelligence.optimize_storage_comprehensive(
+                self.persistent_env.units, 
+                relationship_graph
+            )
             
             # Update performance metrics
             self.performance_metrics['total_optimizations'] += 1
+            optimization_time = optimization_stats.get('optimization_time', 0.0)
             self.performance_metrics['average_optimization_time'] = (
                 (self.performance_metrics['average_optimization_time'] * 
                  (self.performance_metrics['total_optimizations'] - 1) + optimization_time) /
                 self.performance_metrics['total_optimizations']
             )
-            
-            # Calculate storage efficiency improvement
-            total_units = optimization_stats['units_processed']
-            if total_units > 0:
-                hot_ratio = optimization_stats['tier_assignments']['hot'] / total_units
-                archive_ratio = optimization_stats['tier_assignments']['archive'] / total_units
-                efficiency = 1.0 - (hot_ratio * 0.1 + archive_ratio * 0.9)  # Simplified efficiency metric
-                optimization_stats['storage_efficiency_improvement'] = efficiency
-                self.performance_metrics['storage_efficiency_trend'].append(efficiency)
             
             # Store optimization history
             self.optimization_history.append({
@@ -317,6 +207,9 @@ class EnhancedMathematicalMemoryManager:
             avg_access_frequency = np.mean(access_frequencies) if access_frequencies else 0.0
             importance_variance = np.var(importance_scores) if importance_scores else 0.0
             
+            # Get mathematical intelligence performance summary
+            math_intelligence_summary = self.mathematical_intelligence.get_performance_summary()
+            
             return {
                 'total_units': total_units,
                 'tier_distribution': tier_distribution,
@@ -325,7 +218,8 @@ class EnhancedMathematicalMemoryManager:
                 'importance_variance': importance_variance,
                 'performance_metrics': self.performance_metrics.copy(),
                 'optimization_history_count': len(self.optimization_history),
-                'storage_efficiency': self.performance_metrics['storage_efficiency_trend'][-1] if self.performance_metrics['storage_efficiency_trend'] else 0.0
+                'storage_efficiency': self.performance_metrics['storage_efficiency_trend'][-1] if self.performance_metrics['storage_efficiency_trend'] else 0.0,
+                'mathematical_intelligence': math_intelligence_summary
             }
             
         except Exception as e:
